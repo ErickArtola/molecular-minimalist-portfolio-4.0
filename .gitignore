@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Next.js build output
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local env files
+.env.local
+.env.*.local
+
+# OS generated files
+.DS_Store
+
+# Typescript build
+*.tsbuildinfo
