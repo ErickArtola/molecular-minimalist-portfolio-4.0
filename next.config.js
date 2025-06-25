@@ -45,19 +45,8 @@ const nextConfig = {
 
   // SEO and metadata optimization
   generateEtags: true,
-  trailingSlash: false,
+  trailingSlash: false
   
-  // Bundle analysis (optional)
-  webpack: (config, { dev, isServer }) => {
-    // Scientific visualization optimization
-    if (!isServer && !dev) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        '@': './src',
-      };
-    }
-    return config;
-  },
 };
 
 module.exports = nextConfig;
