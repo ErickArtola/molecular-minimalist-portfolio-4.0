@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from '@/components/ui/Card';
 
 // Temporary components until the real ones are available
 const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -6,12 +7,6 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <div className="container-scientific">
       {children}
     </div>
-  </div>
-);
-
-const Card: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
-  <div className={`bg-white rounded-lg shadow-molecular border border-scientific-100 p-6 ${className}`}>
-    {children}
   </div>
 );
 
