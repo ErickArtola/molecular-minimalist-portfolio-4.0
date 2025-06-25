@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inter Font Import - Variable Weight */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base Layer - Molecular Minimalist Foundation */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  
+  body {
+    @apply font-sans text-body text-scientific-900 bg-bg-primary antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Scientific Heading Hierarchy */
+  h1 {
+    @apply text-h1 font-semibold text-scientific-950 tracking-tight;
+  }
+  
+  h2 {
+    @apply text-h2 font-semibold text-scientific-950 tracking-tight;
+  }
+  
+  h3 {
+    @apply text-h3 font-medium text-scientific-900;
+  }
+  
+  h4 {
+    @apply text-body font-medium text-scientific-800;
+  }
+  
+  /* Scientific Paragraph Spacing */
+  p {
+    @apply text-body text-scientific-700 leading-relaxed;
+  }
+  
+  /* Links - Scientific Precision */
+  a {
+    @apply text-accent hover:text-secondary transition-colors duration-250;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  
+  /* Focus States for Accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg-primary;
+  }
+  
+  /* Selection Styling */
+  ::selection {
+    @apply bg-scientific-200 text-scientific-950;
+  }
+  
+  /* Molecular Loading Animation */
+  .molecular-loading {
+    @apply animate-molecular-float;
+  }
+}
+
+/* Component Layer - Reusable Scientific Patterns */
+@layer components {
+  /* Scientific Container */
+  .container-scientific {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Molecular Card */
+  .card-molecular {
+    @apply bg-white rounded-lg shadow-molecular border border-scientific-100 p-6;
+  }
+  
+  /* Scientific Button Base */
+  .btn-scientific {
+    @apply inline-flex items-center justify-center px-6 py-3 text-body font-medium rounded-md transition-all duration-250;
+  }
+  
+  /* Primary Scientific Button */
+  .btn-primary {
+    @apply btn-scientific bg-scientific-950 text-white hover:bg-scientific-800 focus:ring-scientific-500;
+  }
+  
+  /* Secondary Scientific Button */
+  .btn-secondary {
+    @apply btn-scientific bg-scientific-100 text-scientific-950 hover:bg-scientific-200 focus:ring-scientific-300;
+  }
+  
+  /* Scientific Section Spacing */
+  .section-spacing {
+    @apply py-16 lg:py-24;
+  }
+  
+  /* Molecular Grid */
+  .grid-molecular {
+    @apply grid gap-8 lg:gap-12;
+  }
+  
+  /* Research Paper Layout */
+  .research-layout {
+    @apply prose prose-scientific max-w-none;
+  }
+}
+
+/* Utility Layer - Scientific Utilities */
+@layer utilities {
+  /* Scientific Text Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  
+  /* Molecular Spacing */
+  .space-molecular > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  /* Scientific Gradient Backgrounds */
+  .bg-gradient-scientific {
+    background: linear-gradient(135deg, theme('colors.scientific.50') 0%, theme('colors.scientific.100') 100%);
+  }
+  
+  .bg-gradient-molecular {
+    background: linear-gradient(135deg, theme('colors.scientific.950') 0%, theme('colors.secondary') 100%);
+  }
+  
+  /* Accessibility Utilities */
+  .sr-only-focusable:not(:focus):not(:focus-within) {
+    @apply sr-only;
+  }
+  
+  /* Print Styles */
+  @media print {
+    .print-hidden {
+      display: none !important;
+    }
+  }
+}
+
+/* Custom Properties for Dynamic Theming */
+:root {
+  --color-primary: theme('colors.scientific.950');
+  --color-secondary: theme('colors.secondary');
+  --color-accent: theme('colors.accent');
+  --color-neutral: theme('colors.scientific.200');
+  --font-size-base: theme('fontSize.body');
+  --line-height-base: theme('fontSize.body.1.lineHeight');
+  --border-radius-base: theme('borderRadius.md');
+  --shadow-base: theme('boxShadow.molecular');
+}
+
+/* Scientific Animation Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

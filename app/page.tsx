@@ -1,0 +1,237 @@
+import React from 'react';
+
+// Temporary components until the real ones are available
+const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div className="min-h-screen bg-bg-primary">
+    <div className="container-scientific">
+      {children}
+    </div>
+  </div>
+);
+
+const Card: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
+  <div className={`bg-white rounded-lg shadow-molecular border border-scientific-100 p-6 ${className}`}>
+    {children}
+  </div>
+);
+
+const CertificationBadge: React.FC<{
+  title: string;
+  issuer: string;
+  date?: string;
+  credentialId?: string;
+}> = ({ title, issuer, date, credentialId }) => (
+  <div className="group relative bg-white rounded-lg p-6 border border-scientific-100 hover:border-scientific-300 hover:shadow-molecular-md transition-all duration-250">
+    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-secondary rounded-l-lg opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
+    <div className="space-y-3">
+      <h3 className="text-h3 font-medium text-scientific-950 group-hover:text-accent transition-colors duration-250">
+        {title}
+      </h3>
+      <p className="text-body text-scientific-700">{issuer}</p>
+      <div className="space-y-1">
+        {date && <p className="text-small text-scientific-600">Issued: {date}</p>}
+        {credentialId && <p className="text-small text-scientific-500">ID: {credentialId}</p>}
+      </div>
+    </div>
+  </div>
+);
+
+export default function HomePage() {
+  return (
+    <PageWrapper>
+      {/* Hero Section */}
+      <section className="relative py-24 lg:py-32">
+        <div className="max-w-4xl">
+          {/* Molecular pattern accent */}
+          <div className="absolute -top-8 -left-8 w-32 h-32 opacity-5">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="8" fill="#03045e" />
+              <circle cx="80" cy="20" r="8" fill="#03045e" />
+              <circle cx="50" cy="50" r="10" fill="#0077b6" />
+              <circle cx="20" cy="80" r="8" fill="#03045e" />
+              <circle cx="80" cy="80" r="8" fill="#03045e" />
+              <line x1="20" y1="20" x2="50" y2="50" stroke="#03045e" strokeWidth="1" opacity="0.3" />
+              <line x1="80" y1="20" x2="50" y2="50" stroke="#03045e" strokeWidth="1" opacity="0.3" />
+              <line x1="20" y1="80" x2="50" y2="50" stroke="#03045e" strokeWidth="1" opacity="0.3" />
+              <line x1="80" y1="80" x2="50" y2="50" stroke="#03045e" strokeWidth="1" opacity="0.3" />
+            </svg>
+          </div>
+          
+          <h1 className="text-display font-semibold text-scientific-950 mb-6 animate-fade-in">
+            Erick Geovany Artola
+          </h1>
+          <p className="text-h2 text-scientific-700 mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            AI/ML Engineer • Genomics Researcher • Technical Account Manager
+          </p>
+          <p className="text-h3 text-scientific-600 leading-relaxed max-w-3xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            Bridging artificial intelligence and genomics to advance our understanding of complex biological systems. 
+            Currently applying machine learning techniques to oncogenomics research while serving as an AWS Technical Account Manager.
+          </p>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 lg:py-24">
+        <h2 className="text-h1 font-semibold text-scientific-950 mb-12">About</h2>
+        
+        <div className="grid gap-8 lg:grid-cols-2">
+          <Card className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-h2 font-medium text-scientific-950">Background</h3>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                Originally from Nicaragua and now based in Costa Rica, I bring a unique perspective to the intersection 
+                of technology and life sciences. My journey from Central America to the forefront of AI and genomics 
+                research reflects my commitment to leveraging cutting-edge technology for global impact.
+              </p>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                As an AWS Technical Account Manager, I help organizations architect and optimize their cloud infrastructure 
+                for AI/ML workloads, particularly in the healthcare and biotech sectors. This role allows me to stay at 
+                the cutting edge of cloud computing while directly supporting genomics research initiatives.
+              </p>
+            </div>
+          </Card>
+          
+          <Card className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-h2 font-medium text-scientific-950">Research Interests</h3>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                My primary focus lies in applying artificial intelligence to genomics, particularly in understanding 
+                oncogenic pathways and developing computational methods for cancer research. I'm passionate about 
+                creating AI models that can identify patterns in genomic data that might lead to breakthrough treatments.
+              </p>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                Beyond technical pursuits, I maintain a deep interest in robotics and postmodern literature, believing 
+                that interdisciplinary thinking is crucial for innovation. This diverse intellectual foundation informs 
+                my approach to complex problems in computational biology.
+              </p>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Experience Timeline */}
+      <section className="py-16 lg:py-24">
+        <h2 className="text-h1 font-semibold text-scientific-950 mb-12">Professional Journey</h2>
+        
+        <div className="space-y-8">
+          {/* Current Role */}
+          <div className="relative pl-8 pb-8 border-l-2 border-scientific-200 last:border-l-0">
+            <div className="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-molecular" />
+            <div className="space-y-3">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <h3 className="text-h2 font-medium text-scientific-950">Technical Account Manager</h3>
+                <span className="text-small text-scientific-600">2023 - Present</span>
+              </div>
+              <p className="text-body text-scientific-700 font-medium">Amazon Web Services (AWS)</p>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                Leading technical strategy for enterprise healthcare and biotech clients, specializing in architecting 
+                cloud solutions for genomics pipelines, ML model training, and high-performance computing workloads. 
+                Key achievements include optimizing genomic analysis workflows resulting in 60% cost reduction and 
+                3x performance improvement.
+              </p>
+            </div>
+          </div>
+          
+          {/* Research Focus */}
+          <div className="relative pl-8 pb-8 border-l-2 border-scientific-200">
+            <div className="absolute -left-2 top-0 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow-molecular" />
+            <div className="space-y-3">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <h3 className="text-h2 font-medium text-scientific-950">Independent Research</h3>
+                <span className="text-small text-scientific-600">2022 - Present</span>
+              </div>
+              <p className="text-body text-scientific-700 font-medium">AI Applications in Oncogenomics</p>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                Developing machine learning models for identifying cancer biomarkers and predicting treatment responses. 
+                Current projects include deep learning approaches for analyzing tumor heterogeneity and transformer-based 
+                models for genomic sequence analysis.
+              </p>
+            </div>
+          </div>
+          
+          {/* Education/Early Career */}
+          <div className="relative pl-8">
+            <div className="absolute -left-2 top-0 w-4 h-4 bg-scientific-500 rounded-full border-4 border-white shadow-molecular" />
+            <div className="space-y-3">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <h3 className="text-h2 font-medium text-scientific-950">Technical Foundation</h3>
+                <span className="text-small text-scientific-600">2020 - 2022</span>
+              </div>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                Built comprehensive technical expertise through intensive self-directed learning and professional 
+                certifications. Focused on cloud architecture, machine learning, and bioinformatics to prepare 
+                for the intersection of AI and genomics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-16 lg:py-24">
+        <h2 className="text-h1 font-semibold text-scientific-950 mb-12">Technical Certifications</h2>
+        
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <CertificationBadge
+            title="AWS Certified Solutions Architect"
+            issuer="Amazon Web Services"
+            date="2023"
+            credentialId="AWS-SAA-C03"
+          />
+          <CertificationBadge
+            title="AWS Certified Machine Learning"
+            issuer="Amazon Web Services"
+            date="2023"
+            credentialId="AWS-MLS-C01"
+          />
+          <CertificationBadge
+            title="Google IT Support Professional"
+            issuer="Google"
+            date="2022"
+            credentialId="COURSERA-CERT"
+          />
+          <CertificationBadge
+            title="IBM AI Engineering Professional"
+            issuer="IBM"
+            date="2022"
+            credentialId="IBM-AI-ENG"
+          />
+          <CertificationBadge
+            title="AWS Certified Cloud Practitioner"
+            issuer="Amazon Web Services"
+            date="2022"
+            credentialId="AWS-CLF-C01"
+          />
+          <CertificationBadge
+            title="Deep Learning Specialization"
+            issuer="DeepLearning.AI"
+            date="2022"
+            credentialId="COURSERA-DL"
+          />
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 lg:py-24 border-t border-scientific-100">
+        <div className="text-center space-y-8 max-w-3xl mx-auto">
+          <h2 className="text-h1 font-semibold text-scientific-950">
+            Let's Advance Science Together
+          </h2>
+          <p className="text-h3 text-scientific-700 leading-relaxed">
+            I'm always interested in collaborating on projects at the intersection of AI and genomics. 
+            Whether you're working on computational biology challenges, need cloud architecture expertise 
+            for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="btn-primary">
+              View Research Projects
+            </button>
+            <button className="btn-secondary">
+              Get in Touch
+            </button>
+          </div>
+        </div>
+      </section>
+    </PageWrapper>
+  );
+}
