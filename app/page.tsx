@@ -9,7 +9,7 @@ export default function HomePage() {
       <section className="relative h-screen w-full">
         <img
           src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80"
-          alt="Hero"
+          alt="Abstract lab imagery"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
