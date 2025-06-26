@@ -5,37 +5,22 @@ import { CertificationBadge } from '@/components/content/CertificationBadge';
 
 export default function HomePage() {
   return (
-    <PageWrapper>
+    <>
       {/* Hero Section */}
-      <section className="relative py-24 lg:py-32">
-        <div className="max-w-4xl">
-          {/* Molecular pattern accent */}
-          <div className="absolute -top-8 -left-8 w-32 h-32 opacity-5">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="8" fill="#03045e" />
-              <circle cx="80" cy="20" r="8" fill="#03045e" />
-              <circle cx="50" cy="50" r="10" fill="#0077b6" />
-              <circle cx="20" cy="80" r="8" fill="#03045e" />
-              <circle cx="80" cy="80" r="8" fill="#03045e" />
-              <line x1="20" y1="20" x2="50" y2="50" stroke="#03045e" strokeWidth="1" opacity="0.3" />
-              <line x1="80" y1="20" x2="50" y2="50" stroke="#03045e" strokeWidth="1" opacity="0.3" />
-              <line x1="20" y1="80" x2="50" y2="50" stroke="#03045e" strokeWidth="1" opacity="0.3" />
-              <line x1="80" y1="80" x2="50" y2="50" stroke="#03045e" strokeWidth="1" opacity="0.3" />
-            </svg>
-          </div>
-          
-          <h1 className="text-display font-semibold text-scientific-950 mb-6 animate-fade-in">
-            Erick Geovany Artola
-          </h1>
-          <p className="text-h2 text-scientific-700 mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+      <section
+        className="relative h-[60vh] min-h-[400px] bg-cover bg-center flex items-center justify-center text-center"
+        style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?science')" }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 px-4">
+          <h1 className="text-display font-bold text-white mb-4">Erick Geovany Artola</h1>
+          <p className="text-h2 text-white">
             AI/ML Engineer • Genomics Researcher • Technical Account Manager
-          </p>
-          <p className="text-h3 text-scientific-600 leading-relaxed max-w-3xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Bridging artificial intelligence and genomics to advance our understanding of complex biological systems. 
-            Currently applying machine learning techniques to oncogenomics research while serving as an AWS Technical Account Manager.
           </p>
         </div>
       </section>
+
+      <PageWrapper>
 
       {/* About Section */}
       <section className="py-16 lg:py-24">
@@ -200,5 +185,6 @@ export default function HomePage() {
         </div>
       </section>
     </PageWrapper>
+    </>
   );
 }
