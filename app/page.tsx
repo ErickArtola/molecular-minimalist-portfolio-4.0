@@ -1,35 +1,7 @@
 import React from 'react';
 import Card from '@/components/ui/Card';
-
-// Temporary components until the real ones are available
-const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="min-h-screen bg-bg-primary">
-    <div className="container-scientific">
-      {children}
-    </div>
-  </div>
-);
-
-const CertificationBadge: React.FC<{
-  title: string;
-  issuer: string;
-  date?: string;
-  credentialId?: string;
-}> = ({ title, issuer, date, credentialId }) => (
-  <div className="group relative bg-white rounded-lg p-6 border border-scientific-100 hover:border-scientific-300 hover:shadow-molecular-md transition-all duration-250">
-    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-secondary rounded-l-lg opacity-0 group-hover:opacity-100 transition-opacity duration-250" />
-    <div className="space-y-3">
-      <h3 className="text-h3 font-medium text-scientific-950 group-hover:text-accent transition-colors duration-250">
-        {title}
-      </h3>
-      <p className="text-body text-scientific-700">{issuer}</p>
-      <div className="space-y-1">
-        {date && <p className="text-small text-scientific-600">Issued: {date}</p>}
-        {credentialId && <p className="text-small text-scientific-500">ID: {credentialId}</p>}
-      </div>
-    </div>
-  </div>
-);
+import PageWrapper from '@/components/layout/PageWrapper';
+import { CertificationBadge } from '@/components/content/CertificationBadge';
 
 export default function HomePage() {
   return (
