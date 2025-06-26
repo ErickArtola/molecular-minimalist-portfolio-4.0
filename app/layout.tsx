@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 
 // Initialize Inter font with variable weights
@@ -32,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <body className="font-sans antialiased bg-bg-primary text-scientific-900 min-h-screen flex flex-col">
-        <Header />
         <main className="flex-grow">
           {children}
         </main>
