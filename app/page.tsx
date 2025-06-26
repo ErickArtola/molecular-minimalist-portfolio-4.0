@@ -11,7 +11,8 @@ export default function HomePage() {
         <Image
           src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80"
           alt="Abstract lab imagery"
-          fill
+          width={1950}
+          height={1300}
           priority
           className="absolute inset-0 object-cover"
         />
