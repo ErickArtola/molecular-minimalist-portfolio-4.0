@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Card from '@/components/ui/Card'
 
 export default function HomePage() {
@@ -7,10 +8,12 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       {/* Hero Section with overlay navigation */}
       <section className="relative h-screen w-full">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80"
           alt="Abstract lab imagery"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          priority
+          className="absolute inset-0 object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
 
@@ -45,33 +48,36 @@ export default function HomePage() {
       {/* Content Grid */}
       <section className="py-16 lg:py-24 bg-bg-secondary">
         <div className="container-scientific grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="p-0 overflow-hidden" hover>
-            <img
+          <Card className="relative p-0 overflow-hidden" hover>
+            <Image
               src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80"
               alt="Research"
-              className="w-full h-48 object-cover"
+              fill
+              className="object-cover"
             />
             <div className="p-6">
               <h3 className="text-h3 font-medium text-scientific-950">Research Blog</h3>
             </div>
           </Card>
 
-          <Card className="p-0 overflow-hidden md:col-span-2" hover>
-            <img
+          <Card className="relative p-0 overflow-hidden md:col-span-2" hover>
+            <Image
               src="https://images.unsplash.com/photo-1504904126297-1ce789964136?auto=format&fit=crop&w=1200&q=80"
               alt="Featured"
-              className="w-full h-48 object-cover"
+              fill
+              className="object-cover"
             />
             <div className="p-6">
               <h3 className="text-h3 font-medium text-scientific-950">Featured Project</h3>
             </div>
           </Card>
 
-          <Card className="p-0 overflow-hidden" hover>
-            <img
+          <Card className="relative p-0 overflow-hidden" hover>
+            <Image
               src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80"
               alt="Publications"
-              className="w-full h-48 object-cover"
+              fill
+              className="object-cover"
             />
             <div className="p-6">
               <h3 className="text-h3 font-medium text-scientific-950">Publications</h3>
