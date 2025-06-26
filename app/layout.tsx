@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   description: 'AWS Technical Account Manager exploring AI applications in genomics research',
   keywords: ['AI', 'machine learning', 'genomics', 'oncogenomics', 'bioinformatics', 'AWS'],
   authors: [{ name: 'Erick Geovany Artola' }],
-  viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     title: 'Erick Geovany Artola - AI & Genomics Research',
     description: 'AWS Technical Account Manager exploring AI applications in genomics research',
     type: 'website',
   },
 }
+export const viewport = 'width=device-width, initial-scale=1'
 
 export default function RootLayout({
   children,
