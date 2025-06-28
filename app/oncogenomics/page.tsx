@@ -1,0 +1,333 @@
+import React from 'react'
+import Card from '@/components/ui/Card'
+import PageWrapper from '@/components/layout/PageWrapper'
+
+interface ResearchProjectProps {
+  title: string
+  description: string
+  status: 'active' | 'completed' | 'planning'
+  technologies: string[]
+  collaborators?: string[]
+}
+
+const ProjectCard: React.FC<ResearchProjectProps> = ({ 
+  title, 
+  description, 
+  status, 
+  technologies, 
+  collaborators 
+}) => (
+  <Card 
+    as="article" 
+    variant="elevated" 
+    size="medium" 
+    animation="hover"
+    className="space-y-6"
+  >
+    <div className="space-y-4">
+      {/* Project Header */}
+      <div className="flex items-start justify-between gap-4">
+        <h3 className="text-h2 font-medium text-scientific-950 flex-1">{title}</h3>
+        <span className={`text-small font-medium px-3 py-1 rounded-full ${
+          status === 'active' 
+            ? 'bg-green-100 text-green-800' 
+            : status === 'completed'
+            ? 'bg-blue-100 text-blue-800'
+            : 'bg-scientific-100 text-scientific-700'
+        }`}>
+          {status === 'active' ? 'Active' : status === 'completed' ? 'Completed' : 'Planning'}
+        </span>
+      </div>
+      
+      {/* Description */}
+      <p className="text-body text-scientific-700 leading-relaxed">
+        {description}
+      </p>
+      
+      {/* Technologies */}
+      <div className="space-y-2">
+        <h4 className="text-body font-medium text-scientific-800">Technologies</h4>
+        <div className="flex flex-wrap gap-2">
+          {technologies.map((tech, index) => (
+            <span 
+              key={index}
+              className="text-small px-3 py-1 bg-scientific-100 text-scientific-700 rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+      
+      {/* Collaborators */}
+      {collaborators && collaborators.length > 0 && (
+        <div className="space-y-2">
+          <h4 className="text-body font-medium text-scientific-800">Collaborators</h4>
+          <div className="flex flex-wrap gap-2">
+            {collaborators.map((collaborator, index) => (
+              <span 
+                key={index}
+                className="text-small px-3 py-1 bg-accent/10 text-accent rounded-full"
+              >
+                {collaborator}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+    
+    {/* Molecular accent line */}
+    <div className="h-0.5 bg-gradient-to-r from-accent to-secondary rounded-full opacity-30" />
+  </Card>
+)
+
+export default function OncogenomicsPage() {
+  const researchAreas = [
+    {
+      title: "AI-Driven Cancer Genomics Analysis",
+      description: "Developing machine learning pipelines for the analysis of large-scale cancer genomic datasets, utilizing cloud computing infrastructure to process multi-omics data and identify novel therapeutic targets.",
+      icon: "🧠"
+    },
+    {
+      title: "Cloud-Based Genomic Data Processing",
+      description: "Architecting scalable cloud solutions for genomic data storage, processing, and analysis, enabling researchers to handle the computational demands of modern cancer genomics research.",
+      icon: "☁️"
+    },
+    {
+      title: "Precision Medicine Applications",
+      description: "Exploring the application of artificial intelligence in personalizing cancer treatment strategies based on individual genomic profiles and tumor characteristics.",
+      icon: "🎯"
+    }
+  ]
+
+  const researchProjects: ResearchProjectProps[] = [
+    {
+      title: "GenomeExplorer: AI-Driven Genetic Analysis Platform",
+      description: "Developing a deep learning model that analyzes genomic data to identify potential disease markers and drug targets. This project accelerates genetic research by automating the process of finding correlations between genetic variations and phenotypic traits.",
+      status: "active",
+      technologies: ["TensorFlow", "AWS SageMaker", "Python", "Genomics APIs", "Docker"],
+      collaborators: ["Stanford Genomics Lab", "AWS Healthcare Team"]
+    },
+    {
+      title: "Cloud Infrastructure for Oncogenomics Research",
+      description: "Designing and implementing scalable cloud architectures specifically optimized for cancer genomics workflows, enabling efficient processing of large-scale sequencing data and facilitating collaborative research.",
+      status: "active",
+      technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
+      collaborators: ["Cancer Research Institute", "Broad Institute"]
+    },
+    {
+      title: "StemCellOrganoid: AI-Optimized Organoid Culture System",
+      description: "Engineering an AI system that optimizes the growth conditions for stem cell-derived organoids. The project uses reinforcement learning to dynamically adjust nutrient levels, temperature, and other factors to improve organoid development and functionality for cancer research applications.",
+      status: "planning",
+      technologies: ["PyTorch", "IoT Sensors", "Reinforcement Learning", "Computer Vision"],
+      collaborators: ["MIT Stem Cell Lab", "Harvard Medical School"]
+    }
+  ]
+
+  return (
+    <PageWrapper width="default">
+      <div className="space-y-16">
+        {/* Hero Section */}
+        <section className="text-center space-y-6">
+          <h1 className="text-h1 font-semibold text-scientific-950">
+            Oncogenomics Research
+          </h1>
+          <p className="text-h3 text-scientific-700 max-w-4xl mx-auto leading-relaxed">
+            Exploring the intersection of artificial intelligence, cloud computing, and cancer genomics 
+            to advance precision medicine and therapeutic discovery.
+          </p>
+        </section>
+
+        {/* Research Focus */}
+        <section className="space-y-8">
+          <div className="text-center">
+            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+              Research Focus
+            </h2>
+            <p className="text-body text-scientific-700 max-w-3xl mx-auto leading-relaxed">
+              My research interests lie at the convergence of computational methods and cancer biology, 
+              leveraging cloud-scale computing and machine learning to understand the genomic landscape 
+              of cancer. This interdisciplinary approach combines my technical expertise in cloud 
+              architecture with emerging opportunities in precision oncology.
+            </p>
+          </div>
+        </section>
+
+        {/* Current Research Areas */}
+        <section className="space-y-12">
+          <div className="text-center">
+            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+              Current Research Areas
+            </h2>
+          </div>
+          
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {researchAreas.map((area, index) => (
+              <Card 
+                key={index}
+                variant="outlined" 
+                size="medium" 
+                animation="hover"
+                className="text-center space-y-4"
+              >
+                <div className="text-5xl mb-4">{area.icon}</div>
+                <h3 className="text-h3 font-medium text-scientific-950">{area.title}</h3>
+                <p className="text-body text-scientific-700 leading-relaxed">{area.description}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Research Projects */}
+        <section className="space-y-12">
+          <div className="text-center">
+            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+              Research Projects
+            </h2>
+            <p className="text-body text-scientific-600">
+              Current and planned research initiatives at the intersection of AI and genomics
+            </p>
+          </div>
+          
+          <div className="space-y-8">
+            {researchProjects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </section>
+
+        {/* Methodology Section */}
+        <section className="py-16 border-t border-scientific-100">
+          <div className="grid gap-12 lg:grid-cols-2">
+            <div className="space-y-6">
+              <h2 className="text-h2 font-semibold text-scientific-950">
+                Research Methodology
+              </h2>
+              <div className="space-y-4">
+                <p className="text-body text-scientific-700 leading-relaxed">
+                  My approach combines computational genomics with cloud-native architectures, 
+                  enabling scalable analysis of large genomic datasets. I leverage machine learning 
+                  to identify patterns in cancer genomics data that traditional methods might miss.
+                </p>
+                <p className="text-body text-scientific-700 leading-relaxed">
+                  The integration of AWS cloud services allows for processing of multi-terabyte 
+                  genomic datasets, while advanced AI models help identify potential therapeutic 
+                  targets and biomarkers for precision medicine applications.
+                </p>
+              </div>
+            </div>
+            
+            <Card variant="elevated" size="medium" className="space-y-6">
+              <h3 className="text-h3 font-medium text-scientific-950">Key Technologies</h3>
+              <div className="grid grid-cols-2 gap-4 text-small">
+                <div className="space-y-2">
+                  <h4 className="font-medium text-scientific-800">AI/ML Frameworks</h4>
+                  <ul className="text-scientific-600 space-y-1">
+                    <li>• TensorFlow & PyTorch</li>
+                    <li>• Scikit-learn</li>
+                    <li>• Transformers</li>
+                    <li>• BioPython</li>
+                  </ul>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-medium text-scientific-800">Cloud & Infrastructure</h4>
+                  <ul className="text-scientific-600 space-y-1">
+                    <li>• AWS SageMaker</li>
+                    <li>• AWS Batch</li>
+                    <li>• Kubernetes</li>
+                    <li>• Docker</li>
+                  </ul>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-medium text-scientific-800">Genomics Tools</h4>
+                  <ul className="text-scientific-600 space-y-1">
+                    <li>• GATK</li>
+                    <li>• Nextflow</li>
+                    <li>• Bioconductor</li>
+                    <li>• IGV</li>
+                  </ul>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-medium text-scientific-800">Data Analysis</h4>
+                  <ul className="text-scientific-600 space-y-1">
+                    <li>• R & Python</li>
+                    <li>• Jupyter Notebooks</li>
+                    <li>• Apache Spark</li>
+                    <li>• SQL/NoSQL</li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* Collaboration Section */}
+        <section className="space-y-8">
+          <div className="text-center">
+            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+              Collaborations & Future Work
+            </h2>
+          </div>
+          
+          <div className="grid gap-8 md:grid-cols-2">
+            <Card variant="outlined" size="medium" className="space-y-4">
+              <h3 className="text-h3 font-medium text-scientific-950">Open to Collaboration</h3>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                I'm actively seeking collaborations with cancer research institutions, 
+                biotechnology companies, and academic researchers working at the intersection 
+                of genomics, artificial intelligence, and cloud computing.
+              </p>
+              <div className="space-y-2">
+                <h4 className="text-body font-medium text-scientific-800">Areas of Interest:</h4>
+                <ul className="text-small text-scientific-600 space-y-1">
+                  <li>• Multi-omics data integration</li>
+                  <li>• Drug discovery pipelines</li>
+                  <li>• Biomarker identification</li>
+                  <li>• Clinical trial optimization</li>
+                </ul>
+              </div>
+            </Card>
+            
+            <Card variant="outlined" size="medium" className="space-y-4">
+              <h3 className="text-h3 font-medium text-scientific-950">Publications & Presentations</h3>
+              <p className="text-body text-scientific-700 leading-relaxed">
+                Research publications and conference presentations will be listed here as they 
+                become available. Currently preparing manuscripts on AI applications in 
+                cancer genomics and cloud architectures for precision medicine.
+              </p>
+              <div className="space-y-2">
+                <h4 className="text-body font-medium text-scientific-800">Upcoming:</h4>
+                <ul className="text-small text-scientific-600 space-y-1">
+                  <li>• ASHG 2025 Conference</li>
+                  <li>• Nature Biotechnology (In Review)</li>
+                  <li>• AWS re:Invent Healthcare Track</li>
+                </ul>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
+          <h2 className="text-h2 font-semibold text-scientific-950">
+            Advancing Precision Medicine Through AI
+          </h2>
+          <p className="text-body text-scientific-700 max-w-2xl mx-auto">
+            Interested in collaborating on cutting-edge research that combines artificial intelligence 
+            with cancer genomics? Let's explore how we can accelerate the development of personalized 
+            treatments and improve patient outcomes together.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="btn-primary">
+              View Research Proposals
+            </button>
+            <button className="btn-secondary">
+              Contact for Collaboration
+            </button>
+          </div>
+        </section>
+      </div>
+    </PageWrapper>
+  )
+}
