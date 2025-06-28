@@ -8,17 +8,16 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section with DNA Background */}
-      <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
-        src="/dna.png"
-        <div className="absolute inset-0">
-          <Image
-            src="/dna-helix.jpg" // Update this path to match your image location
-            alt="DNA Helix - representing genomics research"
-            fill
-            className="object-cover object-center"
-            priority
-            quality={90}
-          />
+<section className="relative h-[60vh] min-h-[400px] overflow-hidden">
+  <div className="absolute inset-0">
+    <Image
+      src="/dna.png"
+      alt="DNA Helix - representing genomics research"
+      fill
+      className="object-cover object-center"
+      priority
+      quality={90}
+    />
           {/* Gradient overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         </div>
