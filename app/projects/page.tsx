@@ -103,6 +103,24 @@ const ProjectCard: React.FC<ProjectProps> = ({
 export default function ProjectsPage() {
   const projects: ProjectProps[] = [
     {
+      title: "Amazon Q Business Chatbot",
+      technology: "AI Development",
+      description: "An intelligent chatbot solution utilizing Amazon Q Business to provide sophisticated conversational AI capabilities. This project demonstrates the integration of advanced AI services with business applications.",
+      features: [
+        "Natural language processing for complex queries",
+        "Integration with business data sources",
+        "Context-aware conversation management",
+        "Scalable cloud-based architecture"
+      ],
+      highlights: [
+        "AWS AI/ML services integration",
+        "Custom prompt engineering for domain-specific responses",
+        "Real-time data retrieval and processing",
+        "Enterprise-grade security and compliance"
+      ]
+    },
+    
+    {
       title: "Music Visualizer",
       technology: "JavaScript",
       description: "An impressive interactive audio-visual experience that combines the power of sound analysis with creative graphics programming. The project showcases a variety of visualizations that respond dynamically to music, creating an immersive and engaging user interface.",
@@ -137,41 +155,8 @@ export default function ProjectsPage() {
         "Memory-efficient data structures",
         "Cross-platform compatibility"
       ]
-    },
-    {
-      title: "Virtual Zoo",
-      technology: "Java",
-      description: "An educational virtual zoo simulation created in Java, demonstrating advanced software engineering principles and interactive user experience design. This project showcases animal behavior modeling and ecosystem simulation.",
-      features: [
-        "Interactive animal exhibits with realistic behaviors",
-        "Ecosystem simulation with environmental factors",
-        "Educational content and animal information system",
-        "User-friendly navigation and exploration interface"
-      ],
-      highlights: [
-        "Design patterns implementation (Observer, Strategy, Factory)",
-        "Multithreaded animal behavior simulation",
-        "Scalable architecture for adding new species",
-        "Comprehensive unit testing coverage"
-      ]
-    },
-    {
-      title: "Amazon Q Business Chatbot",
-      technology: "AI Development",
-      description: "An intelligent chatbot solution utilizing Amazon Q Business to provide sophisticated conversational AI capabilities. This project demonstrates the integration of advanced AI services with business applications.",
-      features: [
-        "Natural language processing for complex queries",
-        "Integration with business data sources",
-        "Context-aware conversation management",
-        "Scalable cloud-based architecture"
-      ],
-      highlights: [
-        "AWS AI/ML services integration",
-        "Custom prompt engineering for domain-specific responses",
-        "Real-time data retrieval and processing",
-        "Enterprise-grade security and compliance"
-      ]
     }
+    
   ]
 
   return (
@@ -180,7 +165,7 @@ export default function ProjectsPage() {
         {/* Hero Section */}
         <section className="text-center space-y-6">
           <h1 className="text-h1 font-semibold text-scientific-950">
-            Personal Projects
+            Projects
           </h1>
           <p className="text-h3 text-scientific-700 max-w-3xl mx-auto leading-relaxed">
             A showcase of innovative projects spanning AI development, interactive media, 

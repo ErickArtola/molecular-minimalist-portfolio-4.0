@@ -11,7 +11,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Thought-cast', href: '/thought-cast' },
+  { label: 'AI ThoughtCast', href: '/thought-cast' },
   { label: 'Oncogenomics', href: '/oncogenomics' },
 ]
 

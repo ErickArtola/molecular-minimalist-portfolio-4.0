@@ -96,7 +96,7 @@ export default function ThoughtCastPage() {
     {
       id: 1,
       title: "AI as Utopia",
-      description: "I would like to talk about the ideas of AI as a means to reaching eutopia.",
+      description: "I would like to talk about the ideas of AI as a means to achieving eutopia.",
       content: `AI is a technology that will be able to exist in anything that is digital. Computer science's solution to intelligence. All the pieces are present to generate such intelligence.
 
 Our AI solution should be trying to heal the sick, curing diseases, helping us explore our solar system. AI will solve work for humanity, AI will remove drudgery from human existence. Food will be abundant, and crime will be nonexistent. Humans will be able to concentrate on becoming self-actualized. AI will be used to expand human aging with the help of stem cell, molecular biology, genetic engineering.
@@ -110,8 +110,8 @@ AI will be able to help us invent new solutions, things we may not have even ima
     {
       id: 2,
       title: "On the Requirements of Artificial General Intelligence",
-      description: "Complete any task a human can complete.",
-      content: `This means a singular entity that can do all human tasks, from manual work like farming, house chores and construction, to the creation of art utilizing real world material via its own desires as an endeavor to be pursued for its sake, resolve any computational task that a human can compute. Our current state requires that more generalized and at the same time highly adept robots. This will require large amounts of computational power which can use current cloud vendors to architect the code. The task of sexual reproduction would be exempt as a requirement.`,
+      description: "Complete any task a human can complete. It must have agency and memory.",
+      content: `This means a singular being that can do all human tasks, from manual work like farming, house chores and construction, to the creation of art utilizing real world material, its own desires as an endeavor to be pursued for its sake, resolve any computational task that a human can compute. Our current state requires that more generalized and at the same time highly adept robots. This will require large amounts of computational power which can use current cloud vendors to architect the code.`,
       audioUrl: "path/to/audio/file.mp3",
       publishDate: "January 22, 2025",
       duration: "35 min",
@@ -154,7 +154,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
         {/* Hero Section */}
         <section className="text-center space-y-6">
           <h1 className="text-h1 font-semibold text-scientific-950">
-            Thought-cast
+            AI ThoughtCast
           </h1>
           <p className="text-h3 text-scientific-700 max-w-3xl mx-auto leading-relaxed">
             Exploring the frontiers of artificial intelligence, cloud computing, and biotechnologies. 
