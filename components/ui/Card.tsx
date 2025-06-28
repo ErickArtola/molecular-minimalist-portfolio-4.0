@@ -1,71 +1,74 @@
-import { ReactNode } from 'react'
+import { ReactNode, ElementType, ComponentPropsWithoutRef } from 'react'
 
-interface CardProps {
+interface BaseCardProps {
   children: ReactNode
+  variant: 'default' | 'elevated' | 'outlined' | 'ghost'
+  size: 'small' | 'medium' | 'large' | 'none'
+  animation?: 'none' | 'fadeIn' | 'slideUp' | 'float' | 'hover' | 'pulse'
+  interactive?: boolean
   className?: string
-  variant?: 'default' | 'elevated' | 'outlined'
-  padding?: 'none' | 'small' | 'medium' | 'large'
-  onClick?: () => void
-  hover?: boolean
 }
 
-export default function Card({ 
-  children, 
+type PolymorphicCardProps<T extends ElementType> = BaseCardProps & {
+  as?: T
+} & Omit<ComponentPropsWithoutRef<T>, keyof BaseCardProps>
+
+export default function Card<T extends ElementType = 'div'>({
+  children,
+  as,
+  variant,
+  size,
+  animation = 'none',
+  interactive = false,
   className = '',
-  variant = 'default',
-  padding = 'medium',
-  onClick,
-  hover = false
-}: CardProps) {
-  const baseClasses = 'rounded-lg transition-all duration-200'
-  
+  ...props
+}: PolymorphicCardProps<T>) {
+  const Component = as || 'div'
+
   const variantClasses = {
     default: 'bg-white border border-scientific-100 shadow-molecular-sm',
     elevated: 'bg-white shadow-molecular-md',
-    outlined: 'bg-white border-2 border-scientific-200'
+    outlined: 'bg-white border-2 border-scientific-200',
+    ghost: 'bg-transparent border border-dashed border-scientific-300'
   }
 
-  const paddingClasses = {
-    none: '',
+  const sizeClasses = {
     small: 'p-4',
     medium: 'p-6',
-    large: 'p-8'
+    large: 'p-8',
+    none: ''
   }
 
-  const hoverClasses = hover || onClick 
-    ? 'hover:shadow-molecular-md hover:border-scientific-200 cursor-pointer' 
+  const animationClasses = {
+    none: '',
+    fadeIn: 'animate-fade-in',
+    slideUp: 'animate-slide-up',
+    float: 'animate-molecular-float',
+    hover: 'hover:scale-105 hover:shadow-molecular-md transform transition-all duration-300',
+    pulse: 'hover:animate-pulse'
+  }
+
+  const interactiveClasses = interactive 
+    ? 'cursor-pointer hover:shadow-molecular-md focus:outline-none focus:ring-2 focus:ring-accent ring-offset-2 ring-offset-bg-primary' 
     : ''
 
   const combinedClasses = `
-    ${baseClasses}
+    rounded-lg transition-all duration-250
     ${variantClasses[variant]}
-    ${paddingClasses[padding]}
-    ${hoverClasses}
+    ${sizeClasses[size]}
+    ${animationClasses[animation]}
+    ${interactiveClasses}
     ${className}
   `.trim()
 
-  if (onClick) {
-    return (
-      <div
-        onClick={onClick}
-        className={combinedClasses}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            onClick()
-          }
-        }}
-      >
-        {children}
-      </div>
-    )
-  }
-
   return (
-    <div className={combinedClasses}>
+    <Component 
+      className={combinedClasses}
+      tabIndex={interactive ? 0 : undefined}
+      role={interactive ? 'button' : undefined}
+      {...props}
+    >
       {children}
-    </div>
+    </Component>
   )
 }
