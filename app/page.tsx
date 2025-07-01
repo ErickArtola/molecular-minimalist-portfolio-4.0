@@ -203,10 +203,10 @@ export default function HomePage() {
                 for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-primary">
+                <button type="button" className="btn-primary">
                   View Research Projects
                 </button>
-                <button className="btn-secondary">
+                <button type="button" className="btn-secondary">
                   Get in Touch
                 </button>
               </div>
