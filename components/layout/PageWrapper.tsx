@@ -18,16 +18,17 @@ export default function PageWrapper({
   }
 
   return (
-    <div className={`
-      min-h-[calc(100vh-400px)]
-      py-12 lg:py-16
-      ${className}
-    `}>
-      <div className={`
-        ${widthClasses[width]}
-        mx-auto
-        px-4 sm:px-6 lg:px-8
-      `}>
+    <div
+      className={`flex min-h-full flex-col py-12 lg:py-16 ${className}`}
+    >
+      <div
+        className={`
+          ${widthClasses[width]}
+          flex-1
+          mx-auto
+          px-4 sm:px-6 lg:px-8
+        `}
+      >
         {children}
       </div>
     </div>
