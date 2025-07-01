@@ -86,12 +86,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
       <div className="flex gap-3 pt-4 border-t border-scientific-100">
         {demoUrl && (
-          <button className="btn-primary text-small py-2 px-4">
+          <button type="button" className="btn-primary text-small py-2 px-4">
             View Demo
           </button>
         )}
         {githubUrl && (
-          <button className="btn-secondary text-small py-2 px-4">
+          <button type="button" className="btn-secondary text-small py-2 px-4">
             View Code
           </button>
         )}
@@ -229,7 +229,7 @@ export default function ProjectsPage() {
             I'm always excited to work on innovative projects that combine technology 
             with real-world impact. Let's build something amazing together.
           </p>
-          <button className="btn-primary">
+          <button type="button" className="btn-primary">
             Get in Touch
           </button>
         </section>

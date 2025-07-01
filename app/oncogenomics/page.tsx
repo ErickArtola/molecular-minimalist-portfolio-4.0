@@ -319,10 +319,10 @@ export default function OncogenomicsPage() {
             treatments and improve patient outcomes together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary">
+            <button type="button" className="btn-primary">
               View Research Proposals
             </button>
-            <button className="btn-secondary">
+            <button type="button" className="btn-secondary">
               Contact for Collaboration
             </button>
           </div>

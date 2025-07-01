@@ -204,7 +204,8 @@ AI will be able to help us invent new solutions, things we may not have even ima
                 <p className="text-body text-scientific-600">
                   Try adjusting your search terms or browse all episodes.
                 </p>
-                <button 
+                <button
+                  type="button"
                   onClick={() => setSearchTerm('')}
                   className="btn-secondary"
                 >
@@ -270,7 +271,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 text-body bg-white border border-scientific-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
             />
-            <button className="btn-primary whitespace-nowrap">
+            <button type="button" className="btn-primary whitespace-nowrap">
               Subscribe
             </button>
           </div>
