@@ -20,22 +20,10 @@ export default function Header() {
   const isHome = pathname === '/'
 
   return (
-    <header
-      className={
-        isHome ? 'absolute inset-x-0 top-0 z-10' : 'bg-white border-b border-scientific-100'
-      }
-    >
-      <div
-        className={`container-scientific flex items-center justify-between py-6 lg:py-8 ${
-          isHome ? 'text-white' : ''
-        }`}
-      >
+    <header className={isHome ? 'absolute inset-x-0 top-0 z-10 bg-hero-gray' : 'bg-hero-gray'}>
+      <div className="container-scientific flex items-center justify-between py-6 lg:py-8 text-hero-text">
         <Link href="/" className="font-bold">
-          <span
-            className={isHome ? 'bg-black/70 px-3 py-1 rounded text-white' : 'text-scientific-950'}
-          >
-            EGA
-          </span>
+          <span className="text-hero-text">EGA</span>
         </Link>
         <nav className="flex flex-wrap gap-x-8 gap-y-3">
           {navItems.map((item) => {
@@ -45,15 +33,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`text-body font-medium transition-colors duration-200 ${
-                  isHome ? 'text-white hover:underline' : ''
-                } ${
-                  isActive
-                    ? isHome
-                      ? 'underline decoration-2'
-                      : 'text-scientific-950 underline underline-offset-4 decoration-2 decoration-accent'
-                    : !isHome
-                    ? 'text-scientific-700 hover:text-scientific-950 hover:underline hover:underline-offset-4 hover:decoration-1'
-                    : ''
+                  isActive ? 'underline decoration-accent decoration-2' : 'hover:underline'
                 }`}
               >
                 {item.label}

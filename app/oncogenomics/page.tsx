@@ -27,31 +27,31 @@ const ProjectCard: React.FC<ResearchProjectProps> = ({
     <div className="space-y-4">
       {/* Project Header */}
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-h2 font-medium text-scientific-950 flex-1">{title}</h3>
+        <h3 className="text-h2 font-medium text-hero-text flex-1">{title}</h3>
         <span className={`text-small font-medium px-3 py-1 rounded-full ${
           status === 'active' 
             ? 'bg-green-100 text-green-800' 
             : status === 'completed'
             ? 'bg-blue-100 text-blue-800'
-            : 'bg-scientific-100 text-scientific-700'
+            : 'bg-scientific-100 text-hero-text'
         }`}>
           {status === 'active' ? 'Active' : status === 'completed' ? 'Completed' : 'Planning'}
         </span>
       </div>
       
       {/* Description */}
-      <p className="text-body text-scientific-700 leading-relaxed">
+      <p className="text-body text-hero-text leading-relaxed">
         {description}
       </p>
       
       {/* Technologies */}
       <div className="space-y-2">
-        <h4 className="text-body font-medium text-scientific-800">Technologies</h4>
+        <h4 className="text-body font-medium text-hero-text">Technologies</h4>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
             <span 
               key={index}
-              className="text-small px-3 py-1 bg-scientific-100 text-scientific-700 rounded-full"
+              className="text-small px-3 py-1 bg-scientific-100 text-hero-text rounded-full"
             >
               {tech}
             </span>
@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ResearchProjectProps> = ({
       {/* Collaborators */}
       {collaborators && collaborators.length > 0 && (
         <div className="space-y-2">
-          <h4 className="text-body font-medium text-scientific-800">Collaborators</h4>
+          <h4 className="text-body font-medium text-hero-text">Collaborators</h4>
           <div className="flex flex-wrap gap-2">
             {collaborators.map((collaborator, index) => (
               <span 
@@ -130,10 +130,10 @@ export default function OncogenomicsPage() {
       <div className="space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6">
-          <h1 className="text-h1 font-semibold text-scientific-950">
+          <h1 className="text-h1 font-semibold text-hero-text">
             Oncogenomics Research
           </h1>
-          <p className="text-h3 text-scientific-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-h3 text-hero-text max-w-4xl mx-auto leading-relaxed">
             Exploring the intersection of artificial intelligence, cloud computing, and cancer genomics 
             to advance precision medicine and therapeutic discovery.
           </p>
@@ -142,10 +142,10 @@ export default function OncogenomicsPage() {
         {/* Research Focus */}
         <section className="space-y-8">
           <div className="text-center">
-            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+            <h2 className="text-h2 font-semibold text-hero-text mb-4">
               Research Focus
             </h2>
-            <p className="text-body text-scientific-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
               My research interests lie at the convergence of computational methods and cancer biology, 
               leveraging cloud-scale computing and machine learning to understand the genomic landscape 
               of cancer. This interdisciplinary approach combines my technical expertise in cloud 
@@ -157,7 +157,7 @@ export default function OncogenomicsPage() {
         {/* Current Research Areas */}
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+            <h2 className="text-h2 font-semibold text-hero-text mb-4">
               Current Research Areas
             </h2>
           </div>
@@ -172,8 +172,8 @@ export default function OncogenomicsPage() {
                 className="text-center space-y-4"
               >
                 <div className="text-5xl mb-4">{area.icon}</div>
-                <h3 className="text-h3 font-medium text-scientific-950">{area.title}</h3>
-                <p className="text-body text-scientific-700 leading-relaxed">{area.description}</p>
+                <h3 className="text-h3 font-medium text-hero-text">{area.title}</h3>
+                <p className="text-body text-hero-text leading-relaxed">{area.description}</p>
               </Card>
             ))}
           </div>
@@ -182,10 +182,10 @@ export default function OncogenomicsPage() {
         {/* Research Projects */}
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+            <h2 className="text-h2 font-semibold text-hero-text mb-4">
               Research Projects
             </h2>
-            <p className="text-body text-scientific-600">
+            <p className="text-body text-hero-text">
               Current and planned research initiatives at the intersection of AI and genomics
             </p>
           </div>
@@ -201,16 +201,16 @@ export default function OncogenomicsPage() {
         <section className="section-spacing border-t border-scientific-100">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="space-y-6">
-              <h2 className="text-h2 font-semibold text-scientific-950">
+              <h2 className="text-h2 font-semibold text-hero-text">
                 Research Methodology
               </h2>
               <div className="space-y-4">
-                <p className="text-body text-scientific-700 leading-relaxed">
+                <p className="text-body text-hero-text leading-relaxed">
                   My approach combines computational genomics with cloud-native architectures, 
                   enabling scalable analysis of large genomic datasets. I leverage machine learning 
                   to identify patterns in cancer genomics data that traditional methods might miss.
                 </p>
-                <p className="text-body text-scientific-700 leading-relaxed">
+                <p className="text-body text-hero-text leading-relaxed">
                   The integration of AWS cloud services allows for processing of multi-terabyte 
                   genomic datasets, while advanced AI models help identify potential therapeutic 
                   targets and biomarkers for precision medicine applications.
@@ -219,11 +219,11 @@ export default function OncogenomicsPage() {
             </div>
             
             <Card variant="elevated" size="medium" className="space-y-6">
-              <h3 className="text-h3 font-medium text-scientific-950">Key Technologies</h3>
+              <h3 className="text-h3 font-medium text-hero-text">Key Technologies</h3>
               <div className="grid grid-cols-2 gap-4 text-small">
                 <div className="space-y-2">
-                  <h4 className="font-medium text-scientific-800">AI/ML Frameworks</h4>
-                  <ul className="text-scientific-600 space-y-1">
+                  <h4 className="font-medium text-hero-text">AI/ML Frameworks</h4>
+                  <ul className="text-hero-text space-y-1">
                     <li>• TensorFlow & PyTorch</li>
                     <li>• Scikit-learn</li>
                     <li>• Transformers</li>
@@ -231,8 +231,8 @@ export default function OncogenomicsPage() {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-medium text-scientific-800">Cloud & Infrastructure</h4>
-                  <ul className="text-scientific-600 space-y-1">
+                  <h4 className="font-medium text-hero-text">Cloud & Infrastructure</h4>
+                  <ul className="text-hero-text space-y-1">
                     <li>• AWS SageMaker</li>
                     <li>• AWS Batch</li>
                     <li>• Kubernetes</li>
@@ -240,8 +240,8 @@ export default function OncogenomicsPage() {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-medium text-scientific-800">Genomics Tools</h4>
-                  <ul className="text-scientific-600 space-y-1">
+                  <h4 className="font-medium text-hero-text">Genomics Tools</h4>
+                  <ul className="text-hero-text space-y-1">
                     <li>• GATK</li>
                     <li>• Nextflow</li>
                     <li>• Bioconductor</li>
@@ -249,8 +249,8 @@ export default function OncogenomicsPage() {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-medium text-scientific-800">Data Analysis</h4>
-                  <ul className="text-scientific-600 space-y-1">
+                  <h4 className="font-medium text-hero-text">Data Analysis</h4>
+                  <ul className="text-hero-text space-y-1">
                     <li>• R & Python</li>
                     <li>• Jupyter Notebooks</li>
                     <li>• Apache Spark</li>
@@ -265,22 +265,22 @@ export default function OncogenomicsPage() {
         {/* Collaboration Section */}
         <section className="space-y-8">
           <div className="text-center">
-            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+            <h2 className="text-h2 font-semibold text-hero-text mb-4">
               Collaborations & Future Work
             </h2>
           </div>
           
           <div className="grid gap-8 md:grid-cols-2">
             <Card variant="outlined" size="medium" className="space-y-4">
-              <h3 className="text-h3 font-medium text-scientific-950">Open to Collaboration</h3>
-              <p className="text-body text-scientific-700 leading-relaxed">
+              <h3 className="text-h3 font-medium text-hero-text">Open to Collaboration</h3>
+              <p className="text-body text-hero-text leading-relaxed">
                 I'm actively seeking collaborations with cancer research institutions, 
                 biotechnology companies, and academic researchers working at the intersection 
                 of genomics, artificial intelligence, and cloud computing.
               </p>
               <div className="space-y-2">
-                <h4 className="text-body font-medium text-scientific-800">Areas of Interest:</h4>
-                <ul className="text-small text-scientific-600 space-y-1">
+                <h4 className="text-body font-medium text-hero-text">Areas of Interest:</h4>
+                <ul className="text-small text-hero-text space-y-1">
                   <li>• Multi-omics data integration</li>
                   <li>• Drug discovery pipelines</li>
                   <li>• Biomarker identification</li>
@@ -290,15 +290,15 @@ export default function OncogenomicsPage() {
             </Card>
             
             <Card variant="outlined" size="medium" className="space-y-4">
-              <h3 className="text-h3 font-medium text-scientific-950">Publications & Presentations</h3>
-              <p className="text-body text-scientific-700 leading-relaxed">
+              <h3 className="text-h3 font-medium text-hero-text">Publications & Presentations</h3>
+              <p className="text-body text-hero-text leading-relaxed">
                 Research publications and conference presentations will be listed here as they 
                 become available. Currently preparing manuscripts on AI applications in 
                 cancer genomics and cloud architectures for precision medicine.
               </p>
               <div className="space-y-2">
-                <h4 className="text-body font-medium text-scientific-800">Upcoming:</h4>
-                <ul className="text-small text-scientific-600 space-y-1">
+                <h4 className="text-body font-medium text-hero-text">Upcoming:</h4>
+                <ul className="text-small text-hero-text space-y-1">
                   <li>• ASHG 2025 Conference</li>
                   <li>• Nature Biotechnology (In Review)</li>
                   <li>• AWS re:Invent Healthcare Track</li>
@@ -310,10 +310,10 @@ export default function OncogenomicsPage() {
 
         {/* Call to Action */}
         <section className="text-center space-y-6 section-spacing bg-gradient-scientific rounded-lg">
-          <h2 className="text-h2 font-semibold text-scientific-950">
+          <h2 className="text-h2 font-semibold text-hero-text">
             Advancing Precision Medicine Through AI
           </h2>
-          <p className="text-body text-scientific-700 max-w-2xl mx-auto">
+          <p className="text-body text-hero-text max-w-2xl mx-auto">
             Interested in collaborating on cutting-edge research that combines artificial intelligence 
             with cancer genomics? Let's explore how we can accelerate the development of personalized 
             treatments and improve patient outcomes together.

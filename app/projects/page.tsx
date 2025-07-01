@@ -33,12 +33,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
     <div className="space-y-6">
       <div className="space-y-3">
         <div className="flex items-start justify-between">
-          <h3 className="text-h2 font-medium text-scientific-950">{title}</h3>
+          <h3 className="text-h2 font-medium text-hero-text">{title}</h3>
           <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
             {technology}
           </span>
         </div>
-        <p className="text-body text-scientific-700 leading-relaxed">
+        <p className="text-body text-hero-text leading-relaxed">
           {description}
         </p>
       </div>
@@ -58,10 +58,10 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
       {features && features.length > 0 && (
         <div className="space-y-3">
-          <h4 className="text-body font-medium text-scientific-800">Key Features:</h4>
+          <h4 className="text-body font-medium text-hero-text">Key Features:</h4>
           <ul className="space-y-2">
             {features.map((feature, index) => (
-              <li key={index} className="text-small text-scientific-700 flex items-start gap-2">
+              <li key={index} className="text-small text-hero-text flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
                 {feature}
               </li>
@@ -72,10 +72,10 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
       {highlights && highlights.length > 0 && (
         <div className="space-y-3">
-          <h4 className="text-body font-medium text-scientific-800">Technical Highlights:</h4>
+          <h4 className="text-body font-medium text-hero-text">Technical Highlights:</h4>
           <ul className="space-y-2">
             {highlights.map((highlight, index) => (
-              <li key={index} className="text-small text-scientific-700 flex items-start gap-2">
+              <li key={index} className="text-small text-hero-text flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
                 {highlight}
               </li>
@@ -164,10 +164,10 @@ export default function ProjectsPage() {
       <div className="space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6">
-          <h1 className="text-h1 font-semibold text-scientific-950">
+          <h1 className="text-h1 font-semibold text-hero-text">
             Projects
           </h1>
-          <p className="text-h3 text-scientific-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-h3 text-hero-text max-w-3xl mx-auto leading-relaxed">
             A showcase of innovative projects spanning AI development, interactive media, 
             and software engineering. Each project demonstrates technical expertise and 
             creative problem-solving in different domains.
@@ -191,7 +191,7 @@ export default function ProjectsPage() {
         {/* Technology Stack Overview */}
         <section className="section-spacing border-t border-scientific-100">
           <div className="text-center space-y-8">
-            <h2 className="text-h2 font-semibold text-scientific-950">
+            <h2 className="text-h2 font-semibold text-hero-text">
               Technology Stack
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -212,8 +212,8 @@ export default function ProjectsPage() {
                   animation="hover"
                   className="text-center"
                 >
-                  <h4 className="font-medium text-scientific-950 mb-1">{tech.name}</h4>
-                  <p className="text-small text-scientific-600">{tech.description}</p>
+                  <h4 className="font-medium text-hero-text mb-1">{tech.name}</h4>
+                  <p className="text-small text-hero-text">{tech.description}</p>
                 </Card>
               ))}
             </div>
@@ -222,10 +222,10 @@ export default function ProjectsPage() {
 
         {/* Call to Action */}
         <section className="text-center space-y-6 section-spacing bg-gradient-scientific rounded-lg">
-          <h2 className="text-h2 font-semibold text-scientific-950">
+          <h2 className="text-h2 font-semibold text-hero-text">
             Interested in Collaboration?
           </h2>
-          <p className="text-body text-scientific-700 max-w-2xl mx-auto">
+          <p className="text-body text-hero-text max-w-2xl mx-auto">
             I'm always excited to work on innovative projects that combine technology 
             with real-world impact. Let's build something amazing together.
           </p>

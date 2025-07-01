@@ -34,28 +34,28 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
     {/* Episode Header */}
     <div className="space-y-3">
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-h2 font-medium text-scientific-950 flex-1">{title}</h3>
+        <h3 className="text-h2 font-medium text-hero-text flex-1">{title}</h3>
         <div className="flex flex-col items-end gap-2">
           <span className={`text-small font-medium px-3 py-1 rounded-full ${
             status === 'published' 
               ? 'bg-green-100 text-green-800' 
-              : 'bg-scientific-100 text-scientific-700'
+              : 'bg-scientific-100 text-hero-text'
           }`}>
             {status === 'published' ? 'Published' : 'Coming Soon'}
           </span>
           {duration && (
-            <span className="text-small text-scientific-600">{duration}</span>
+            <span className="text-small text-hero-text">{duration}</span>
           )}
         </div>
       </div>
       
       {publishDate && (
-        <p className="text-small text-scientific-600">
+        <p className="text-small text-hero-text">
           {publishDate}
         </p>
       )}
       
-      <p className="text-body text-scientific-700 leading-relaxed">
+      <p className="text-body text-hero-text leading-relaxed">
         {description}
       </p>
     </div>
@@ -63,7 +63,7 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
     {/* Episode Content */}
     {content && (
       <div className="prose prose-scientific max-w-none">
-        <div className="text-body text-scientific-700 leading-relaxed whitespace-pre-line">
+        <div className="text-body text-hero-text leading-relaxed whitespace-pre-line">
           {content}
         </div>
       </div>
@@ -72,7 +72,7 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
     {/* Audio Player */}
     {audioUrl && status === 'published' && (
       <div className="space-y-3">
-        <h4 className="text-body font-medium text-scientific-800">Listen to Episode</h4>
+        <h4 className="text-body font-medium text-hero-text">Listen to Episode</h4>
         <audio 
           controls 
           className="w-full"
@@ -153,10 +153,10 @@ AI will be able to help us invent new solutions, things we may not have even ima
       <div className="space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6">
-          <h1 className="text-h1 font-semibold text-scientific-950">
+          <h1 className="text-h1 font-semibold text-hero-text">
             AI ThoughtCast
           </h1>
-          <p className="text-h3 text-scientific-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-h3 text-hero-text max-w-3xl mx-auto leading-relaxed">
             Exploring the frontiers of artificial intelligence, cloud computing, and biotechnologies. 
             Deep conversations about the future of technology and its impact on humanity.
           </p>
@@ -173,7 +173,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
               className="w-full px-6 py-4 text-body bg-white border border-scientific-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors duration-200"
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-6">
-              <svg className="w-5 h-5 text-scientific-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-hero-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
@@ -183,10 +183,10 @@ AI will be able to help us invent new solutions, things we may not have even ima
         {/* Episodes Section */}
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
+            <h2 className="text-h2 font-semibold text-hero-text mb-4">
               Episodes
             </h2>
-            <p className="text-body text-scientific-600">
+            <p className="text-body text-hero-text">
               {filteredEpisodes.length} episode{filteredEpisodes.length !== 1 ? 's' : ''} found
             </p>
           </div>
@@ -200,8 +200,8 @@ AI will be able to help us invent new solutions, things we may not have even ima
           {filteredEpisodes.length === 0 && (
             <Card variant="outlined" size="large" className="text-center">
               <div className="space-y-3">
-                <h3 className="text-h3 font-medium text-scientific-800">No episodes found</h3>
-                <p className="text-body text-scientific-600">
+                <h3 className="text-h3 font-medium text-hero-text">No episodes found</h3>
+                <p className="text-body text-hero-text">
                   Try adjusting your search terms or browse all episodes.
                 </p>
                 <button
@@ -219,7 +219,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
         {/* Topics Section */}
         <section className="section-spacing border-t border-scientific-100">
           <div className="text-center space-y-8">
-            <h2 className="text-h2 font-semibold text-scientific-950">
+            <h2 className="text-h2 font-semibold text-hero-text">
               Featured Topics
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -248,8 +248,8 @@ AI will be able to help us invent new solutions, things we may not have even ima
                   className="text-center"
                 >
                   <div className="text-4xl mb-3">{topic.icon}</div>
-                  <h4 className="text-h3 font-medium text-scientific-950 mb-2">{topic.title}</h4>
-                  <p className="text-small text-scientific-600">{topic.description}</p>
+                  <h4 className="text-h3 font-medium text-hero-text mb-2">{topic.title}</h4>
+                  <p className="text-small text-hero-text">{topic.description}</p>
                 </Card>
               ))}
             </div>
@@ -258,10 +258,10 @@ AI will be able to help us invent new solutions, things we may not have even ima
 
         {/* Subscribe Section */}
         <section className="text-center space-y-6 section-spacing bg-gradient-scientific rounded-lg">
-          <h2 className="text-h2 font-semibold text-scientific-950">
+          <h2 className="text-h2 font-semibold text-hero-text">
             Stay Updated
           </h2>
-          <p className="text-body text-scientific-700 max-w-2xl mx-auto">
+          <p className="text-body text-hero-text max-w-2xl mx-auto">
             New episodes explore cutting-edge topics in AI, biotechnology, and the future of human-machine collaboration. 
             Join the conversation about technology's role in shaping our future.
           </p>
