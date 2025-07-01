@@ -189,7 +189,7 @@ export default function ProjectsPage() {
         </section>
 
         {/* Technology Stack Overview */}
-        <section className="py-16 border-t border-scientific-100">
+        <section className="section-spacing border-t border-scientific-100">
           <div className="text-center space-y-8">
             <h2 className="text-h2 font-semibold text-scientific-950">
               Technology Stack
@@ -221,7 +221,7 @@ export default function ProjectsPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
+        <section className="text-center space-y-6 section-spacing bg-gradient-scientific rounded-lg">
           <h2 className="text-h2 font-semibold text-scientific-950">
             Interested in Collaboration?
           </h2>

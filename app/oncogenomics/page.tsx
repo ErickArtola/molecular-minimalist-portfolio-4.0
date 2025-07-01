@@ -198,7 +198,7 @@ export default function OncogenomicsPage() {
         </section>
 
         {/* Methodology Section */}
-        <section className="py-16 border-t border-scientific-100">
+        <section className="section-spacing border-t border-scientific-100">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="space-y-6">
               <h2 className="text-h2 font-semibold text-scientific-950">
@@ -309,7 +309,7 @@ export default function OncogenomicsPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
+        <section className="text-center space-y-6 section-spacing bg-gradient-scientific rounded-lg">
           <h2 className="text-h2 font-semibold text-scientific-950">
             Advancing Precision Medicine Through AI
           </h2>

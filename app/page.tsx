@@ -51,7 +51,7 @@ export default function HomePage() {
       <div className="bg-hero-gray">
         <PageWrapper>
           {/* About Section */}
-          <section className="py-16 lg:py-24">
+          <section className="section-spacing">
             <h2 className="text-h1 font-semibold text-white mb-12">About</h2>
             
             <div className="grid gap-8 lg:grid-cols-2">
@@ -90,7 +90,7 @@ export default function HomePage() {
           </section>
 
           {/* Experience Timeline */}
-          <section className="py-16 lg:py-24">
+          <section className="section-spacing">
             <h2 className="text-h1 font-semibold text-white mb-12">Professional Journey</h2>
             
             <div className="space-y-8">
@@ -148,7 +148,7 @@ export default function HomePage() {
           </section>
 
           {/* Certifications Section */}
-          <section className="py-16 lg:py-24">
+          <section className="section-spacing">
             <h2 className="text-h1 font-semibold text-hero-text mb-12">Technical Certifications</h2>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -192,7 +192,7 @@ export default function HomePage() {
           </section>
 
           {/* Call to Action */}
-          <section className="py-16 lg:py-24 border-t border-scientific-100">
+          <section className="section-spacing border-t border-scientific-100">
             <div className="text-center space-y-8 max-w-3xl mx-auto">
               <h2 className="text-h1 font-semibold text-hero-text">
                 Let's Advance Science Together
