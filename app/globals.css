@@ -10,7 +10,7 @@
   }
   
   body {
-    @apply font-sans text-body text-scientific-900 bg-bg-primary antialiased;
+    @apply font-sans text-body text-hero-text bg-bg-primary antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -19,29 +19,29 @@
   
   /* Scientific Heading Hierarchy */
   h1 {
-    @apply text-h1 font-semibold text-scientific-950 tracking-tight;
+    @apply text-h1 font-semibold text-hero-text tracking-tight;
   }
-  
+
   h2 {
-    @apply text-h2 font-semibold text-scientific-950 tracking-tight;
+    @apply text-h2 font-semibold text-hero-text tracking-tight;
   }
-  
+
   h3 {
-    @apply text-h3 font-medium text-scientific-900;
+    @apply text-h3 font-medium text-hero-text;
   }
-  
+
   h4 {
-    @apply text-body font-medium text-scientific-800;
+    @apply text-body font-medium text-hero-text;
   }
   
   /* Scientific Paragraph Spacing */
   p {
-    @apply text-body text-scientific-700 leading-relaxed;
+    @apply text-body text-hero-text leading-relaxed;
   }
   
   /* Links - Scientific Precision */
   a {
-    @apply text-accent hover:text-secondary transition-colors duration-250;
+    @apply text-hero-text hover:text-accent transition-colors duration-250;
     text-decoration: none;
   }
   
@@ -86,12 +86,12 @@
   
   /* Primary Scientific Button */
   .btn-primary {
-    @apply btn-scientific bg-scientific-950 text-white hover:bg-scientific-800 focus:ring-scientific-500;
+    @apply btn-scientific bg-scientific-950 text-hero-text hover:bg-scientific-800 focus:ring-scientific-500;
   }
   
   /* Secondary Scientific Button */
   .btn-secondary {
-    @apply btn-scientific bg-scientific-100 text-scientific-950 hover:bg-scientific-200 focus:ring-scientific-300;
+    @apply btn-scientific bg-scientific-100 text-hero-text hover:bg-scientific-200 focus:ring-scientific-300;
   }
   
   /* Scientific Section Spacing */

@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="font-sans antialiased bg-bg-primary text-scientific-900 min-h-screen flex flex-col">
+      <body className="font-sans antialiased bg-bg-primary text-hero-text min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
           {children}
