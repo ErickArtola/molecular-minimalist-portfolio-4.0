@@ -26,6 +26,9 @@ module.exports = {
         // Secondary and accent colors
         'secondary': '#0077b6',
         'accent': '#00b4d8',
+
+        // Hero text color
+        'hero-text': '#ffffff',
         
         // Neutral molecular grays
         'molecular': {
