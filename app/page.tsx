@@ -149,7 +149,7 @@ export default function HomePage() {
 
           {/* Certifications Section */}
           <section className="py-16 lg:py-24">
-            <h2 className="text-h1 font-semibold text-scientific-950 mb-12">Technical Certifications</h2>
+            <h2 className="text-h1 font-semibold text-hero-text mb-12">Technical Certifications</h2>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <CertificationBadge
@@ -194,12 +194,12 @@ export default function HomePage() {
           {/* Call to Action */}
           <section className="py-16 lg:py-24 border-t border-scientific-100">
             <div className="text-center space-y-8 max-w-3xl mx-auto">
-              <h2 className="text-h1 font-semibold text-scientific-950">
+              <h2 className="text-h1 font-semibold text-hero-text">
                 Let's Advance Science Together
               </h2>
-              <p className="text-h3 text-scientific-700 leading-relaxed">
-                I'm always interested in collaborating on projects at the intersection of AI and genomics. 
-                Whether you're working on computational biology challenges, need cloud architecture expertise 
+              <p className="text-h3 text-white leading-relaxed">
+                I'm always interested in collaborating on projects at the intersection of AI and genomics.
+                Whether you're working on computational biology challenges, need cloud architecture expertise
                 for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
