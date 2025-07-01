@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header
       className={
-        isHome ? 'absolute inset-x-0 top-0 z-10' : 'bg-white border-b border-scientific-100'
+        isHome ? 'absolute inset-x-0 top-0 z-50' : 'bg-white border-b border-scientific-100'
       }
     >
       <div
@@ -37,14 +37,14 @@ export default function Header() {
             EGA
           </span>
         </Link>
-        <nav className="flex flex-wrap gap-x-8 gap-y-3">
+        <nav className="flex flex-wrap gap-x-8 gap-y-3 pointer-events-auto">
           {navItems.map((item) => {
             const isActive = pathname === item.href
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-body font-medium transition-colors duration-200 ${
+                className={`text-body font-medium transition-colors duration-200 cursor-pointer py-2 px-1 ${
                   isHome ? 'text-white hover:underline' : ''
                 } ${
                   isActive
