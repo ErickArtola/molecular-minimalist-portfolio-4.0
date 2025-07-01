@@ -216,7 +216,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
         </section>
 
         {/* Topics Section */}
-        <section className="py-16 border-t border-scientific-100">
+        <section className="section-spacing border-t border-scientific-100">
           <div className="text-center space-y-8">
             <h2 className="text-h2 font-semibold text-scientific-950">
               Featured Topics
@@ -256,7 +256,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
         </section>
 
         {/* Subscribe Section */}
-        <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
+        <section className="text-center space-y-6 section-spacing bg-gradient-scientific rounded-lg">
           <h2 className="text-h2 font-semibold text-scientific-950">
             Stay Updated
           </h2>
