@@ -6,7 +6,7 @@ import { CertificationBadge } from '@/components/content/CertificationBadge';
 
 export default function HomePage() {
   return (
-    <div className="bg-[#989898] min-h-screen">
+    <div className="bg-hero-gray min-h-screen">
       {/* Hero Section with Extended Background */}
       <section className="relative min-h-screen overflow-hidden">
         {/* DNA Background Image - Extended beyond viewport */}
@@ -22,7 +22,7 @@ export default function HomePage() {
           {/* Gradient overlays for smooth transition */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
           {/* Extended gradient for smooth blend to matching background */}
-          <div className="absolute inset-x-0 bottom-0 h-[80vh] bg-gradient-to-b from-transparent via-[#989898]/30 to-[#989898]" />
+          <div className="absolute inset-x-0 bottom-0 h-[80vh] bg-gradient-to-b from-transparent via-hero-gray/30 to-hero-gray" />
         </div>
         
         {/* Text Content - Positioned in lower left with more vertical centering */}
@@ -48,14 +48,14 @@ export default function HomePage() {
       </section>
 
       {/* Content sections with matching background */}
-      <div className="bg-[#989898]">
+      <div className="bg-hero-gray">
         <PageWrapper>
           {/* About Section */}
           <section className="py-16 lg:py-24">
             <h2 className="text-h1 font-semibold text-white mb-12">About</h2>
             
             <div className="grid gap-8 lg:grid-cols-2">
-              <Card variant="elevated" size="medium" className="bg-[#989898] border-white/20 shadow-lg space-y-6">
+              <Card variant="elevated" size="medium" className="bg-hero-gray border-white/20 shadow-lg space-y-6">
                 <div className="space-y-4">
                   <h3 className="text-h2 font-medium text-white">Background</h3>
                   <p className="text-body text-white/90 leading-relaxed">
@@ -71,7 +71,7 @@ export default function HomePage() {
                 </div>
               </Card>
               
-              <Card variant="elevated" size="medium" className="bg-[#989898] border-white/20 shadow-lg space-y-6">
+              <Card variant="elevated" size="medium" className="bg-hero-gray border-white/20 shadow-lg space-y-6">
                 <div className="space-y-4">
                   <h3 className="text-h2 font-medium text-white">Research Interests</h3>
                   <p className="text-body text-white/90 leading-relaxed">
@@ -96,7 +96,7 @@ export default function HomePage() {
             <div className="space-y-8">
               {/* Current Role */}
               <div className="relative pl-8 pb-8 border-l-2 border-white/30 last:border-l-0">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full border-4 border-[#989898] shadow-lg" />
+                <div className="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full border-4 border-hero-gray shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <h3 className="text-h2 font-medium text-white">Technical Account Manager</h3>
@@ -114,7 +114,7 @@ export default function HomePage() {
               
               {/* Research Focus */}
               <div className="relative pl-8 pb-8 border-l-2 border-white/30">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-secondary rounded-full border-4 border-[#989898] shadow-lg" />
+                <div className="absolute -left-2 top-0 w-4 h-4 bg-secondary rounded-full border-4 border-hero-gray shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <h3 className="text-h2 font-medium text-white">Independent Research</h3>
@@ -131,7 +131,7 @@ export default function HomePage() {
               
               {/* Education/Early Career */}
               <div className="relative pl-8">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-white/70 rounded-full border-4 border-[#989898] shadow-lg" />
+                <div className="absolute -left-2 top-0 w-4 h-4 bg-white/70 rounded-full border-4 border-hero-gray shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <h3 className="text-h2 font-medium text-white">Technical Foundation</h3>
