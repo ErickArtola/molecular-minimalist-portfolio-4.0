@@ -26,9 +26,9 @@ export default function Card<T extends ElementType = 'div'>({
   const Component = as || 'div'
 
   const variantClasses = {
-    default: 'bg-white border border-scientific-100 shadow-molecular-sm',
-    elevated: 'bg-white shadow-molecular-md',
-    outlined: 'bg-white border-2 border-scientific-200',
+    default: 'bg-hero-gray border border-scientific-100 shadow-molecular-sm',
+    elevated: 'bg-hero-gray shadow-molecular-md',
+    outlined: 'bg-hero-gray border-2 border-scientific-200',
     ghost: 'bg-transparent border border-dashed border-scientific-300'
   }
 
