@@ -26,10 +26,10 @@ export default function Card<T extends ElementType = 'div'>({
   const Component = as || 'div'
 
   const variantClasses = {
-    default: 'bg-white border border-scientific-100 shadow-molecular-sm',
-    elevated: 'bg-white shadow-molecular-md',
-    outlined: 'bg-white border-2 border-scientific-200',
-    ghost: 'bg-transparent border border-dashed border-scientific-300'
+    default: 'bg-bg-primary border border-border-light shadow-sm',
+    elevated: 'bg-bg-primary shadow-md',
+    outlined: 'bg-bg-primary border-2 border-border-medium',
+    ghost: 'bg-transparent border border-dashed border-border-light'
   }
 
   const sizeClasses = {
@@ -43,13 +43,13 @@ export default function Card<T extends ElementType = 'div'>({
     none: '',
     fadeIn: 'animate-fade-in',
     slideUp: 'animate-slide-up',
-    float: 'animate-molecular-float',
-    hover: 'hover:scale-105 hover:shadow-molecular-md transform transition-all duration-300',
+    float: 'animate-float',
+    hover: 'hover:scale-105 hover:shadow-lg transform transition-all duration-300',
     pulse: 'hover:animate-pulse'
   }
 
   const interactiveClasses = interactive 
-    ? 'cursor-pointer hover:shadow-molecular-md focus:outline-none focus:ring-2 focus:ring-accent ring-offset-2 ring-offset-bg-primary' 
+    ? 'cursor-pointer hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent ring-offset-2 ring-offset-bg-primary' 
     : ''
 
   const combinedClasses = `
