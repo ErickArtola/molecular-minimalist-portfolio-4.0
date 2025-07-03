@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '@/components/ui/Card'
 import PageWrapper from '@/components/layout/PageWrapper'
+import PageHero from '@/components/layout/PageHero'
 
 interface ProjectProps {
   title: string
@@ -28,17 +29,17 @@ const ProjectCard: React.FC<ProjectProps> = ({
     variant="elevated" 
     size="medium" 
     animation="hover"
-    className="h-full"
+    className="h-full bg-[#989898] border-white/20 shadow-lg"
   >
     <div className="space-y-6">
       <div className="space-y-3">
         <div className="flex items-start justify-between">
-          <h3 className="text-h2 font-medium text-scientific-950">{title}</h3>
+          <h3 className="text-h2 font-medium text-white">{title}</h3>
           <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
             {technology}
           </span>
         </div>
-        <p className="text-body text-scientific-700 leading-relaxed">
+        <p className="text-body text-white/90 leading-relaxed">
           {description}
         </p>
       </div>
@@ -58,10 +59,10 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
       {features && features.length > 0 && (
         <div className="space-y-3">
-          <h4 className="text-body font-medium text-scientific-800">Key Features:</h4>
+          <h4 className="text-body font-medium text-white">Key Features:</h4>
           <ul className="space-y-2">
             {features.map((feature, index) => (
-              <li key={index} className="text-small text-scientific-700 flex items-start gap-2">
+              <li key={index} className="text-small text-white/80 flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
                 {feature}
               </li>
@@ -72,10 +73,10 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
       {highlights && highlights.length > 0 && (
         <div className="space-y-3">
-          <h4 className="text-body font-medium text-scientific-800">Technical Highlights:</h4>
+          <h4 className="text-body font-medium text-white">Technical Highlights:</h4>
           <ul className="space-y-2">
             {highlights.map((highlight, index) => (
-              <li key={index} className="text-small text-scientific-700 flex items-start gap-2">
+              <li key={index} className="text-small text-white/80 flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
                 {highlight}
               </li>
@@ -160,80 +161,77 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <PageWrapper width="wide">
-      <div className="space-y-16">
-        {/* Hero Section */}
-        <section className="text-center space-y-6">
-          <h1 className="text-h1 font-semibold text-scientific-950">
-            Projects
-          </h1>
-          <p className="text-h3 text-scientific-700 max-w-3xl mx-auto leading-relaxed">
-            A showcase of innovative projects spanning AI development, interactive media, 
-            and software engineering. Each project demonstrates technical expertise and 
-            creative problem-solving in different domains.
-          </p>
-        </section>
-
-        {/* Projects Grid */}
-        <section className="space-y-12">
-          <div className="grid gap-8 lg:gap-12">
-            {projects.map((project, index) => (
-              <div key={index}>
-                <ProjectCard {...project} />
-                {index < projects.length - 1 && (
-                  <div className="mt-12 border-t border-scientific-100" />
-                )}
+    <div className="bg-[#989898] min-h-screen">
+      <PageHero 
+        title="Projects"
+        subtitle="A showcase of innovative projects spanning AI development, interactive media, and software engineering. Each project demonstrates technical expertise and creative problem-solving in different domains."
+      />
+      
+      <div className="bg-[#989898]">
+        <PageWrapper width="wide">
+          <div className="space-y-16 py-16">
+            {/* Projects Grid */}
+            <section className="space-y-12">
+              <div className="grid gap-8 lg:gap-12">
+                {projects.map((project, index) => (
+                  <div key={index}>
+                    <ProjectCard {...project} />
+                    {index < projects.length - 1 && (
+                      <div className="mt-12 border-t border-scientific-100" />
+                    )}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
+            </section>
 
-        {/* Technology Stack Overview */}
-        <section className="py-16 border-t border-scientific-100">
-          <div className="text-center space-y-8">
-            <h2 className="text-h2 font-semibold text-scientific-950">
-              Technology Stack
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {[
-                { name: "JavaScript", description: "Interactive web applications" },
-                { name: "C++", description: "Performance-critical applications" },
-                { name: "Java", description: "Enterprise software solutions" },
-                { name: "AI/ML", description: "Intelligent systems development" },
-                { name: "WebGL", description: "3D graphics and visualization" },
-                { name: "AWS", description: "Cloud infrastructure & AI services" },
-                { name: "React", description: "Modern user interfaces" },
-                { name: "Node.js", description: "Server-side development" }
-              ].map((tech, index) => (
-                <Card 
-                  key={index}
-                  variant="outlined" 
-                  size="small" 
-                  animation="hover"
-                  className="text-center"
-                >
-                  <h4 className="font-medium text-scientific-950 mb-1">{tech.name}</h4>
-                  <p className="text-small text-scientific-600">{tech.description}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+            {/* Technology Stack Overview */}
+            <section className="py-16 border-t border-scientific-100">
+              <div className="text-center space-y-8">
+                <h2 className="text-h2 font-semibold text-white">
+                  Technology Stack
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                  {[
+                    { name: "JavaScript", description: "Interactive web applications" },
+                    { name: "C++", description: "Performance-critical applications" },
+                    { name: "Java", description: "Enterprise software solutions" },
+                    { name: "AI/ML", description: "Intelligent systems development" },
+                    { name: "WebGL", description: "3D graphics and visualization" },
+                    { name: "AWS", description: "Cloud infrastructure & AI services" },
+                    { name: "React", description: "Modern user interfaces" },
+                    { name: "Node.js", description: "Server-side development" }
+                  ].map((tech, index) => (
+                    <Card 
+                      key={index}
+                      variant="outlined" 
+                      size="small" 
+                      animation="hover"
+                      className="text-center"
+                    >
+                      <h4 className="font-medium text-white mb-1">{tech.name}</h4>
+                      <p className="text-small text-white/80">{tech.description}</p>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section>
 
-        {/* Call to Action */}
-        <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
-          <h2 className="text-h2 font-semibold text-scientific-950">
-            Interested in Collaboration?
-          </h2>
-          <p className="text-body text-scientific-700 max-w-2xl mx-auto">
-            I'm always excited to work on innovative projects that combine technology 
-            with real-world impact. Let's build something amazing together.
-          </p>
-          <button className="btn-primary">
-            Get in Touch
-          </button>
-        </section>
+            {/* Call to Action */}
+            <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
+              <h2 className="text-h2 font-semibold text-white">
+                Interested in Collaboration?
+              </h2>
+              <p className="text-body text-white/90 max-w-2xl mx-auto">
+                I'm always excited to work on innovative projects that combine technology 
+                with real-world impact. Let's build something amazing together.
+              </p>
+              <button className="btn-primary">
+                Get in Touch
+              </button>
+            </section>
+          </div>
+        </PageWrapper>
       </div>
-    </PageWrapper>
+    </div>
   )
 }

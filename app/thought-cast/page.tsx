@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Card from '@/components/ui/Card'
 import PageWrapper from '@/components/layout/PageWrapper'
+import PageHero from '@/components/layout/PageHero'
 
 interface EpisodeProps {
   id: number
@@ -29,12 +30,12 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
     variant="elevated" 
     size="medium" 
     animation="hover"
-    className="space-y-6"
+    className="space-y-6 bg-[#989898] border-white/20 shadow-lg"
   >
     {/* Episode Header */}
     <div className="space-y-3">
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-h2 font-medium text-scientific-950 flex-1">{title}</h3>
+        <h3 className="text-h2 font-medium text-white flex-1">{title}</h3>
         <div className="flex flex-col items-end gap-2">
           <span className={`text-small font-medium px-3 py-1 rounded-full ${
             status === 'published' 
@@ -50,12 +51,12 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
       </div>
       
       {publishDate && (
-        <p className="text-small text-scientific-600">
+        <p className="text-small text-white/70">
           {publishDate}
         </p>
       )}
       
-      <p className="text-body text-scientific-700 leading-relaxed">
+      <p className="text-body text-white/90 leading-relaxed">
         {description}
       </p>
     </div>
@@ -63,7 +64,7 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
     {/* Episode Content */}
     {content && (
       <div className="prose prose-scientific max-w-none">
-        <div className="text-body text-scientific-700 leading-relaxed whitespace-pre-line">
+        <div className="text-body text-white/90 leading-relaxed whitespace-pre-line">
           {content}
         </div>
       </div>
@@ -72,7 +73,7 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
     {/* Audio Player */}
     {audioUrl && status === 'published' && (
       <div className="space-y-3">
-        <h4 className="text-body font-medium text-scientific-800">Listen to Episode</h4>
+        <h4 className="text-body font-medium text-white">Listen to Episode</h4>
         <audio 
           controls 
           className="w-full"
@@ -149,133 +150,131 @@ AI will be able to help us invent new solutions, things we may not have even ima
   )
 
   return (
-    <PageWrapper width="default">
-      <div className="space-y-16">
-        {/* Hero Section */}
-        <section className="text-center space-y-6">
-          <h1 className="text-h1 font-semibold text-scientific-950">
-            AI ThoughtCast
-          </h1>
-          <p className="text-h3 text-scientific-700 max-w-3xl mx-auto leading-relaxed">
-            Exploring the frontiers of artificial intelligence, cloud computing, and biotechnologies. 
-            Deep conversations about the future of technology and its impact on humanity.
-          </p>
-        </section>
+    <div className="bg-[#989898] min-h-screen">
+      <PageHero 
+        title="AI ThoughtCast"
+        subtitle="Exploring the frontiers of artificial intelligence, cloud computing, and biotechnologies. Deep conversations about the future of technology and its impact on humanity."
+      />
+      
+      <div className="bg-[#989898]">
+        <PageWrapper width="default">
+          <div className="space-y-16 py-16">
+            {/* Search Section */}
+            <section className="max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search episodes..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-6 py-4 text-body bg-white border border-scientific-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors duration-200"
+                />
+                <div className="absolute inset-y-0 right-0 flex items-center pr-6">
+                  <svg className="w-5 h-5 text-scientific-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+              </div>
+            </section>
 
-        {/* Search Section */}
-        <section className="max-w-2xl mx-auto">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search episodes..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-6 py-4 text-body bg-white border border-scientific-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors duration-200"
-            />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-6">
-              <svg className="w-5 h-5 text-scientific-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-          </div>
-        </section>
-
-        {/* Episodes Section */}
-        <section className="space-y-12">
-          <div className="text-center">
-            <h2 className="text-h2 font-semibold text-scientific-950 mb-4">
-              Episodes
-            </h2>
-            <p className="text-body text-scientific-600">
-              {filteredEpisodes.length} episode{filteredEpisodes.length !== 1 ? 's' : ''} found
-            </p>
-          </div>
-          
-          <div className="space-y-8">
-            {filteredEpisodes.map((episode) => (
-              <EpisodeCard key={episode.id} {...episode} />
-            ))}
-          </div>
-
-          {filteredEpisodes.length === 0 && (
-            <Card variant="outlined" size="large" className="text-center">
-              <div className="space-y-3">
-                <h3 className="text-h3 font-medium text-scientific-800">No episodes found</h3>
-                <p className="text-body text-scientific-600">
-                  Try adjusting your search terms or browse all episodes.
+            {/* Episodes Section */}
+            <section className="space-y-12">
+              <div className="text-center">
+                <h2 className="text-h2 font-semibold text-white mb-4">
+                  Episodes
+                </h2>
+                <p className="text-body text-white/70">
+                  {filteredEpisodes.length} episode{filteredEpisodes.length !== 1 ? 's' : ''} found
                 </p>
-                <button 
-                  onClick={() => setSearchTerm('')}
-                  className="btn-secondary"
-                >
-                  Clear Search
+              </div>
+              
+              <div className="space-y-8">
+                {filteredEpisodes.map((episode) => (
+                  <EpisodeCard key={episode.id} {...episode} />
+                ))}
+              </div>
+
+              {filteredEpisodes.length === 0 && (
+                <Card variant="outlined" size="large" className="text-center">
+                  <div className="space-y-3">
+                    <h3 className="text-h3 font-medium text-scientific-800">No episodes found</h3>
+                    <p className="text-body text-scientific-600">
+                      Try adjusting your search terms or browse all episodes.
+                    </p>
+                    <button 
+                      onClick={() => setSearchTerm('')}
+                      className="btn-secondary"
+                    >
+                      Clear Search
+                    </button>
+                  </div>
+                </Card>
+              )}
+            </section>
+
+            {/* Topics Section */}
+            <section className="py-16 border-t border-scientific-100">
+              <div className="text-center space-y-8">
+                <h2 className="text-h2 font-semibold text-white">
+                  Featured Topics
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  {[
+                    {
+                      title: "Artificial Intelligence",
+                      description: "The future of AGI and ASI, alignment challenges, and societal impact",
+                      icon: "🧠"
+                    },
+                    {
+                      title: "Biotechnology",
+                      description: "Genomics, molecular biology, and the intersection with AI",
+                      icon: "🧬"
+                    },
+                    {
+                      title: "Philosophy of Mind",
+                      description: "Consciousness, agency, and what it means to be intelligent",
+                      icon: "🤔"
+                    }
+                  ].map((topic, index) => (
+                    <Card 
+                      key={index}
+                      variant="outlined" 
+                      size="medium" 
+                      animation="hover"
+                      className="text-center"
+                    >
+                      <div className="text-4xl mb-3">{topic.icon}</div>
+                      <h4 className="text-h3 font-medium text-white mb-2">{topic.title}</h4>
+                      <p className="text-small text-white/80">{topic.description}</p>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Subscribe Section */}
+            <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
+              <h2 className="text-h2 font-semibold text-white">
+                Stay Updated
+              </h2>
+              <p className="text-body text-white/90 max-w-2xl mx-auto">
+                New episodes explore cutting-edge topics in AI, biotechnology, and the future of human-machine collaboration. 
+                Join the conversation about technology's role in shaping our future.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 text-body bg-white border border-scientific-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                />
+                <button className="btn-primary whitespace-nowrap">
+                  Subscribe
                 </button>
               </div>
-            </Card>
-          )}
-        </section>
-
-        {/* Topics Section */}
-        <section className="py-16 border-t border-scientific-100">
-          <div className="text-center space-y-8">
-            <h2 className="text-h2 font-semibold text-scientific-950">
-              Featured Topics
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {[
-                {
-                  title: "Artificial Intelligence",
-                  description: "The future of AGI and ASI, alignment challenges, and societal impact",
-                  icon: "🧠"
-                },
-                {
-                  title: "Biotechnology",
-                  description: "Genomics, molecular biology, and the intersection with AI",
-                  icon: "🧬"
-                },
-                {
-                  title: "Philosophy of Mind",
-                  description: "Consciousness, agency, and what it means to be intelligent",
-                  icon: "🤔"
-                }
-              ].map((topic, index) => (
-                <Card 
-                  key={index}
-                  variant="outlined" 
-                  size="medium" 
-                  animation="hover"
-                  className="text-center"
-                >
-                  <div className="text-4xl mb-3">{topic.icon}</div>
-                  <h4 className="text-h3 font-medium text-scientific-950 mb-2">{topic.title}</h4>
-                  <p className="text-small text-scientific-600">{topic.description}</p>
-                </Card>
-              ))}
-            </div>
+            </section>
           </div>
-        </section>
-
-        {/* Subscribe Section */}
-        <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
-          <h2 className="text-h2 font-semibold text-scientific-950">
-            Stay Updated
-          </h2>
-          <p className="text-body text-scientific-700 max-w-2xl mx-auto">
-            New episodes explore cutting-edge topics in AI, biotechnology, and the future of human-machine collaboration. 
-            Join the conversation about technology's role in shaping our future.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 text-body bg-white border border-scientific-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
-            />
-            <button className="btn-primary whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
-        </section>
+        </PageWrapper>
       </div>
-    </PageWrapper>
+    </div>
   )
 }
