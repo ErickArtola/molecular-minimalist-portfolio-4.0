@@ -45,7 +45,7 @@ module.exports = {
         },
         
         // Background variations
-        'bg-primary': '#ffffff',
+        'bg-primary': '#989898',
         'bg-secondary': '#f0f9ff',
         'bg-tertiary': '#caf0f8',
         'hero-gray': '#989898',
