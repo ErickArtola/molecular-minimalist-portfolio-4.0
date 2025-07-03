@@ -20,7 +20,7 @@ export default function Header() {
   const isHome = pathname === '/'
 
   return (
-    <header className={isHome ? 'absolute inset-x-0 top-0 z-10 bg-hero-gray' : 'bg-hero-gray'}>
+    <header className={isHome ? 'absolute inset-x-0 top-0 z-20 bg-hero-gray' : 'bg-hero-gray'}>
       <div className="container-scientific flex items-center justify-between py-6 lg:py-8 text-hero-text">
         <Link href="/" className="font-bold">
           <span className="text-hero-text">EGA</span>
