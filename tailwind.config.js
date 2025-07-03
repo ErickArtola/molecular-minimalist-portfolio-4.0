@@ -6,72 +6,54 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Monochrome Color Palette - Black, White, Grey
+      // Molecular Minimalist Color Palette
       colors: {
-        // Primary greys - replacing all scientific blues
-        'primary': {
-          50: '#f9fafb',   // Lightest grey (near white)
-          100: '#f3f4f6',  // Very light grey
-          200: '#e5e7eb',  // Light grey
-          300: '#d1d5db',  // Medium light grey
-          400: '#9ca3af',  // Medium grey
-          500: '#6b7280',  // Medium dark grey
-          600: '#4b5563',  // Dark grey
-          700: '#374151',  // Darker grey
-          800: '#1f2937',  // Very dark grey
-          900: '#111827',  // Near black
-          950: '#030712',  // Darkest grey/black
+        // Scientific Blue Gradient (#03045e to #caf0f8)
+        'scientific': {
+          50: '#f0f9ff',   // Lightest scientific blue
+          100: '#e0f2fe',  // Very light blue
+          200: '#caf0f8',  // Light scientific blue (neutral)
+          300: '#7dd3fc',  // Light blue
+          400: '#38bdf8',  // Medium light blue
+          500: '#0ea5e9',  // Medium blue
+          600: '#0284c7',  // Medium dark blue
+          700: '#0369a1',  // Dark blue
+          800: '#075985',  // Darker blue
+          900: '#0c4a6e',  // Very dark blue
+          950: '#03045e',  // Primary dark scientific blue
         },
         
-        // Accent greys for highlights (replacing blue accents)
-        'accent': '#4b5563',      // Dark grey accent
-        'secondary': '#6b7280',   // Medium grey secondary
+        // Secondary and accent colors
+        'secondary': '#0077b6',
+        'accent': '#00b4d8',
+
+        // Hero text color - CHANGED TO DARK FOR VISIBILITY
+        'hero-text': '#1f2937', // Dark gray instead of white
         
-        // Text colors
-        'text': {
-          'primary': '#111827',    // Dark text on light backgrounds
-          'secondary': '#4b5563',  // Medium grey text
-          'tertiary': '#9ca3af',   // Light grey text
-          'inverse': '#ffffff',    // White text on dark backgrounds
-        },
+        // Additional text color options for better contrast
+        'text-primary': '#111827',   // Very dark gray
+        'text-secondary': '#4b5563', // Medium gray
+        'text-muted': '#6b7280',     // Light gray
         
-        // Background colors
-        'bg': {
-          'primary': '#ffffff',    // White background
-          'secondary': '#f9fafb',  // Light grey background
-          'tertiary': '#f3f4f6',   // Slightly darker light grey
-          'dark': '#111827',       // Dark background
-          'darker': '#030712',     // Darkest background
-        },
-        
-        // Border colors
-        'border': {
-          'light': '#e5e7eb',      // Light border
-          'medium': '#d1d5db',     // Medium border
-          'dark': '#4b5563',       // Dark border
-        },
-        
-        // Status colors (minimal, using greys)
-        'success': '#374151',      // Dark grey for success
-        'warning': '#6b7280',      // Medium grey for warning
-        'error': '#1f2937',        // Very dark grey for error
-        'info': '#4b5563',         // Dark grey for info
-        
-        // Legacy color names for backward compatibility
-        'hero-text': '#ffffff',
-        'hero-gray': '#4b5563',
+        // Neutral molecular grays
         'molecular': {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
+          50: '#fafbfc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
         },
+        
+        // Background variations
+        'bg-primary': '#989898',
+        'bg-secondary': '#f0f9ff',
+        'bg-tertiary': '#caf0f8',
+        'hero-gray': '#989898',
       },
       
       // Typography Scale - Inter Font Family
@@ -80,7 +62,7 @@ module.exports = {
         'display': ['var(--font-inter)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       
-      // Typography Scale
+      // Scientific Typography Scale
       fontSize: {
         'display': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }],
         'h1': ['36px', { lineHeight: '44px', letterSpacing: '-0.01em', fontWeight: '600' }],
@@ -91,7 +73,7 @@ module.exports = {
         'caption': ['12px', { lineHeight: '16px', letterSpacing: '0.01em', fontWeight: '400' }],
       },
       
-      // Spacing System (4px base unit)
+      // Molecular Spacing System (4px base unit)
       spacing: {
         '1': '4px',    // 4px
         '2': '8px',    // 8px
@@ -107,42 +89,32 @@ module.exports = {
         '48': '192px', // 192px
       },
       
-      // Border Radius
+      // Border Radius - Scientific Precision
       borderRadius: {
         'none': '0px',
-        'sm': '2px',     
-        'md': '4px',     
-        'lg': '8px',     
-        'xl': '12px',    
-        '2xl': '16px',   
-        'full': '9999px',
+        'sm': '2px',     // Subtle molecular edges
+        'md': '4px',     // Standard molecular radius
+        'lg': '8px',     // Larger molecular structures
+        'xl': '12px',    // Scientific containers
+        '2xl': '16px',   // Large scientific elements
+        'full': '9999px', // Circular molecular representations
       },
       
-      // Box Shadow - Monochrome depth
+      // Box Shadow - Molecular Depth
       boxShadow: {
-        'sm': '0 1px 2px 0 rgb(17 24 39 / 0.05)',
-        'DEFAULT': '0 4px 6px -1px rgb(17 24 39 / 0.1), 0 2px 4px -2px rgb(17 24 39 / 0.1)',
-        'md': '0 10px 15px -3px rgb(17 24 39 / 0.1), 0 4px 6px -4px rgb(17 24 39 / 0.1)',
-        'lg': '0 20px 25px -5px rgb(17 24 39 / 0.1), 0 8px 10px -6px rgb(17 24 39 / 0.1)',
-        'xl': '0 25px 50px -12px rgb(17 24 39 / 0.25)',
-        'inner': 'inset 0 2px 4px 0 rgb(17 24 39 / 0.06)',
-        'none': '0 0 #0000',
-        // Legacy molecular shadows
-        'molecular-sm': '0 1px 2px 0 rgb(17 24 39 / 0.05)',
-        'molecular': '0 4px 6px -1px rgb(17 24 39 / 0.1), 0 2px 4px -2px rgb(17 24 39 / 0.1)',
-        'molecular-md': '0 10px 15px -3px rgb(17 24 39 / 0.1), 0 4px 6px -4px rgb(17 24 39 / 0.1)',
-        'molecular-lg': '0 20px 25px -5px rgb(17 24 39 / 0.1), 0 8px 10px -6px rgb(17 24 39 / 0.1)',
-        'molecular-xl': '0 25px 50px -12px rgb(17 24 39 / 0.25)',
+        'molecular-sm': '0 1px 2px 0 rgb(3 4 94 / 0.05)',
+        'molecular': '0 4px 6px -1px rgb(3 4 94 / 0.1), 0 2px 4px -2px rgb(3 4 94 / 0.1)',
+        'molecular-md': '0 10px 15px -3px rgb(3 4 94 / 0.1), 0 4px 6px -4px rgb(3 4 94 / 0.1)',
+        'molecular-lg': '0 20px 25px -5px rgb(3 4 94 / 0.1), 0 8px 10px -6px rgb(3 4 94 / 0.1)',
+        'molecular-xl': '0 25px 50px -12px rgb(3 4 94 / 0.25)',
       },
       
-      // Animation - Minimal timings
+      // Animation - Molecular Minimalist Timings
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
         'slide-up': 'slideUp 0.8s ease-out',
-        'float': 'float 3s ease-in-out infinite',
+        'molecular-float': 'molecularFloat 3s ease-in-out infinite',
         'gentle-bounce': 'gentleBounce 2s ease-in-out infinite',
-        // Legacy molecular animations
-        'molecular-float': 'float 3s ease-in-out infinite',
       },
       
       // Custom Keyframes
@@ -155,7 +127,7 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(30px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        float: {
+        molecularFloat: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
         },
@@ -165,18 +137,18 @@ module.exports = {
         },
       },
       
-      // Grid Templates
+      // Grid Templates for Scientific Layouts
       gridTemplateColumns: {
-        'main': 'minmax(200px, 1fr) 3fr',
-        'layout': '1fr 2fr 1fr',
-        'auto-fit': 'repeat(auto-fit, minmax(300px, 1fr))',
+        'molecular': 'minmax(200px, 1fr) 3fr',
+        'scientific': '1fr 2fr 1fr',
+        'research': 'repeat(auto-fit, minmax(300px, 1fr))',
       },
       
       // Transition Durations
       transitionDuration: {
-        '250': '250ms',  
-        '400': '400ms',  
-        '600': '600ms',  
+        '250': '250ms',  // Quick molecular interactions
+        '400': '400ms',  // Standard scientific transitions
+        '600': '600ms',  // Deliberate scientific animations
       },
     },
   },
@@ -185,6 +157,6 @@ module.exports = {
     require('@tailwindcss/typography'),
   ],
   
-  // Dark mode support
+  // Accessibility and color scheme
   darkMode: ['class', '[data-theme="dark"]'],
 };
