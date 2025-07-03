@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="bg-[#989898] min-h-screen">
       {/* Hero Section with Extended Background */}
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         {/* DNA Background Image - Extended beyond viewport */}
         <div className="absolute inset-0 h-[150vh]">
           <Image
@@ -25,17 +25,15 @@ export default function HomePage() {
           <div className="absolute inset-x-0 bottom-0 h-[80vh] bg-gradient-to-b from-transparent via-[#989898]/30 to-[#989898]" />
         </div>
         
-        {/* Text Content - Positioned in lower left with more vertical centering */}
-        <div className="relative z-10 min-h-screen flex items-center">
-          <div className="p-8 lg:p-12 max-w-2xl">
-            <div className="space-y-4">
-              <h1 className="text-display font-bold text-white leading-tight">
-                Erick Geovany Artola
-              </h1>
-              <p className="text-h2 text-white/90 leading-relaxed">
-                AI/ML Engineer • Genomics Researcher • Technical Account Manager
-              </p>
-            </div>
+        {/* Text Content - Positioned in lower left */}
+        <div className="absolute bottom-0 left-0 p-8 lg:p-12 max-w-2xl">
+          <div className="space-y-4">
+            <h1 className="text-display font-bold text-white leading-tight">
+              Erick Geovany Artola
+            </h1>
+            <p className="text-h2 text-white/90 leading-relaxed">
+              AI/ML Engineer • Genomics Researcher • Technical Account Manager
+            </p>
           </div>
         </div>
         
@@ -149,7 +147,7 @@ export default function HomePage() {
 
           {/* Certifications Section */}
           <section className="py-16 lg:py-24">
-            <h2 className="text-h1 font-semibold text-scientific-950 mb-12">Technical Certifications</h2>
+            <h2 className="text-h1 font-semibold text-white mb-12">Technical Certifications</h2>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <CertificationBadge
@@ -194,19 +192,19 @@ export default function HomePage() {
           {/* Call to Action */}
           <section className="py-16 lg:py-24 border-t border-scientific-100">
             <div className="text-center space-y-8 max-w-3xl mx-auto">
-              <h2 className="text-h1 font-semibold text-scientific-950">
+              <h2 className="text-h1 font-semibold text-white">
                 Let's Advance Science Together
               </h2>
-              <p className="text-h3 text-scientific-700 leading-relaxed">
-                I'm always interested in collaborating on projects at the intersection of AI and genomics. 
-                Whether you're working on computational biology challenges, need cloud architecture expertise 
+              <p className="text-h3 text-white leading-relaxed">
+                I'm always interested in collaborating on projects at the intersection of AI and genomics.
+                Whether you're working on computational biology challenges, need cloud architecture expertise
                 for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-primary">
+                <button type="button" className="btn-primary">
                   View Research Projects
                 </button>
-                <button className="btn-secondary">
+                <button type="button" className="btn-secondary">
                   Get in Touch
                 </button>
               </div>

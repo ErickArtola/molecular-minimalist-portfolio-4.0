@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from '@/components/ui/Card'
 import PageWrapper from '@/components/layout/PageWrapper'
-import PageHero from '@/components/layout/PageHero'
 
 interface ProjectProps {
   title: string
@@ -29,17 +28,17 @@ const ProjectCard: React.FC<ProjectProps> = ({
     variant="elevated" 
     size="medium" 
     animation="hover"
-    className="h-full bg-[#989898] border-white/20 shadow-lg"
+    className="h-full"
   >
     <div className="space-y-6">
       <div className="space-y-3">
         <div className="flex items-start justify-between">
-          <h3 className="text-h2 font-medium text-white">{title}</h3>
+          <h3 className="text-h2 font-medium text-hero-text">{title}</h3>
           <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
             {technology}
           </span>
         </div>
-        <p className="text-body text-white/90 leading-relaxed">
+        <p className="text-body text-hero-text leading-relaxed">
           {description}
         </p>
       </div>
@@ -59,10 +58,10 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
       {features && features.length > 0 && (
         <div className="space-y-3">
-          <h4 className="text-body font-medium text-white">Key Features:</h4>
+          <h4 className="text-body font-medium text-hero-text">Key Features:</h4>
           <ul className="space-y-2">
             {features.map((feature, index) => (
-              <li key={index} className="text-small text-white/80 flex items-start gap-2">
+              <li key={index} className="text-small text-hero-text flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
                 {feature}
               </li>
@@ -73,10 +72,10 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
       {highlights && highlights.length > 0 && (
         <div className="space-y-3">
-          <h4 className="text-body font-medium text-white">Technical Highlights:</h4>
+          <h4 className="text-body font-medium text-hero-text">Technical Highlights:</h4>
           <ul className="space-y-2">
             {highlights.map((highlight, index) => (
-              <li key={index} className="text-small text-white/80 flex items-start gap-2">
+              <li key={index} className="text-small text-hero-text flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
                 {highlight}
               </li>
@@ -87,12 +86,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
       <div className="flex gap-3 pt-4 border-t border-scientific-100">
         {demoUrl && (
-          <button className="btn-primary text-small py-2 px-4">
+          <button type="button" className="btn-primary text-small py-2 px-4">
             View Demo
           </button>
         )}
         {githubUrl && (
-          <button className="btn-secondary text-small py-2 px-4">
+          <button type="button" className="btn-secondary text-small py-2 px-4">
             View Code
           </button>
         )}
@@ -161,77 +160,73 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <div className="bg-[#989898] min-h-screen">
-      <PageHero 
-        title="Projects"
-        subtitle="A showcase of innovative projects spanning AI development, interactive media, and software engineering. Each project demonstrates technical expertise and creative problem-solving in different domains."
-      />
-      
-      <div className="bg-[#989898]">
-        <PageWrapper width="wide">
-          <div className="space-y-16 py-16">
-            {/* Projects Grid */}
-            <section className="space-y-12">
-              <div className="grid gap-8 lg:gap-12">
-                {projects.map((project, index) => (
-                  <div key={index}>
-                    <ProjectCard {...project} />
-                    {index < projects.length - 1 && (
-                      <div className="mt-12 border-t border-scientific-100" />
-                    )}
-                  </div>
-                ))}
+    <PageWrapper 
+      width="wide"
+      heroImage="/circuit-board.jpg"
+      heroTitle="Projects"
+      heroSubtitle="AI Development • Interactive Media • Software Engineering"
+    >
+      <div className="space-y-16">
+        {/* Projects Grid */}
+        <section className="space-y-12">
+          <div className="grid gap-8 lg:gap-12">
+            {projects.map((project, index) => (
+              <div key={index}>
+                <ProjectCard {...project} />
+                {index < projects.length - 1 && (
+                  <div className="mt-12 border-t border-scientific-100" />
+                )}
               </div>
-            </section>
-
-            {/* Technology Stack Overview */}
-            <section className="py-16 border-t border-scientific-100">
-              <div className="text-center space-y-8">
-                <h2 className="text-h2 font-semibold text-white">
-                  Technology Stack
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                  {[
-                    { name: "JavaScript", description: "Interactive web applications" },
-                    { name: "C++", description: "Performance-critical applications" },
-                    { name: "Java", description: "Enterprise software solutions" },
-                    { name: "AI/ML", description: "Intelligent systems development" },
-                    { name: "WebGL", description: "3D graphics and visualization" },
-                    { name: "AWS", description: "Cloud infrastructure & AI services" },
-                    { name: "React", description: "Modern user interfaces" },
-                    { name: "Node.js", description: "Server-side development" }
-                  ].map((tech, index) => (
-                    <Card 
-                      key={index}
-                      variant="outlined" 
-                      size="small" 
-                      animation="hover"
-                      className="text-center"
-                    >
-                      <h4 className="font-medium text-white mb-1">{tech.name}</h4>
-                      <p className="text-small text-white/80">{tech.description}</p>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* Call to Action */}
-            <section className="text-center space-y-6 py-16 bg-gradient-scientific rounded-lg">
-              <h2 className="text-h2 font-semibold text-white">
-                Interested in Collaboration?
-              </h2>
-              <p className="text-body text-white/90 max-w-2xl mx-auto">
-                I'm always excited to work on innovative projects that combine technology 
-                with real-world impact. Let's build something amazing together.
-              </p>
-              <button className="btn-primary">
-                Get in Touch
-              </button>
-            </section>
+            ))}
           </div>
-        </PageWrapper>
+        </section>
+
+        {/* Technology Stack Overview */}
+        <section className="section-spacing border-t border-scientific-100">
+          <div className="text-center space-y-8">
+            <h2 className="text-h2 font-semibold text-hero-text">
+              Technology Stack
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {[
+                { name: "JavaScript", description: "Interactive web applications" },
+                { name: "C++", description: "Performance-critical applications" },
+                { name: "Java", description: "Enterprise software solutions" },
+                { name: "AI/ML", description: "Intelligent systems development" },
+                { name: "WebGL", description: "3D graphics and visualization" },
+                { name: "AWS", description: "Cloud infrastructure & AI services" },
+                { name: "React", description: "Modern user interfaces" },
+                { name: "Node.js", description: "Server-side development" }
+              ].map((tech, index) => (
+                <Card 
+                  key={index}
+                  variant="outlined" 
+                  size="small" 
+                  animation="hover"
+                  className="text-center"
+                >
+                  <h4 className="font-medium text-hero-text mb-1">{tech.name}</h4>
+                  <p className="text-small text-hero-text">{tech.description}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="text-center space-y-6 section-spacing bg-gradient-scientific rounded-lg">
+          <h2 className="text-h2 font-semibold text-hero-text">
+            Interested in Collaboration?
+          </h2>
+          <p className="text-body text-hero-text max-w-2xl mx-auto">
+            I'm always excited to work on innovative projects that combine technology 
+            with real-world impact. Let's build something amazing together.
+          </p>
+          <button type="button" className="btn-primary">
+            Get in Touch
+          </button>
+        </section>
       </div>
-    </div>
+    </PageWrapper>
   )
 }
