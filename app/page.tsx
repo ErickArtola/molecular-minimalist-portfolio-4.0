@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import Card from '@/components/ui/Card';
 import PageWrapper from '@/components/layout/PageWrapper';
@@ -50,18 +51,18 @@ export default function HomePage() {
         <PageWrapper>
           {/* About Section */}
           <section className="py-16 lg:py-24">
-            <h2 className="text-h1 font-semibold text-white mb-12">About</h2>
+            <h2 className="text-h1 font-semibold text-black mb-12">About</h2>
             
             <div className="grid gap-8 lg:grid-cols-2">
               <Card variant="elevated" size="medium" className="bg-[#989898] border-white/20 shadow-lg space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-h2 font-medium text-white">Background</h3>
-                  <p className="text-body text-white/90 leading-relaxed">
+                  <h3 className="text-h2 font-medium text-black">Background</h3>
+                  <p className="text-body text-black leading-relaxed">
                     Originally from Nicaragua and now based in Costa Rica, I bring a unique perspective to the intersection 
                     of technology and life sciences. My journey from Central America to the forefront of AI and genomics 
                     research reflects my commitment to leveraging cutting-edge technology for global impact.
                   </p>
-                  <p className="text-body text-white/90 leading-relaxed">
+                  <p className="text-body text-black leading-relaxed">
                     As an AWS Technical Account Manager, I help organizations architect and optimize their cloud infrastructure 
                     for AI/ML workloads, particularly in the healthcare and biotech sectors. This role allows me to stay at 
                     the cutting edge of cloud computing while directly supporting genomics research initiatives.
@@ -71,13 +72,13 @@ export default function HomePage() {
               
               <Card variant="elevated" size="medium" className="bg-[#989898] border-white/20 shadow-lg space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-h2 font-medium text-white">Research Interests</h3>
-                  <p className="text-body text-white/90 leading-relaxed">
+                  <h3 className="text-h2 font-medium text-black">Research Interests</h3>
+                  <p className="text-body text-black leading-relaxed">
                     My primary focus lies in applying artificial intelligence to genomics, particularly in understanding 
                     oncogenic pathways and developing computational methods for cancer research. I'm passionate about 
                     creating AI models that can identify patterns in genomic data that might lead to breakthrough treatments.
                   </p>
-                  <p className="text-body text-white/90 leading-relaxed">
+                  <p className="text-body text-black leading-relaxed">
                     Beyond technical pursuits, I maintain a deep interest in robotics and postmodern literature, believing 
                     that interdisciplinary thinking is crucial for innovation. This diverse intellectual foundation informs 
                     my approach to complex problems in computational biology.
@@ -94,7 +95,8 @@ export default function HomePage() {
             <div className="space-y-8">
               {/* Current Role */}
               <div className="relative pl-8 pb-8 border-l-2 border-white/30 last:border-l-0">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full border-4 border-[#989898] shadow-lg" />
+                {/* UPDATED: Changed dot color to white for better contrast */}
+                <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <h3 className="text-h2 font-medium text-white">Technical Account Manager</h3>
@@ -112,7 +114,8 @@ export default function HomePage() {
               
               {/* Research Focus */}
               <div className="relative pl-8 pb-8 border-l-2 border-white/30">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-secondary rounded-full border-4 border-[#989898] shadow-lg" />
+                {/* UPDATED: Changed dot color to white for consistency */}
+                <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <h3 className="text-h2 font-medium text-white">Independent Research</h3>
@@ -129,7 +132,8 @@ export default function HomePage() {
               
               {/* Education/Early Career */}
               <div className="relative pl-8">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-white/70 rounded-full border-4 border-[#989898] shadow-lg" />
+                {/* UPDATED: Changed dot color to white for consistency */}
+                <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <h3 className="text-h2 font-medium text-white">Technical Foundation</h3>
@@ -150,47 +154,125 @@ export default function HomePage() {
             <h2 className="text-h1 font-semibold text-white mb-12">Technical Certifications</h2>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <CertificationBadge
-                title="AWS Certified Solutions Architect"
-                issuer="Amazon Web Services"
-                date="2023"
-                credentialId="AWS-SAA-C03"
-              />
-              <CertificationBadge
-                title="AWS Certified Machine Learning"
-                issuer="Amazon Web Services"
-                date="2023"
-                credentialId="AWS-MLS-C01"
-              />
-              <CertificationBadge
-                title="Google IT Support Professional"
-                issuer="Google"
-                date="2022"
-                credentialId="COURSERA-CERT"
-              />
-              <CertificationBadge
-                title="IBM AI Engineering Professional"
-                issuer="IBM"
-                date="2022"
-                credentialId="IBM-AI-ENG"
-              />
-              <CertificationBadge
-                title="AWS Certified Cloud Practitioner"
-                issuer="Amazon Web Services"
-                date="2022"
-                credentialId="AWS-CLF-C01"
-              />
-              <CertificationBadge
-                title="Deep Learning Specialization"
-                issuer="DeepLearning.AI"
-                date="2022"
-                credentialId="COURSERA-DL"
-              />
+              {/* UPDATED: Added custom certification badges with white text for consistency */}
+              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+                <div className="space-y-3">
+                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                    AWS Certified Solutions Architect
+                  </h3>
+                  <p className="text-body text-white/80">
+                    Amazon Web Services
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-small text-white/70">
+                      Issued: 2023
+                    </p>
+                    <p className="text-small text-white/60">
+                      ID: AWS-SAA-C03
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+                <div className="space-y-3">
+                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                    AWS Certified Machine Learning
+                  </h3>
+                  <p className="text-body text-white/80">
+                    Amazon Web Services
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-small text-white/70">
+                      Issued: 2023
+                    </p>
+                    <p className="text-small text-white/60">
+                      ID: AWS-MLS-C01
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+                <div className="space-y-3">
+                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                    Google IT Support Professional
+                  </h3>
+                  <p className="text-body text-white/80">
+                    Google
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-small text-white/70">
+                      Issued: 2022
+                    </p>
+                    <p className="text-small text-white/60">
+                      ID: COURSERA-CERT
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+                <div className="space-y-3">
+                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                    IBM AI Engineering Professional
+                  </h3>
+                  <p className="text-body text-white/80">
+                    IBM
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-small text-white/70">
+                      Issued: 2022
+                    </p>
+                    <p className="text-small text-white/60">
+                      ID: IBM-AI-ENG
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+                <div className="space-y-3">
+                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                    AWS Certified Cloud Practitioner
+                  </h3>
+                  <p className="text-body text-white/80">
+                    Amazon Web Services
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-small text-white/70">
+                      Issued: 2022
+                    </p>
+                    <p className="text-small text-white/60">
+                      ID: AWS-CLF-C01
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+                <div className="space-y-3">
+                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                    Deep Learning Specialization
+                  </h3>
+                  <p className="text-body text-white/80">
+                    DeepLearning.AI
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-small text-white/70">
+                      Issued: 2022
+                    </p>
+                    <p className="text-small text-white/60">
+                      ID: COURSERA-DL
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
           {/* Call to Action */}
-          <section className="py-16 lg:py-24 border-t border-scientific-100">
+          <section className="py-16 lg:py-24 border-t border-white/20">
             <div className="text-center space-y-8 max-w-3xl mx-auto">
               <h2 className="text-h1 font-semibold text-white">
                 Let's Advance Science Together
@@ -201,13 +283,13 @@ export default function HomePage() {
                 for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button type="button" className="btn-primary">
-                  View Research Projects
-                </button>
-                <button type="button" className="btn-secondary">
-                  Get in Touch
-                </button>
-              </div>
+  <Link href="/projects" className="inline-flex items-center justify-center px-6 py-3 text-body font-medium rounded-md transition-all duration-250 bg-white text-[#989898] hover:bg-white/90 focus:ring-white focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#989898]">
+    View Research Projects
+  </Link>
+  <button type="button" className="inline-flex items-center justify-center px-6 py-3 text-body font-medium rounded-md transition-all duration-250 bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#989898] focus:ring-white focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#989898]">
+    Get in Touch
+  </button>
+</div>
             </div>
           </section>
         </PageWrapper>

@@ -10,12 +10,17 @@ interface ResearchProjectProps {
   collaborators?: string[]
 }
 
-const ProjectCard: React.FC<ResearchProjectProps> = ({ 
+interface ProjectCardProps extends ResearchProjectProps {
+  achievements?: string[]
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ 
   title, 
   description, 
   status, 
   technologies, 
-  collaborators 
+  collaborators,
+  achievements
 }) => (
   <Card 
     as="article" 
@@ -43,6 +48,21 @@ const ProjectCard: React.FC<ResearchProjectProps> = ({
       <p className="text-body text-hero-text leading-relaxed">
         {description}
       </p>
+      
+      {/* Key Achievements */}
+      {achievements && achievements.length > 0 && (
+        <div className="space-y-2">
+          <h4 className="text-body font-medium text-hero-text">Key Achievements</h4>
+          <ul className="space-y-1">
+            {achievements.map((achievement, index) => (
+              <li key={index} className="text-body text-hero-text flex items-start gap-2">
+                <span className="text-accent mt-1">•</span>
+                <span>{achievement}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       
       {/* Technologies */}
       <div className="space-y-2">
@@ -87,27 +107,34 @@ export default function OncogenomicsPage() {
     {
       title: "AI-Driven Cancer Genomics Analysis",
       description: "Developing machine learning pipelines for the analysis of large-scale cancer genomic datasets, utilizing cloud computing infrastructure to process multi-omics data and identify novel therapeutic targets.",
-      icon: "🧠"
+      //icon: "🧠"
     },
     {
       title: "Cloud-Based Genomic Data Processing",
       description: "Architecting scalable cloud solutions for genomic data storage, processing, and analysis, enabling researchers to handle the computational demands of modern cancer genomics research.",
-      icon: "☁️"
+     // icon: "☁️"
     },
     {
       title: "Precision Medicine Applications",
       description: "Exploring the application of artificial intelligence in personalizing cancer treatment strategies based on individual genomic profiles and tumor characteristics.",
-      icon: "🎯"
+      //icon: "🎯"
     }
   ]
 
-  const researchProjects: ResearchProjectProps[] = [
+  const researchProjects: ProjectCardProps[] = [
     {
-      title: "GenomeExplorer: AI-Driven Genetic Analysis Platform",
-      description: "Developing a deep learning model that analyzes genomic data to identify potential disease markers and drug targets. This project accelerates genetic research by automating the process of finding correlations between genetic variations and phenotypic traits.",
+      title: "ARTEMIS: Advanced Real-Time Expert Medical Intelligent System",
+      description: "Developing of a cutting-edge AI-powered cancer treatment recommendation system using Amazon Web Services (AWS) and Nova multimodal AI capabilities. This comprehensive solution processes diverse patient data types including medical imaging, genomic sequences, and clinical records to deliver personalized treatment recommendations. ",
       status: "active",
-      technologies: ["TensorFlow", "AWS SageMaker", "Python", "Genomics APIs", "Docker"],
-      collaborators: ["Stanford Genomics Lab", "AWS Healthcare Team"]
+      technologies: ["AWS Bedrock", "Amazon Nova", "Lambda", "Step Functions", "OpenSearch", "Cloudwatch", "S3", ],
+      collaborators: ["Stanford Genomics Lab", "AWS Healthcare Team"],
+      achievements: [
+        "Implemented advanced RAG (Retrieval-Augmented Generation) system integrating current medical protocols and research",
+        "Developed automated clinical workflow agents using Amazon Bedrock",
+        "Created robust testing framework ensuring 85%+ recommendation accuracy",
+        "Engineered HIPAA-compliant architecture with end-to-end security",
+        "Integrated continuous prompt optimization for enhanced accuracy"
+      ]
     },
     {
       title: "Cloud Infrastructure for Oncogenomics Research",
@@ -117,12 +144,19 @@ export default function OncogenomicsPage() {
       collaborators: ["Cancer Research Institute", "Broad Institute"]
     },
     {
-      title: "StemCellOrganoid: AI-Optimized Organoid Culture System",
-      description: "Engineering an AI system that optimizes the growth conditions for stem cell-derived organoids. The project uses reinforcement learning to dynamically adjust nutrient levels, temperature, and other factors to improve organoid development and functionality for cancer research applications.",
-      status: "planning",
-      technologies: ["PyTorch", "IoT Sensors", "Reinforcement Learning", "Computer Vision"],
-      collaborators: ["MIT Stem Cell Lab", "Harvard Medical School"]
+      title: "Oncogenomics Review",
+      description: "Designing and implementing scalable cloud architectures specifically optimized for cancer genomics workflows, enabling efficient processing of large-scale sequencing data and facilitating collaborative research.",
+      status: "active",
+      technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
+      collaborators: ["Cancer Research Institute", "Broad Institute"]
     }
+    // {
+    //   title: "StemCellOrganoid: AI-Optimized Organoid Culture System",
+    //   description: "Engineering an AI system that optimizes the growth conditions for stem cell-derived organoids. The project uses reinforcement learning to dynamically adjust nutrient levels, temperature, and other factors to improve organoid development and functionality for cancer research applications.",
+    //   status: "planning",
+    //   technologies: ["PyTorch", "IoT Sensors", "Reinforcement Learning", "Computer Vision"],
+    //   collaborators: ["MIT Stem Cell Lab", "Harvard Medical School"]
+    // }
   ]
 
   return (
