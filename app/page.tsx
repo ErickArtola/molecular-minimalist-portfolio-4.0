@@ -51,18 +51,24 @@ export default function HomePage() {
         <PageWrapper>
           {/* About Section */}
           <section className="py-16 lg:py-24">
-            <h2 className="text-h1 font-semibold text-black mb-12">About</h2>
+            <h2 className="text-h1 font-semibold text-white mb-12">About</h2>
             
             <div className="grid gap-8 lg:grid-cols-2">
-              <Card variant="elevated" size="medium" className="bg-[#989898] border-white/20 shadow-lg space-y-6">
+              {/* UPDATED: Changed to match oncogenomics page styling */}
+              <Card 
+                variant="elevated" 
+                size="medium" 
+                animation="hover"
+                className="bg-[#989898] border border-white/20 shadow-lg space-y-6"
+              >
                 <div className="space-y-4">
-                  <h3 className="text-h2 font-medium text-black">Background</h3>
-                  <p className="text-body text-black leading-relaxed">
+                  <h3 className="text-h2 font-medium text-white">Background</h3>
+                  <p className="text-body text-white/90 leading-relaxed">
                     Originally from Nicaragua and now based in Costa Rica, I bring a unique perspective to the intersection 
                     of technology and life sciences. My journey from Central America to the forefront of AI and genomics 
                     research reflects my commitment to leveraging cutting-edge technology for global impact.
                   </p>
-                  <p className="text-body text-black leading-relaxed">
+                  <p className="text-body text-white/90 leading-relaxed">
                     As an AWS Technical Account Manager, I help organizations architect and optimize their cloud infrastructure 
                     for AI/ML workloads, particularly in the healthcare and biotech sectors. This role allows me to stay at 
                     the cutting edge of cloud computing while directly supporting genomics research initiatives.
@@ -70,15 +76,21 @@ export default function HomePage() {
                 </div>
               </Card>
               
-              <Card variant="elevated" size="medium" className="bg-[#989898] border-white/20 shadow-lg space-y-6">
+              {/* UPDATED: Changed to match oncogenomics page styling */}
+              <Card 
+                variant="elevated" 
+                size="medium" 
+                animation="hover"
+                className="bg-[#989898] border border-white/20 shadow-lg space-y-6"
+              >
                 <div className="space-y-4">
-                  <h3 className="text-h2 font-medium text-black">Research Interests</h3>
-                  <p className="text-body text-black leading-relaxed">
+                  <h3 className="text-h2 font-medium text-white">Research Interests</h3>
+                  <p className="text-body text-white/90 leading-relaxed">
                     My primary focus lies in applying artificial intelligence to genomics, particularly in understanding 
                     oncogenic pathways and developing computational methods for cancer research. I'm passionate about 
                     creating AI models that can identify patterns in genomic data that might lead to breakthrough treatments.
                   </p>
-                  <p className="text-body text-black leading-relaxed">
+                  <p className="text-body text-white/90 leading-relaxed">
                     Beyond technical pursuits, I maintain a deep interest in robotics and postmodern literature, believing 
                     that interdisciplinary thinking is crucial for innovation. This diverse intellectual foundation informs 
                     my approach to complex problems in computational biology.
@@ -95,7 +107,6 @@ export default function HomePage() {
             <div className="space-y-8">
               {/* Current Role */}
               <div className="relative pl-8 pb-8 border-l-2 border-white/30 last:border-l-0">
-                {/* UPDATED: Changed dot color to white for better contrast */}
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
@@ -114,7 +125,6 @@ export default function HomePage() {
               
               {/* Research Focus */}
               <div className="relative pl-8 pb-8 border-l-2 border-white/30">
-                {/* UPDATED: Changed dot color to white for consistency */}
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
@@ -132,7 +142,6 @@ export default function HomePage() {
               
               {/* Education/Early Career */}
               <div className="relative pl-8">
-                {/* UPDATED: Changed dot color to white for consistency */}
                 <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
@@ -154,8 +163,8 @@ export default function HomePage() {
             <h2 className="text-h1 font-semibold text-white mb-12">Technical Certifications</h2>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {/* UPDATED: Added custom certification badges with white text for consistency */}
-              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+              {/* UPDATED: Custom certification badges with matching page background and white borders */}
+              <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
                   <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
                     AWS Certified Solutions Architect
@@ -174,7 +183,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+              <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
                   <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
                     AWS Certified Machine Learning
@@ -193,7 +202,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+              <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
                   <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
                     Google IT Support Professional
@@ -212,7 +221,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+              <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
                   <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
                     IBM AI Engineering Professional
@@ -231,7 +240,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+              <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
                   <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
                     AWS Certified Cloud Practitioner
@@ -250,7 +259,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="group relative bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-250">
+              <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
                   <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
                     Deep Learning Specialization
@@ -272,26 +281,26 @@ export default function HomePage() {
           </section>
 
           {/* Call to Action */}
-          <section className="py-16 lg:py-24 border-t border-white/20">
-            <div className="text-center space-y-8 max-w-3xl mx-auto">
-              <h2 className="text-h1 font-semibold text-white">
-                Let's Advance Science Together
-              </h2>
-              <p className="text-h3 text-white leading-relaxed">
-                I'm always interested in collaborating on projects at the intersection of AI and genomics.
-                Whether you're working on computational biology challenges, need cloud architecture expertise
-                for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-  <Link href="/projects" className="inline-flex items-center justify-center px-6 py-3 text-body font-medium rounded-md transition-all duration-250 bg-white text-[#989898] hover:bg-white/90 focus:ring-white focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#989898]">
-    View Research Projects
-  </Link>
-  <button type="button" className="inline-flex items-center justify-center px-6 py-3 text-body font-medium rounded-md transition-all duration-250 bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#989898] focus:ring-white focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#989898]">
-    Get in Touch
-  </button>
-</div>
-            </div>
-          </section>
+          <section className="py-16 lg:py-24 border-t border-scientific-100 bg-gradient-scientific rounded-lg">
+  <div className="text-center space-y-8 max-w-3xl mx-auto">
+    <h2 className="text-h1 font-semibold text-hero-text">
+      Let's Advance Science Together
+    </h2>
+    <p className="text-h3 text-hero-text leading-relaxed">
+      I'm always interested in collaborating on projects at the intersection of AI and genomics.
+      Whether you're working on computational biology challenges, need cloud architecture expertise
+      for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <button type="button" className="btn-primary">
+        View Research Projects
+      </button>
+      <button type="button" className="btn-secondary">
+        Get in Touch
+      </button>
+    </div>
+  </div>
+</section>
         </PageWrapper>
       </div>
     </div>

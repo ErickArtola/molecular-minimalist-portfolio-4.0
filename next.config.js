@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable static export for hosting on Render
+  output: 'export',
+  
+  // Add trailing slash for better static hosting compatibility
+  trailingSlash: true,
+  
+  // Disable image optimization for static export
+  images: {
+    unoptimized: true,
+  },
+  
   // App Router configuration
   experimental: {
     typedRoutes: true,
@@ -9,14 +20,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
-  // Image optimization for scientific content
-  images: {
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
-  
-  // Security headers
+  // Security headers (static export compatible)
   async headers() {
     return [
       {
@@ -34,10 +38,6 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
           },
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self'; connect-src 'self';"
-          }
         ],
       },
     ];
@@ -45,8 +45,7 @@ const nextConfig = {
 
   // SEO and metadata optimization
   generateEtags: true,
-  trailingSlash: false
-  
+  trailingSlash: false,
 };
 
 module.exports = nextConfig;
