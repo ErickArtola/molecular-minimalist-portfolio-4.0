@@ -107,17 +107,17 @@ export default function OncogenomicsPage() {
     {
       title: "AI-Driven Cancer Genomics Analysis",
       description: "Developing machine learning pipelines for the analysis of large-scale cancer genomic datasets, utilizing cloud computing infrastructure to process multi-omics data and identify novel therapeutic targets.",
-      //icon: "🧠"
+      icon: "🧠"
     },
     {
       title: "Cloud-Based Genomic Data Processing",
       description: "Architecting scalable cloud solutions for genomic data storage, processing, and analysis, enabling researchers to handle the computational demands of modern cancer genomics research.",
-     // icon: "☁️"
+      icon: "☁️"
     },
     {
       title: "Precision Medicine Applications",
       description: "Exploring the application of artificial intelligence in personalizing cancer treatment strategies based on individual genomic profiles and tumor characteristics.",
-      //icon: "🎯"
+      icon: "🎯"
     }
   ]
 
@@ -150,13 +150,6 @@ export default function OncogenomicsPage() {
       technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
       collaborators: ["Cancer Research Institute", "Broad Institute"]
     }
-    // {
-    //   title: "StemCellOrganoid: AI-Optimized Organoid Culture System",
-    //   description: "Engineering an AI system that optimizes the growth conditions for stem cell-derived organoids. The project uses reinforcement learning to dynamically adjust nutrient levels, temperature, and other factors to improve organoid development and functionality for cancer research applications.",
-    //   status: "planning",
-    //   technologies: ["PyTorch", "IoT Sensors", "Reinforcement Learning", "Computer Vision"],
-    //   collaborators: ["MIT Stem Cell Lab", "Harvard Medical School"]
-    // }
   ]
 
   return (
