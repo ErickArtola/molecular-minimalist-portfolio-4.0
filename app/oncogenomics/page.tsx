@@ -142,14 +142,14 @@ export default function OncogenomicsPage() {
       status: "active",
       technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
       collaborators: ["Cancer Research Institute", "Broad Institute"]
-    },
-    {
-      title: "Oncogenomics Review",
-      description: "Designing and implementing scalable cloud architectures specifically optimized for cancer genomics workflows, enabling efficient processing of large-scale sequencing data and facilitating collaborative research.",
-      status: "active",
-      technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
-      collaborators: ["Cancer Research Institute", "Broad Institute"]
     }
+    // {
+    //   title: "Oncogenomics Review",
+    //   description: "Designing and implementing scalable cloud architectures specifically optimized for cancer genomics workflows, enabling efficient processing of large-scale sequencing data and facilitating collaborative research.",
+    //   status: "active",
+    //   technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
+    //   collaborators: ["Cancer Research Institute", "Broad Institute"]
+    // }
   ]
 
   return (
