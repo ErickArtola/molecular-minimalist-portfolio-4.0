@@ -4,7 +4,7 @@ const nextConfig = {
   output: 'export',
   
   // Add trailing slash for better static hosting compatibility
-  trailingSlash: true,
+  trailingSlash: false,
   
   // Disable image optimization for static export
   images: {
@@ -45,7 +45,6 @@ const nextConfig = {
 
   // SEO and metadata optimization
   generateEtags: true,
-  trailingSlash: false,
 };
 
 module.exports = nextConfig;
