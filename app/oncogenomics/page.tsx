@@ -127,7 +127,7 @@ export default function OncogenomicsPage() {
       description: "Developing of a cutting-edge AI-powered cancer treatment recommendation system using Amazon Web Services (AWS) and Nova multimodal AI capabilities. This comprehensive solution processes diverse patient data types including medical imaging, genomic sequences, and clinical records to deliver personalized treatment recommendations. ",
       status: "active",
       technologies: ["AWS Bedrock", "Amazon Nova", "Lambda", "Step Functions", "OpenSearch", "Cloudwatch", "S3", ],
-      collaborators: ["Stanford Genomics Lab", "AWS Healthcare Team"],
+      // collaborators: ["Stanford Genomics Lab", "AWS Healthcare Team"],
       achievements: [
         "Implemented advanced RAG (Retrieval-Augmented Generation) system integrating current medical protocols and research",
         "Developed automated clinical workflow agents using Amazon Bedrock",
@@ -141,7 +141,7 @@ export default function OncogenomicsPage() {
       description: "Designing and implementing scalable cloud architectures specifically optimized for cancer genomics workflows, enabling efficient processing of large-scale sequencing data and facilitating collaborative research.",
       status: "active",
       technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
-      collaborators: ["Cancer Research Institute", "Broad Institute"]
+      // collaborators: ["Cancer Research Institute", "Broad Institute"]
     }
     // {
     //   title: "Oncogenomics Review",
@@ -317,14 +317,14 @@ export default function OncogenomicsPage() {
                 become available. Currently preparing manuscripts on AI applications in 
                 cancer genomics and cloud architectures for precision medicine.
               </p>
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <h4 className="text-body font-medium text-hero-text">Upcoming:</h4>
                 <ul className="text-small text-hero-text space-y-1">
                   <li>• ASHG 2025 Conference</li>
                   <li>• Nature Biotechnology (In Review)</li>
                   <li>• AWS re:Invent Healthcare Track</li>
                 </ul>
-              </div>
+              </div> */}
             </Card>
           </div>
         </section>

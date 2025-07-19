@@ -103,7 +103,7 @@ Our AI solution should be trying to heal the sick, curing diseases, helping us e
 
 AI will be able to help us invent new solutions, things we may not have even imagined. AI will be able to provide true companionship, empathy and help you become more educated, expressive, and help you form stronger emotional connections. AI will become installed in robots and will be seen everywhere, like we see cars today. AI will be everywhere because robots and digital devices will be everywhere. AI will be so efficient that it will not be contained to one nation.  AI will be adopted by people of all ages, walk of life because of the ever presence of digital life and digital life forms walking among us and with organic beings. Humans will become self-actualized, pursue their truest passions because AI will make life across the Earth more efficient, resulting in more happiness for humans. Humans will no longer feel a need to disrespect others, they will be able to truly care and understand others. Humans will begin to help all and ensure that everyone is living in dignity. AI will make all this possible and more.`,
       audioUrl: "path/to/audio/file.mp3",
-      publishDate: "-----",
+      // publishDate: "-----",
       duration: "28 min",
       status: "coming-soon"
     },
@@ -113,7 +113,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
       description: "Pending",
       // content: `Complete any task a human can complete. It must have agency and memory. This means a singular being that can do all human tasks, from manual work like farming, house chores and construction, to the creation of art utilizing real world material, its own desires as an endeavor to be pursued for its sake, resolve any computational task that a human can compute. Our current state requires that more generalized and at the same time highly adept robots. This will require large amounts of computational power which can use current cloud vendors to architect the code.`, Complete any task a human can complete. It must have agency and memory.
       audioUrl: "path/to/audio/file.mp3",
-      publishDate: "-----",
+      // publishDate: "-----",
       duration: "35 min",
       status: "coming-soon"
     },
@@ -122,7 +122,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
       title: "On the Requirements of Artificial Super Intelligence",
       description: "Pending",
       //content: "Exploring what comes after AGI and the implications for humanity.""
-      publishDate: "-----",
+      // publishDate: "-----",
       duration: "40 min",
       status: "coming-soon"
     },
@@ -131,7 +131,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
       title: "Agency is Inherent to Intelligence",
       description: "Pending.",
       //content: `The relationship between consciousness and agency is a fundamental aspect of artificial intelligence (AI) and the field of cognitive science. Consciousness refers to the state of being, including consciousness, awareness, and the ability to perceive, reason, and make decisions. Agency, in turn, refers to the ability of consciousness to perceive, reason, and make decisions. AI is a technology that aims to replicate or simulate the behavior of consciousness and agency. The relationship between consciousness and agency is crucial for the development of AI, as it allows AI to reason, make decisions, and perceive the world around it.`,
-      publishDate: "-----",
+      // publishDate: "-----",
       duration: "32 min",
       status: "coming-soon"
     },
@@ -140,7 +140,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
       title: "AI is a Mirror",
       description: "Pending",
       //content: "The problem of alignment is not technical. The problem of alignment is that AI will always be a mirror of its maker.",
-      publishDate: "-----",
+      // publishDate: "-----",
       duration: "25 min",
       status: "coming-soon"
     }
@@ -155,7 +155,7 @@ AI will be able to help us invent new solutions, things we may not have even ima
     <PageWrapper 
       width="default"
       heroImage="/molecular-network.jpg"
-      heroTitle="Thought-cast"
+      heroTitle="AI Podcast"
       heroSubtitle="AI Philosophy • Future Technology • Scientific Discourse"
     >
       <div className="space-y-16">
