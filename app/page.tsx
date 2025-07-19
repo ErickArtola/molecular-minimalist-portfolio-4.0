@@ -91,7 +91,7 @@ export default function HomePage() {
                     creating AI models that can identify patterns in genomic data that might lead to breakthrough treatments.
                   </p>
                   <p className="text-body text-white/90 leading-relaxed">
-                    Beyond technical pursuits, I maintain a deep interest in robotics and postmodern literature, believing 
+                    Beyond technical pursuits, I maintain a deep interest in robotics, bioinformatics, stem cell technology, genetic engineering, believing 
                     that interdisciplinary thinking is crucial for innovation. This diverse intellectual foundation informs 
                     my approach to complex problems in computational biology.
                   </p>
