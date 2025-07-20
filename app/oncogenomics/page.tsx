@@ -211,8 +211,17 @@ export default function OncogenomicsPage() {
           </div>
           <div className="flex flex-col items-center space-y-6">
             {/* PowerPoint Presentation Embed */}
-            <div className="w-full max-w-3xl mx-auto">
-              <iframe src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSr0rJy6_CTR7e1DgoFU9hxAZQ-yMFWpwSgqo7zXDABB4I" width="100%" height="500" frameBorder="0" scrolling="no"></iframe>
+            <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                <iframe 
+                  src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSr0rJy6_CTR7e1DgoFU9hxAZQ-yMFWpwSgqo7zXDABB4I" 
+                  className="absolute top-0 left-0 w-full h-full" 
+                  frameBorder="0" 
+                  scrolling="no"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
             
             {/* Audio Player for Presentation */}
