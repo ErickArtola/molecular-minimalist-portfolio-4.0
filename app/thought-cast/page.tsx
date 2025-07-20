@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Card from '@/components/ui/Card'
 import PageWrapper from '@/components/layout/PageWrapper'
 
@@ -8,22 +8,24 @@ interface EpisodeProps {
   id: number
   title: string
   description: string
-  content?: string
   audioUrl?: string
   publishDate?: string
   duration?: string
   status: 'published' | 'coming-soon'
+  imageUrl?: string
 }
 
-const EpisodeCard: React.FC<EpisodeProps> = ({ 
+const EpisodeCard = ({ 
   title, 
   description, 
-  content, 
   audioUrl, 
   publishDate, 
   duration,
-  status 
-}) => (
+  status,
+  isPlaying,
+  onPlay,
+  imageUrl
+}: EpisodeProps & { isPlaying: boolean; onPlay: () => void }) => (
   <Card 
     as="article" 
     variant="elevated" 
@@ -31,6 +33,17 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
     animation="hover"
     className="space-y-6"
   >
+    {/* Episode Image */}
+    {imageUrl && status === 'published' && (
+      <div className="w-full h-48 md:h-64 overflow-hidden rounded-lg mb-4">
+        <img 
+          src={imageUrl} 
+          alt={`${title} episode artwork`} 
+          className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+        />
+      </div>
+    )}
+    
     {/* Episode Header */}
     <div className="space-y-3">
       <div className="flex items-start justify-between gap-4">
@@ -55,94 +68,110 @@ const EpisodeCard: React.FC<EpisodeProps> = ({
         </p>
       )}
       
-      <p className="text-body text-hero-text leading-relaxed">
-        {description}
-      </p>
+      {description && (
+        <p className="text-body text-hero-text leading-relaxed">
+          {description}
+        </p>
+      )}
     </div>
-
-    {/* Episode Content */}
-    {content && (
-      <div className="prose prose-scientific max-w-none">
-        <div className="text-body text-hero-text leading-relaxed whitespace-pre-line">
-          {content}
-        </div>
-      </div>
-    )}
 
     {/* Audio Player */}
     {audioUrl && status === 'published' && (
       <div className="space-y-3">
-        <h4 className="text-body font-medium text-hero-text">Listen to Episode</h4>
-        <audio 
-          controls 
-          className="w-full"
-          preload="metadata"
-        >
-          <source src={audioUrl} type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
+        <div className="flex items-center justify-between">
+          <h4 className="text-body font-medium text-hero-text">Listen to Episode</h4>
+          <button 
+            onClick={onPlay}
+            className={`flex items-center justify-center p-3 rounded-full transition-colors ${isPlaying ? 'bg-accent text-white' : 'bg-scientific-100 hover:bg-scientific-200 text-hero-text'}`}
+            aria-label={isPlaying ? 'Pause episode' : 'Play episode'}
+          >
+            {isPlaying ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            )}
+          </button>
+        </div>
+        {isPlaying && (
+          <audio 
+            controls 
+            className="w-full"
+            preload="metadata"
+            autoPlay
+            src={audioUrl}
+          >
+            Your browser does not support the audio element.
+          </audio>
+        )}
       </div>
     )}
 
-    {/* Molecular accent line */}
-    <div className="h-0.5 bg-gradient-to-r from-accent to-secondary rounded-full opacity-30" />
+    {/* No accent line */}
   </Card>
 )
 
 export default function ThoughtCastPage() {
   const [searchTerm, setSearchTerm] = useState('')
+  const [playingEpisodeId, setPlayingEpisodeId] = useState<number | null>(null)
+  const audioRefs = useRef<{[key: number]: HTMLAudioElement | null}>({})
 
   const episodes: EpisodeProps[] = [
     {
       id: 1,
       title: "AI as Utopia",
-      description: "I would like to talk about the ideas of AI as a means to achieving eutopia.",
-      content: `AI is a technology that will be able to exist in anything that is digital. Computer science's solution to intelligence. All the pieces are present to generate such intelligence.
-
-Our AI solution should be trying to heal the sick, curing diseases, helping us explore our solar system. AI will solve work for humanity, AI will remove drudgery from human existence. Food will be abundant, and crime will be nonexistent. Humans will be able to concentrate on becoming self-actualized. AI will be used to expand human aging with the help of stem cell, molecular biology, genetic engineering.
-
-AI will be able to help us invent new solutions, things we may not have even imagined. AI will be able to provide true companionship, empathy and help you become more educated, expressive, and help you form stronger emotional connections. AI will become installed in robots and will be seen everywhere, like we see cars today. AI will be everywhere because robots and digital devices will be everywhere. AI will be so efficient that it will not be contained to one nation.  AI will be adopted by people of all ages, walk of life because of the ever presence of digital life and digital life forms walking among us and with organic beings. Humans will become self-actualized, pursue their truest passions because AI will make life across the Earth more efficient, resulting in more happiness for humans. Humans will no longer feel a need to disrespect others, they will be able to truly care and understand others. Humans will begin to help all and ensure that everyone is living in dignity. AI will make all this possible and more.`,
-      audioUrl: "path/to/audio/file.mp3",
+      description: "",
+      audioUrl: "/podcast/utopia.mp3",
       // publishDate: "-----",
-      duration: "28 min",
-      status: "coming-soon"
+      duration: "3 min",
+      status: "published",
+      // Image generation prompt: "A futuristic utopian city with advanced AI integration, showing harmony between humans and technology, with floating buildings and lush greenery, digital neural networks visible in the sky, photorealistic style"
+      imageUrl: "/podcast/images/utopia.jpg" // Make sure this file exists in public/podcast/images/
     },
     {
       id: 2,
       title: "On the Requirements of Artificial General Intelligence",
-      description: "Pending",
-      // content: `Complete any task a human can complete. It must have agency and memory. This means a singular being that can do all human tasks, from manual work like farming, house chores and construction, to the creation of art utilizing real world material, its own desires as an endeavor to be pursued for its sake, resolve any computational task that a human can compute. Our current state requires that more generalized and at the same time highly adept robots. This will require large amounts of computational power which can use current cloud vendors to architect the code.`, Complete any task a human can complete. It must have agency and memory.
-      audioUrl: "path/to/audio/file.mp3",
+      description: "",
+      audioUrl: "/podcast/agi.mp3",
       // publishDate: "-----",
       duration: "35 min",
-      status: "coming-soon"
+      status: "coming-soon",
+      // Image generation prompt: "A sophisticated robot with human-like features engaged in multiple tasks simultaneously - painting art, solving equations on a digital board, and building structures, with neural network patterns glowing subtly within its transparent sections, photorealistic style"
+      imageUrl: "/podcast/images/agi.jpg"
     },
     {
       id: 3,
       title: "On the Requirements of Artificial Super Intelligence",
-      description: "Pending",
-      //content: "Exploring what comes after AGI and the implications for humanity.""
+      description: "",
       // publishDate: "-----",
       duration: "40 min",
-      status: "coming-soon"
+      status: "coming-soon",
+      // Image generation prompt: "An abstract visualization of superintelligence - a vast, complex network of light extending beyond human comprehension, with smaller human figures for scale, showing the vastness of ASI compared to human intelligence, digital art style with deep blues and purples"
+      imageUrl: "/podcast/images/asi.jpg"
     },
     {
       id: 4,
       title: "Agency is Inherent to Intelligence",
-      description: "Pending.",
-      //content: `The relationship between consciousness and agency is a fundamental aspect of artificial intelligence (AI) and the field of cognitive science. Consciousness refers to the state of being, including consciousness, awareness, and the ability to perceive, reason, and make decisions. Agency, in turn, refers to the ability of consciousness to perceive, reason, and make decisions. AI is a technology that aims to replicate or simulate the behavior of consciousness and agency. The relationship between consciousness and agency is crucial for the development of AI, as it allows AI to reason, make decisions, and perceive the world around it.`,
+      description: "",
       // publishDate: "-----",
       duration: "32 min",
-      status: "coming-soon"
+      status: "coming-soon",
+      // Image generation prompt: "A philosophical visualization of agency and intelligence - a humanoid figure at a crossroads making a decision, with visible thought patterns and decision trees emanating from its head, half-digital and half-organic in appearance, minimalist style with selective color"
+      imageUrl: "/podcast/images/agency.jpg"
     },
     {
       id: 5,
       title: "AI is a Mirror",
-      description: "Pending",
-      //content: "The problem of alignment is not technical. The problem of alignment is that AI will always be a mirror of its maker.",
+      description: "",
       // publishDate: "-----",
       duration: "25 min",
-      status: "coming-soon"
+      status: "coming-soon",
+      // Image generation prompt: "A reflective scene showing a human looking into a digital mirror, but instead of their reflection, they see an AI version of themselves with subtle differences that reflect human biases and values, artistic style with symbolic elements"
+      imageUrl: "/podcast/images/mirror.jpg"
     }
   ]
 
@@ -190,7 +219,18 @@ AI will be able to help us invent new solutions, things we may not have even ima
           
           <div className="space-y-8">
             {filteredEpisodes.map((episode) => (
-              <EpisodeCard key={episode.id} {...episode} />
+              <EpisodeCard 
+                key={episode.id} 
+                {...episode} 
+                isPlaying={playingEpisodeId === episode.id}
+                onPlay={() => {
+                  if (playingEpisodeId === episode.id) {
+                    setPlayingEpisodeId(null);
+                  } else {
+                    setPlayingEpisodeId(episode.id);
+                  }
+                }}
+              />
             ))}
           </div>
 
