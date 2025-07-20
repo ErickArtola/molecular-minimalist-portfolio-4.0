@@ -64,14 +64,15 @@ const ProjectCard: React.FC<ProjectProps> = ({
         </div>
       )}
       {videoType === 'vimeo' && videoUrl && (
-        <div className="aspect-video bg-scientific-100 rounded-lg overflow-hidden" style={{ maxHeight: '400px' }}>
+        <div className="flex justify-center items-center bg-bg-primary rounded-lg" style={{ height: '400px' }}>
           <iframe 
             src={videoUrl}
-            className="w-full h-full"
+            style={{ width: '640px', height: '360px' }}
             frameBorder="0" 
             allow="autoplay; fullscreen; picture-in-picture" 
             allowFullScreen
             title={title}
+            loading="lazy"
           ></iframe>
         </div>
       )}
@@ -156,7 +157,7 @@ export default function ProjectsPage() {
       title: "Music Visualizer",
       technology: "JavaScript",
       description: "An impressive interactive audio-visual experience that combines the power of sound analysis with creative graphics programming. The project showcases a variety of visualizations that respond dynamically to music, creating an immersive and engaging user interface.",
-      videoUrl: "https://player.vimeo.com/video/1102853940",
+      videoUrl: "https://player.vimeo.com/video/1102853940?h=c9c9f9f9f9&autoplay=0&loop=0&title=0&byline=0&portrait=0",
       videoType: "vimeo",
       features: [
         "Multiple visualization modes, including Spectrum, WavePattern, Needles, Ridge, and Snake",
