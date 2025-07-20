@@ -155,7 +155,7 @@ export default function ThoughtCastPage() {
       title: "AI as Utopia",
       description: "A visual exploration of AI as a utopian force in society.",
       audioUrl: "/podcast/utopia.mp3",
-      publishDate: "May 15, 2023",
+      publishDate: "July 18, 2025",
       duration: "3 min",
       status: "published",
       // Image generation prompt: "A futuristic utopian city with advanced AI integration, showing harmony between humans and technology, with floating buildings and lush greenery, digital neural networks visible in the sky, photorealistic style"
