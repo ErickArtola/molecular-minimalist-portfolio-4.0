@@ -48,9 +48,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
           <video 
             className="w-full h-full object-cover" 
             controls 
-            poster="/api/placeholder/640/360"
+            autoPlay
+            muted
+            loop
+            playsInline
+            src={videoUrl}
           >
-            <source src={videoUrl} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -124,7 +127,7 @@ export default function ProjectsPage() {
       title: "Music Visualizer",
       technology: "JavaScript",
       description: "An impressive interactive audio-visual experience that combines the power of sound analysis with creative graphics programming. The project showcases a variety of visualizations that respond dynamically to music, creating an immersive and engaging user interface.",
-      videoUrl: "https://your-s3-bucket-name.s3.amazonaws.com/path/to/your/video.mp4",
+      videoUrl: "/visualizer.mp4",
       features: [
         "Multiple visualization modes, including Spectrum, WavePattern, Needles, Ridge, and Snake",
         "Real-time audio analysis using Fast Fourier Transform (FFT) to extract frequency data",
