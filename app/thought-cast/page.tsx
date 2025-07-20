@@ -15,17 +15,20 @@ interface EpisodeProps {
   imageUrl?: string
 }
 
-const EpisodeCard = ({ 
-  title, 
-  description, 
-  audioUrl, 
-  publishDate, 
-  duration,
-  status,
-  isPlaying,
-  onPlay,
-  imageUrl
-}: EpisodeProps & { isPlaying: boolean; onPlay: () => void }) => (
+const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => void }> = (props) => {
+  const { 
+    title, 
+    description, 
+    audioUrl, 
+    publishDate, 
+    duration,
+    status,
+    isPlaying,
+    onPlay,
+    imageUrl
+  } = props;
+  
+  return (
   <Card 
     as="article" 
     variant="elevated" 
@@ -35,11 +38,11 @@ const EpisodeCard = ({
   >
     {/* Episode Image */}
     {imageUrl && status === 'published' && (
-      <div className="w-full h-48 md:h-64 overflow-hidden rounded-lg mb-4">
+      <div className="w-full rounded-lg mb-4">
         <img 
           src={imageUrl} 
           alt={`${title} episode artwork`} 
-          className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+          className="w-full object-contain transition-transform hover:scale-105 duration-500"
         />
       </div>
     )}
@@ -113,7 +116,8 @@ const EpisodeCard = ({
 
     {/* No accent line */}
   </Card>
-)
+  );
+}
 
 export default function ThoughtCastPage() {
   const [searchTerm, setSearchTerm] = useState('')
