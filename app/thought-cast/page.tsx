@@ -153,7 +153,7 @@ export default function ThoughtCastPage() {
     {
       id: 1,
       title: "AI as Utopia",
-      description: "A visual exploration of AI as a utopian force in society.",
+      description: "In this thought-provoking episode, we explore AI's potential to reshape society as we stand at a critical juncture in 2025. From breakthrough healthcare applications to questions of human agency, discover how the next 5-10 years could determine humanity's future. We examine three critical factors that will shape whether AI leads us toward utopia or dystopia, and why technical advancement alone won't guarantee human flourishing. Essential listening for anyone interested in AI governance, policy, and the future of human-machine collaboration.",
       audioUrl: "/podcast/utopia.mp3",
       publishDate: "July 18, 2025",
       duration: "3 min",
