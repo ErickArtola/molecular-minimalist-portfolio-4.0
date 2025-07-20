@@ -64,16 +64,18 @@ const ProjectCard: React.FC<ProjectProps> = ({
         </div>
       )}
       {videoType === 'vimeo' && videoUrl && (
-        <div className="flex justify-center items-center bg-bg-primary rounded-lg" style={{ height: '400px' }}>
-          <iframe 
-            src={videoUrl}
-            style={{ width: '640px', height: '360px' }}
-            frameBorder="0" 
-            allow="autoplay; fullscreen; picture-in-picture" 
-            allowFullScreen
-            title={title}
-            loading="lazy"
-          ></iframe>
+        <div className="flex justify-center items-center bg-bg-primary rounded-lg py-8 px-4 md:px-0" style={{ minHeight: '300px', maxHeight: '400px' }}>
+          <div className="w-full max-w-[640px] h-auto aspect-video">
+            <iframe 
+              src={videoUrl}
+              className="w-full h-full"
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowFullScreen
+              title={title}
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       )}
       {youtubeId && (
