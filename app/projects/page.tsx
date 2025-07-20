@@ -9,6 +9,7 @@ interface ProjectProps {
   features?: string[]
   highlights?: string[]
   videoUrl?: string
+  youtubeId?: string
   demoUrl?: string
   githubUrl?: string
 }
@@ -20,6 +21,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
   features, 
   highlights,
   videoUrl,
+  youtubeId,
   demoUrl,
   githubUrl 
 }) => (
@@ -43,6 +45,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         </p>
       </div>
 
+      {/* Video Section - Support for both local videos and YouTube embeds */}
       {videoUrl && (
         <div className="aspect-video bg-scientific-100 rounded-lg overflow-hidden">
           <video 
@@ -56,6 +59,18 @@ const ProjectCard: React.FC<ProjectProps> = ({
           >
             Your browser does not support the video tag.
           </video>
+        </div>
+      )}
+      {youtubeId && (
+        <div className="aspect-video rounded-lg overflow-hidden">
+          <iframe 
+            className="w-full h-full"
+            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=0&rel=0`}
+            title={`${title} Demo Video`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       )}
 
@@ -127,7 +142,7 @@ export default function ProjectsPage() {
       title: "Music Visualizer",
       technology: "JavaScript",
       description: "An impressive interactive audio-visual experience that combines the power of sound analysis with creative graphics programming. The project showcases a variety of visualizations that respond dynamically to music, creating an immersive and engaging user interface.",
-      videoUrl: "/visualizer.mp4",
+      youtubeId: "9oQnDud3iGQ",
       features: [
         "Multiple visualization modes, including Spectrum, WavePattern, Needles, Ridge, and Snake",
         "Real-time audio analysis using Fast Fourier Transform (FFT) to extract frequency data",

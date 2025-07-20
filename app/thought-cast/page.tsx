@@ -13,6 +13,7 @@ interface EpisodeProps {
   duration?: string
   status: 'published' | 'coming-soon'
   imageUrl?: string
+  videoUrl?: string
 }
 
 const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => void }> = (props) => {
