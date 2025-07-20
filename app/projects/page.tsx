@@ -156,21 +156,15 @@ export default function ProjectsPage() {
     {
       title: "Music Visualizer",
       technology: "JavaScript",
-      description: "An impressive interactive audio-visual experience that combines the power of sound analysis with creative graphics programming. The project showcases a variety of visualizations that respond dynamically to music, creating an immersive and engaging user interface.",
+      description: "The Music Visualizer is an immersive audio-visual experience that transforms your music into stunning visual displays. At its heart, the application offers a suite of mesmerizing visualization modes that bring your music to life. As you play your favorite tracks, you can watch as the Spectrum analyzer creates dynamic patterns that pulse with the frequencies, or switch to the fluid WavePattern that ebbs and flows with the music's rhythm. The hypnotic Needles visualization responds to every beat, while the Ridge pattern creates an otherworldly 3D landscape that morphs with the sound. The Snake visualization, despite its name, creates an abstract collection of intersecting white lines that dance and scatter beneath a textured spherical object, creating a dynamic contrast between the organic movement of the sphere and the geometric patterns below. \n\nThe interface is designed with user experience in mind, featuring intuitive playback controls that let you easily manage your music. As you interact with the visualizer, it responds smoothly to both mouse and keyboard inputs, allowing you to seamlessly switch between different visualization styles. The application adapts beautifully to any window size, ensuring an optimal viewing experience on any display.",
       videoUrl: "https://player.vimeo.com/video/1102853940?h=c9c9f9f9f9&autoplay=0&loop=0&title=0&byline=0&portrait=0",
       videoType: "vimeo",
-      features: [
-        "Multiple visualization modes, including Spectrum, WavePattern, Needles, Ridge, and Snake",
-        "Real-time audio analysis using Fast Fourier Transform (FFT) to extract frequency data",
-        "3D graphics rendering using WebGL mode in p5.js",
-        "Interactive controls allowing users to play/pause music and switch between visualizations",
-        "Responsive design that adapts to window resizing"
-      ],
+      features: [],
       highlights: [
-        "Utilizes noise functions to generate organic, flowing shapes",
-        "Incorporates 3D transformations and lighting effects",
-        "Dynamically responds to bass and treble frequencies",
-        "Applies textures and materials for enhanced visual appeal"
+        "Audio Processing: Integration with p5.sound.js library for audio analysis, Real-time Fast Fourier Transform (FFT) implementation, Audio buffer management and processing",
+        "Graphics Implementation: Built using p5.js framework, WebGL mode support for 3D visualizations, Dynamic canvas sizing and viewport management, Custom rendering pipeline for each visualization type",
+        "Architecture: Modular code structure with separate files for each visualization, Object-oriented design patterns, Event-driven architecture for user interactions, Efficient memory management for real-time performance",
+        "Assets Management: Custom font integration (Inter.ttf), Image asset handling (ngc604.jpg, sun.jpg), Audio file management (Dot2.mp3, stomper_reggae_bit.mp3)"
       ]
     },
     {
