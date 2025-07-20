@@ -13,7 +13,7 @@ export default function HomePage() {
         {/* DNA Background Image - Extended beyond viewport */}
         <div className="absolute inset-0 h-[150vh]">
           <Image
-            src="/dna.png"
+            src="/dna.png?v=1" // Added version parameter to force refresh
             alt="DNA Helix - representing genomics research"
             fill
             className="object-cover object-center"

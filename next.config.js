@@ -20,28 +20,8 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
-  // Security headers (static export compatible)
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
+  // Security headers removed as they're not compatible with static exports
+  // For static hosting, configure these headers in your hosting platform
 
   // SEO and metadata optimization
   generateEtags: true,
