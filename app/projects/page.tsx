@@ -84,7 +84,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         </div>
       )}
 
-      <div className="flex gap-3 pt-4 border-t border-scientific-100">
+      <div className="flex gap-3 pt-4">
         {demoUrl && (
           <button type="button" className="btn-primary text-small py-2 px-4">
             View Demo
@@ -173,9 +173,7 @@ export default function ProjectsPage() {
             {projects.map((project, index) => (
               <div key={index}>
                 <ProjectCard {...project} />
-                {index < projects.length - 1 && (
-                  <div className="mt-12 border-t border-scientific-100" />
-                )}
+                {/* No divider */}
               </div>
             ))}
           </div>
@@ -222,9 +220,9 @@ export default function ProjectsPage() {
             I'm always excited to work on innovative projects that combine technology 
             with real-world impact. Let's build something amazing together.
           </p>
-          <button type="button" className="btn-primary">
+          <a href="https://www.linkedin.com/in/erick-artola/" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
             Get in Touch
-          </button>
+          </a>
         </section>
       </div>
     </PageWrapper>

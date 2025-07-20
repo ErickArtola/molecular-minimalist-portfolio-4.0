@@ -292,9 +292,9 @@ export default function HomePage() {
       for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
     </p>
     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <button type="button" className="btn-primary">
+      <Link href="/projects" className="btn-primary">
         View Research Projects
-      </button>
+      </Link>
       <button type="button" className="btn-secondary">
         Get in Touch
       </button>

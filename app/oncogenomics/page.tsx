@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <ul className="space-y-1">
             {achievements.map((achievement, index) => (
               <li key={index} className="text-body text-hero-text flex items-start gap-2">
-                <span className="text-accent mt-1">•</span>
+                <span className="text-accent mt-1">-</span>
                 <span>{achievement}</span>
               </li>
             ))}
@@ -97,8 +97,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       )}
     </div>
     
-    {/* Molecular accent line */}
-    <div className="h-0.5 bg-gradient-to-r from-accent to-secondary rounded-full opacity-30" />
+    {/* No accent line */}
   </Card>
 )
 
@@ -107,17 +106,17 @@ export default function OncogenomicsPage() {
     {
       title: "AI-Driven Cancer Genomics Analysis",
       description: "Developing machine learning pipelines for the analysis of large-scale cancer genomic datasets, utilizing cloud computing infrastructure to process multi-omics data and identify novel therapeutic targets.",
-      icon: "🧠"
+      icon: "AI"
     },
     {
       title: "Cloud-Based Genomic Data Processing",
       description: "Architecting scalable cloud solutions for genomic data storage, processing, and analysis, enabling researchers to handle the computational demands of modern cancer genomics research.",
-      icon: "☁️"
+      icon: "Cloud"
     },
     {
       title: "Precision Medicine Applications",
       description: "Exploring the application of artificial intelligence in personalizing cancer treatment strategies based on individual genomic profiles and tumor characteristics.",
-      icon: "🎯"
+      icon: "PM"
     }
   ]
 
@@ -192,7 +191,7 @@ export default function OncogenomicsPage() {
                 animation="hover"
                 className="text-center space-y-4"
               >
-                <div className="text-5xl mb-4">{area.icon}</div>
+                <div className="text-xl font-bold mb-4 bg-scientific-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto">{area.icon}</div>
                 <h3 className="text-h3 font-medium text-hero-text">{area.title}</h3>
                 <p className="text-body text-hero-text leading-relaxed">{area.description}</p>
               </Card>
@@ -245,37 +244,37 @@ export default function OncogenomicsPage() {
                 <div className="space-y-2">
                   <h4 className="font-medium text-hero-text">AI/ML Frameworks</h4>
                   <ul className="text-hero-text space-y-1">
-                    <li>• TensorFlow & PyTorch</li>
-                    <li>• Scikit-learn</li>
-                    <li>• Transformers</li>
-                    <li>• BioPython</li>
+                    <li>- TensorFlow & PyTorch</li>
+                    <li>- Scikit-learn</li>
+                    <li>- Transformers</li>
+                    <li>- BioPython</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-medium text-hero-text">Cloud & Infrastructure</h4>
                   <ul className="text-hero-text space-y-1">
-                    <li>• AWS SageMaker</li>
-                    <li>• AWS Batch</li>
-                    <li>• Kubernetes</li>
-                    <li>• Docker</li>
+                    <li>- AWS SageMaker</li>
+                    <li>- AWS Batch</li>
+                    <li>- Kubernetes</li>
+                    <li>- Docker</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-medium text-hero-text">Genomics Tools</h4>
                   <ul className="text-hero-text space-y-1">
-                    <li>• GATK</li>
-                    <li>• Nextflow</li>
-                    <li>• Bioconductor</li>
-                    <li>• IGV</li>
+                    <li>- GATK</li>
+                    <li>- Nextflow</li>
+                    <li>- Bioconductor</li>
+                    <li>- IGV</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-medium text-hero-text">Data Analysis</h4>
                   <ul className="text-hero-text space-y-1">
-                    <li>• R & Python</li>
-                    <li>• Jupyter Notebooks</li>
-                    <li>• Apache Spark</li>
-                    <li>• SQL/NoSQL</li>
+                    <li>- R & Python</li>
+                    <li>- Jupyter Notebooks</li>
+                    <li>- Apache Spark</li>
+                    <li>- SQL/NoSQL</li>
                   </ul>
                 </div>
               </div>
@@ -302,10 +301,10 @@ export default function OncogenomicsPage() {
               <div className="space-y-2">
                 <h4 className="text-body font-medium text-hero-text">Areas of Interest:</h4>
                 <ul className="text-small text-hero-text space-y-1">
-                  <li>• Multi-omics data integration</li>
-                  <li>• Drug discovery pipelines</li>
-                  <li>• Biomarker identification</li>
-                  <li>• Clinical trial optimization</li>
+                  <li>- Multi-omics data integration</li>
+                  <li>- Drug discovery pipelines</li>
+                  <li>- Biomarker identification</li>
+                  <li>- Clinical trial optimization</li>
                 </ul>
               </div>
             </Card>
