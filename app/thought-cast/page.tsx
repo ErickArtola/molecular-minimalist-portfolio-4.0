@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react'
 import Card from '@/components/ui/Card'
 import PageWrapper from '@/components/layout/PageWrapper'
+import S3VideoPlayer from '@/components/ui/S3VideoPlayer'
 
 interface EpisodeProps {
   id: number
@@ -14,6 +15,7 @@ interface EpisodeProps {
   status: 'published' | 'coming-soon'
   imageUrl?: string
   videoUrl?: string
+  videoType?: 's3' | 'youtube'
 }
 
 const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => void }> = (props) => {
@@ -26,7 +28,9 @@ const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => v
     status,
     isPlaying,
     onPlay,
-    imageUrl
+    imageUrl,
+    videoUrl,
+    videoType = 's3'
   } = props;
   
   return (
@@ -37,14 +41,34 @@ const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => v
     animation="hover"
     className="space-y-6"
   >
-    {/* Episode Image */}
-    {imageUrl && status === 'published' && (
+    {/* Episode Image or Video */}
+    {status === 'published' && (
       <div className="w-full rounded-lg mb-4">
-        <img 
-          src={imageUrl} 
-          alt={`${title} episode artwork`} 
-          className="w-full object-contain transition-transform hover:scale-105 duration-500"
-        />
+        {videoUrl ? (
+          <div className="aspect-video w-full relative">
+            {videoType === 's3' ? (
+              <S3VideoPlayer 
+                src={videoUrl} 
+                poster={imageUrl} 
+                title={title}
+              />
+            ) : (
+              <iframe 
+                src={videoUrl} 
+                className="w-full h-full rounded-lg"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+                title={title}
+              />
+            )}
+          </div>
+        ) : imageUrl ? (
+          <img 
+            src={imageUrl} 
+            alt={`${title} episode artwork`} 
+            className="w-full object-contain transition-transform hover:scale-105 duration-500"
+          />
+        ) : null}
       </div>
     )}
     
@@ -129,9 +153,9 @@ export default function ThoughtCastPage() {
     {
       id: 1,
       title: "AI as Utopia",
-      description: "",
+      description: "A visual exploration of AI as a utopian force in society.",
       audioUrl: "/podcast/utopia.mp3",
-      // publishDate: "-----",
+      publishDate: "May 15, 2023",
       duration: "3 min",
       status: "published",
       // Image generation prompt: "A futuristic utopian city with advanced AI integration, showing harmony between humans and technology, with floating buildings and lush greenery, digital neural networks visible in the sky, photorealistic style"
@@ -146,7 +170,10 @@ export default function ThoughtCastPage() {
       duration: "35 min",
       status: "coming-soon",
       // Image generation prompt: "A sophisticated robot with human-like features engaged in multiple tasks simultaneously - painting art, solving equations on a digital board, and building structures, with neural network patterns glowing subtly within its transparent sections, photorealistic style"
-      imageUrl: "/podcast/images/agi.jpg"
+      imageUrl: "/podcast/images/agi.jpg",
+      // Example of how to use S3 for videos
+      // videoUrl: "https://tears-are-data.s3.us-east-1.amazonaws.com/videos/agi-requirements.mp4",
+      // videoType: "s3"
     },
     {
       id: 3,

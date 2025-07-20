@@ -9,6 +9,7 @@ interface ProjectProps {
   features?: string[]
   highlights?: string[]
   videoUrl?: string
+  videoType?: 's3' | 'local' | 'youtube' | 'vimeo'
   youtubeId?: string
   demoUrl?: string
   githubUrl?: string
@@ -21,6 +22,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
   features, 
   highlights,
   videoUrl,
+  videoType = 'local',
   youtubeId,
   demoUrl,
   githubUrl 
@@ -45,20 +47,32 @@ const ProjectCard: React.FC<ProjectProps> = ({
         </p>
       </div>
 
-      {/* Video Section - Support for both local videos and YouTube embeds */}
-      {videoUrl && (
-        <div className="aspect-video bg-scientific-100 rounded-lg overflow-hidden">
+      {/* Video Section - Support for videos, Vimeo and YouTube embeds */}
+      {videoUrl && videoType !== 'vimeo' && (
+        <div className="aspect-video bg-scientific-100 rounded-lg overflow-hidden" style={{ maxHeight: '400px' }}>
           <video 
-            className="w-full h-full object-cover" 
+            className="w-full h-full object-contain" 
             controls 
-            autoPlay
             muted
-            loop
             playsInline
+            disablePictureInPicture
+            preload="auto"
             src={videoUrl}
           >
             Your browser does not support the video tag.
           </video>
+        </div>
+      )}
+      {videoType === 'vimeo' && videoUrl && (
+        <div className="aspect-video bg-scientific-100 rounded-lg overflow-hidden" style={{ maxHeight: '400px' }}>
+          <iframe 
+            src={videoUrl}
+            className="w-full h-full"
+            frameBorder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowFullScreen
+            title={title}
+          ></iframe>
         </div>
       )}
       {youtubeId && (
@@ -142,7 +156,8 @@ export default function ProjectsPage() {
       title: "Music Visualizer",
       technology: "JavaScript",
       description: "An impressive interactive audio-visual experience that combines the power of sound analysis with creative graphics programming. The project showcases a variety of visualizations that respond dynamically to music, creating an immersive and engaging user interface.",
-      youtubeId: "9oQnDud3iGQ",
+      videoUrl: "https://player.vimeo.com/video/1102853940?h=c9c9f9f9f9",
+      videoType: "vimeo",
       features: [
         "Multiple visualization modes, including Spectrum, WavePattern, Needles, Ridge, and Snake",
         "Real-time audio analysis using Fast Fourier Transform (FFT) to extract frequency data",
