@@ -199,6 +199,33 @@ export default function OncogenomicsPage() {
           </div>
         </section>
 
+        {/* Presentation Section */}
+        <section className="space-y-8">
+          <div className="text-center">
+            <h2 className="text-h2 font-semibold text-hero-text mb-4">
+              Research Presentation
+            </h2>
+            <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
+              View my latest research presentation on oncogenomics and AI applications.
+            </p>
+          </div>
+          <div className="flex flex-col items-center space-y-6">
+            {/* PowerPoint Presentation Embed */}
+            <div className="w-full max-w-3xl mx-auto">
+              <iframe src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSr0rJy6_CTR7e1DgoFU9hxAZQ-yMFWpwSgqo7zXDABB4I" width="100%" height="500" frameBorder="0" scrolling="no"></iframe>
+            </div>
+            
+            {/* Audio Player for Presentation */}
+            <div className="w-full max-w-3xl mx-auto">
+              <h3 className="text-h3 font-medium text-hero-text mb-2">Introduction to Cancer Genomics</h3>
+              <audio controls className="w-full" preload="auto" controlsList="nodownload">
+                <source src="/oncogenomics/course-primer/1.introduction-to-cancer-genomics.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </section>
+
         {/* Research Projects */}
         <section className="space-y-12">
           <div className="text-center">

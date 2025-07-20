@@ -3,7 +3,6 @@
 import React, { useState, useRef } from 'react'
 import Card from '@/components/ui/Card'
 import PageWrapper from '@/components/layout/PageWrapper'
-import S3VideoPlayer from '@/components/ui/S3VideoPlayer'
 
 interface EpisodeProps {
   id: number
@@ -15,7 +14,7 @@ interface EpisodeProps {
   status: 'published' | 'coming-soon'
   imageUrl?: string
   videoUrl?: string
-  videoType?: 's3' | 'youtube'
+  videoType?: 'youtube'
 }
 
 const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => void }> = (props) => {
@@ -30,7 +29,7 @@ const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => v
     onPlay,
     imageUrl,
     videoUrl,
-    videoType = 's3'
+    videoType
   } = props;
   
   return (
@@ -46,21 +45,13 @@ const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => v
       <div className="w-full rounded-lg mb-4">
         {videoUrl ? (
           <div className="aspect-video w-full relative">
-            {videoType === 's3' ? (
-              <S3VideoPlayer 
-                src={videoUrl} 
-                poster={imageUrl} 
-                title={title}
-              />
-            ) : (
-              <iframe 
-                src={videoUrl} 
-                className="w-full h-full rounded-lg"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-                title={title}
-              />
-            )}
+            <iframe 
+              src={videoUrl} 
+              className="w-full h-full rounded-lg"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+              title={title}
+            />
           </div>
         ) : imageUrl ? (
           <img 
@@ -171,9 +162,8 @@ export default function ThoughtCastPage() {
       status: "coming-soon",
       // Image generation prompt: "A sophisticated robot with human-like features engaged in multiple tasks simultaneously - painting art, solving equations on a digital board, and building structures, with neural network patterns glowing subtly within its transparent sections, photorealistic style"
       imageUrl: "/podcast/images/agi.jpg",
-      // Example of how to use S3 for videos
-      // videoUrl: "https://tears-are-data.s3.us-east-1.amazonaws.com/videos/agi-requirements.mp4",
-      // videoType: "s3"
+      // Example of how to use videos
+      // videoUrl: "https://player.vimeo.com/video/123456789"
     },
     {
       id: 3,
