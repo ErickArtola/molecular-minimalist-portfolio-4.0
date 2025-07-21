@@ -209,28 +209,55 @@ export default function OncogenomicsPage() {
               View my latest research presentation on oncogenomics and AI applications.
             </p>
           </div>
-          <div className="flex flex-col items-center space-y-6">
-            {/* PowerPoint Presentation Embed */}
-            <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
-              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
-                <iframe 
-                  src="https://1drv.ms/p/c/e38e37d6ed9af814/IQRwSTPVxRr2S7AuSh77r9R9AXnyAx_enP0vKVTessiIp8I" 
-                  className="absolute top-0 left-0 w-full h-full" 
-                  frameBorder="0" 
-                  scrolling="no"
-                  allowFullScreen
-                  loading="lazy"
-                ></iframe>
+          <div className="flex flex-col items-center space-y-10">
+            {/* First PowerPoint Presentation */}
+            <div className="w-full space-y-4">
+              <h3 className="text-h3 font-medium text-hero-text text-center">From Chromosomal Chaos to Molecular Precision</h3>
+              <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
+                <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                  <iframe 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQRwSTPVxRr2S7AuSh77r9R9AXnyAx_enP0vKVTessiIp8I" 
+                    className="absolute top-0 left-0 w-full h-full" 
+                    frameBorder="0" 
+                    scrolling="no"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+              
+              {/* Audio Player for First Presentation */}
+              <div className="w-full max-w-3xl mx-auto">
+                <audio controls className="w-full" preload="auto" controlsList="nodownload">
+                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/1.1from-chromosomal-chaos-to-molecular-precision.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
               </div>
             </div>
             
-            {/* Audio Player for Presentation */}
-            <div className="w-full max-w-3xl mx-auto">
-              <h3 className="text-h3 font-medium text-hero-text mb-2">From Chromosomal Chaos to Molecular Precision</h3>
-              <audio controls className="w-full" preload="auto" controlsList="nodownload">
-                <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/1.1from-chromosomal-chaos-to-molecular-precision.mp3" type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
+            {/* Second PowerPoint Presentation */}
+            <div className="w-full space-y-4">
+              <h3 className="text-h3 font-medium text-hero-text text-center">The Hallmarks of Cancer: From Concept to Clinical Reality</h3>
+              <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
+                <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                  <iframe 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSjCp7hjP27QbH3e2u0fF4rAcGsoE8YvqMGmSww7dXau0Y" 
+                    className="absolute top-0 left-0 w-full h-full" 
+                    frameBorder="0" 
+                    scrolling="no"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+              
+              {/* Audio Player for Second Presentation */}
+              <div className="w-full max-w-3xl mx-auto">
+                <audio controls className="w-full" preload="auto" controlsList="nodownload">
+                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/1.2-the-hallmarks-framework.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
             </div>
           </div>
         </section>
