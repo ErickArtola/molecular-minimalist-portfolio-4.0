@@ -228,7 +228,7 @@ export default function OncogenomicsPage() {
             <div className="w-full max-w-3xl mx-auto">
               <h3 className="text-h3 font-medium text-hero-text mb-2">From Chromosomal Chaos to Molecular Precision</h3>
               <audio controls className="w-full" preload="auto" controlsList="nodownload">
-                <source src="/oncogenomics/course-primer/1.introduction-to-cancer-genomics.mp3" type="audio/mpeg" />
+                <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/1.1from-chromosomal-chaos-to-molecular-precision.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
             </div>
