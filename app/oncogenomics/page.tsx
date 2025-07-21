@@ -203,7 +203,7 @@ export default function OncogenomicsPage() {
         <section className="space-y-8">
           <div className="text-center">
             <h2 className="text-h2 font-semibold text-hero-text mb-4">
-              Research Presentation
+              Oncogenomics Learning Hub
             </h2>
             <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
               View my latest research presentation on oncogenomics and AI applications.
@@ -346,7 +346,7 @@ export default function OncogenomicsPage() {
             </Card>
             
             <Card variant="outlined" size="medium" className="space-y-4">
-              <h3 className="text-h3 font-medium text-hero-text">Publications & Presentations</h3>
+              <h3 className="text-h3 font-medium text-hero-text">Oncogenomics Learning Hub</h3>
               <p className="text-body text-hero-text leading-relaxed">
                 Research publications and conference presentations will be listed here as they 
                 become available. Currently preparing manuscripts on AI applications in 
@@ -378,9 +378,9 @@ export default function OncogenomicsPage() {
             <button type="button" className="btn-primary">
               View Research Proposals
             </button>
-            <button type="button" className="btn-secondary">
+            <a href="https://www.linkedin.com/in/erick-artola/" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 text-body font-medium bg-white text-accent border border-accent rounded-lg hover:bg-accent/5 transition-colors">
               Contact for Collaboration
-            </button>
+            </a>
           </div>
         </section>
       </div>
