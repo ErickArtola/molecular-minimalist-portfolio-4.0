@@ -214,7 +214,7 @@ export default function OncogenomicsPage() {
             <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
               <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
                 <iframe 
-                  src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSr0rJy6_CTR7e1DgoFU9hxAZQ-yMFWpwSgqo7zXDABB4I" 
+                  src="https://1drv.ms/p/c/e38e37d6ed9af814/IQRwSTPVxRr2S7AuSh77r9R9AXnyAx_enP0vKVTessiIp8I" 
                   className="absolute top-0 left-0 w-full h-full" 
                   frameBorder="0" 
                   scrolling="no"
@@ -226,7 +226,7 @@ export default function OncogenomicsPage() {
             
             {/* Audio Player for Presentation */}
             <div className="w-full max-w-3xl mx-auto">
-              <h3 className="text-h3 font-medium text-hero-text mb-2">Introduction to Cancer Genomics</h3>
+              <h3 className="text-h3 font-medium text-hero-text mb-2">From Chromosomal Chaos to Molecular Precision</h3>
               <audio controls className="w-full" preload="auto" controlsList="nodownload">
                 <source src="/oncogenomics/course-primer/1.introduction-to-cancer-genomics.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
