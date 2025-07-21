@@ -267,18 +267,18 @@ export default function OncogenomicsPage() {
                 <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
                   <iframe 
                     src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSAyJGZHVdVRKIEKG-zC1ukASgkAyajjlZSs32EbSKQWg0" 
-                    className="absolute top-0 left-0 w-full h-full" 
+                    width="402" 
+                    height="327" 
                     frameBorder="0" 
                     scrolling="no"
-                    allowFullScreen
-                    loading="lazy"
+                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
                   ></iframe>
                 </div>
               </div>
               
               {/* Audio Player for Third Presentation */}
               <div className="w-full max-w-3xl mx-auto">
-                <audio controls className="w-full" preload="auto" controlsList="nodownload">
+                <audio controls className="w-full">
                   <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/2.1-ras-myc.mp3" type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
