@@ -266,7 +266,7 @@ export default function OncogenomicsPage() {
               <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
                   <iframe 
-                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQQxy-iHBU0xS7vwSlUgrvfQAb1Ua1byCmZvNgEN9YMkvlk?em=2&amp;wdAr=1.7777777777777777" 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQTBWX5kGNKAT75pshE66lTmAcC8YXX_NRMAB2DLaOpJFhU?em=2&amp;wdAr=1.7777777777777777" 
                     className="absolute top-0 left-0 w-full h-full" 
                     frameBorder="0" 
                     scrolling="no"
@@ -279,7 +279,7 @@ export default function OncogenomicsPage() {
               {/* Audio Player for Third Presentation */}
               <div className="w-full max-w-3xl mx-auto">
                 <audio controls className="w-full" preload="auto" controlsList="nodownload">
-                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/2.1-ras-myc-version2.mp3" type="audio/mpeg" />
+                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/2.1-ras-myc-version2-version2.mp3" type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
               </div>
@@ -291,12 +291,12 @@ export default function OncogenomicsPage() {
               <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
                   <iframe 
-                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQTVW5EtgnIsSrftdQ7LBHO4AaZpGIm_uE-jNZNVVB1fHdo" 
-                    width="402" 
-                    height="327" 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQScw3jwpQEPTI5NTaIT-MStAeVfWvgi1PevXH_KDodDMt4?em=2&amp;wdAr=1.7777777777777777" 
+                    className="absolute top-0 left-0 w-full h-full" 
                     frameBorder="0" 
                     scrolling="no"
-                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+                    allowFullScreen
+                    loading="lazy"
                   ></iframe>
                 </div>
               </div>
@@ -310,30 +310,7 @@ export default function OncogenomicsPage() {
               </div>
             </div>
             
-            {/* Fifth PowerPoint Presentation - Oncogene and Tumor Suppressor Analysis */}
-            <div className="w-full space-y-4">
-              <h3 className="text-h3 font-medium text-hero-text text-center">Oncogene and Tumor Suppressor Analysis</h3>
-              <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
-                <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
-                  <iframe 
-                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSTOYBRrG4xT4OHc9xEQgDZAZL-gqZmDnr-37RMw8bcPBI?em=2&amp;wdAr=1.7777777777777777" 
-                    className="absolute top-0 left-0 w-full h-full" 
-                    frameBorder="0" 
-                    scrolling="no"
-                    allowFullScreen
-                    loading="lazy"
-                  ></iframe>
-                </div>
-              </div>
-              
-              {/* Audio Player for Fifth Presentation */}
-              <div className="w-full max-w-3xl mx-auto">
-                <audio controls className="w-full" preload="auto" controlsList="nodownload">
-                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/Lab2.1-oncogene-and-tumor-suppressor-analysis.pdf.mp3" type="audio/mpeg" />
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
-            </div>
+
           </div>
         </section>
 
@@ -430,8 +407,8 @@ export default function OncogenomicsPage() {
               Practical applications and laboratory techniques in cancer genomics research.
             </p>
           </div>
-          <div className="flex flex-col items-center space-y-6">
-            {/* Laboratory Presentation */}
+          <div className="flex flex-col items-center space-y-10">
+            {/* First Laboratory Presentation */}
             <div className="w-full space-y-4">
               <h3 className="text-h3 font-medium text-hero-text text-center">Cancer Cell Line Characterization</h3>
               <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
@@ -447,10 +424,35 @@ export default function OncogenomicsPage() {
                 </div>
               </div>
               
-              {/* Audio Player for Laboratory Presentation */}
+              {/* Audio Player for First Laboratory Presentation */}
               <div className="w-full max-w-3xl mx-auto">
                 <audio controls className="w-full" preload="auto" controlsList="nodownload">
                   <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/Lab1.1-cancer-cell-line-characterization.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+            
+            {/* Second Laboratory Presentation - Oncogene and Tumor Suppressor Analysis */}
+            <div className="w-full space-y-4">
+              <h3 className="text-h3 font-medium text-hero-text text-center">Oncogene and Tumor Suppressor Analysis</h3>
+              <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
+                <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                  <iframe 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSTOYBRrG4xT4OHc9xEQgDZAZL-gqZmDnr-37RMw8bcPBI?em=2&amp;wdAr=1.7777777777777777" 
+                    className="absolute top-0 left-0 w-full h-full" 
+                    frameBorder="0" 
+                    scrolling="no"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+              
+              {/* Audio Player for Second Laboratory Presentation */}
+              <div className="w-full max-w-3xl mx-auto">
+                <audio controls className="w-full" preload="auto" controlsList="nodownload">
+                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/Lab2.1-oncogene-and-tumor-suppressor-analysis.pdf.mp3" type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
               </div>
