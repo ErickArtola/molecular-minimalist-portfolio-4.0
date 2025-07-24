@@ -284,6 +284,31 @@ export default function OncogenomicsPage() {
                 </audio>
               </div>
             </div>
+            
+            {/* Fourth PowerPoint Presentation - Tumor Suppressors */}
+            <div className="w-full space-y-4">
+              <h3 className="text-h3 font-medium text-hero-text text-center">Tumor Suppressors</h3>
+              <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
+                <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                  <iframe 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/EdVbkS2CcixKt-11DssEc7gBGYFyRMwQDZW1CpI0EgLHJQ?e=1qgtrf" 
+                    className="absolute top-0 left-0 w-full h-full" 
+                    frameBorder="0" 
+                    scrolling="no"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+              
+              {/* Audio Player for Fourth Presentation */}
+              <div className="w-full max-w-3xl mx-auto">
+                <audio controls className="w-full">
+                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/ElevenLabs_Lecture_2.2.pdf.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
           </div>
         </section>
 
