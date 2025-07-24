@@ -291,12 +291,12 @@ export default function OncogenomicsPage() {
               <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
                   <iframe 
-                    src="https://1drv.ms/p/c/e38e37d6ed9af814/EdVbkS2CcixKt-11DssEc7gBGYFyRMwQDZW1CpI0EgLHJQ?e=1qgtrf" 
-                    className="absolute top-0 left-0 w-full h-full" 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQTVW5EtgnIsSrftdQ7LBHO4AaZpGIm_uE-jNZNVVB1fHdo" 
+                    width="402" 
+                    height="327" 
                     frameBorder="0" 
                     scrolling="no"
-                    allowFullScreen
-                    loading="lazy"
+                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
                   ></iframe>
                 </div>
               </div>
