@@ -309,6 +309,31 @@ export default function OncogenomicsPage() {
                 </audio>
               </div>
             </div>
+            
+            {/* Fifth PowerPoint Presentation - Oncogene and Tumor Suppressor Analysis */}
+            <div className="w-full space-y-4">
+              <h3 className="text-h3 font-medium text-hero-text text-center">Oncogene and Tumor Suppressor Analysis</h3>
+              <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
+                <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                  <iframe 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSTOYBRrG4xT4OHc9xEQgDZAZL-gqZmDnr-37RMw8bcPBI?em=2&amp;wdAr=1.7777777777777777" 
+                    className="absolute top-0 left-0 w-full h-full" 
+                    frameBorder="0" 
+                    scrolling="no"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+              
+              {/* Audio Player for Fifth Presentation */}
+              <div className="w-full max-w-3xl mx-auto">
+                <audio controls className="w-full" preload="auto" controlsList="nodownload">
+                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/Lab2.1-oncogene-and-tumor-suppressor-analysis.pdf.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
           </div>
         </section>
 
