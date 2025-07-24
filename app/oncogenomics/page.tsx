@@ -266,7 +266,7 @@ export default function OncogenomicsPage() {
               <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
                 <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
                   <iframe 
-                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQRwSTPVxRr2S7AuSh77r9R9AXnyAx_enP0vKVTessiIp8I" 
+                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQQxy-iHBU0xS7vwSlUgrvfQAb1Ua1byCmZvNgEN9YMkvlk?em=2&amp;wdAr=1.7777777777777777" 
                     className="absolute top-0 left-0 w-full h-full" 
                     frameBorder="0" 
                     scrolling="no"
