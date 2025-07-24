@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
 
 export default function Header() {
   const pathname = usePathname()
-  const heroPages = ['/', '/projects', '/thought-cast', '/oncogenomics']
+  const heroPages = ['/', '/projects', '/thought-cast', '/oncogenomics', '/oncogenomics/library']
   const hasHero = heroPages.includes(pathname)
 
   return (
@@ -27,17 +27,10 @@ export default function Header() {
       }
     >
       <div
-        className={`container-scientific flex items-center justify-between py-6 lg:py-8 ${
+        className={`container-scientific flex items-center justify-end py-6 lg:py-8 ${
           hasHero ? 'text-white' : ''
         }`}
       >
-        <Link href="/" className="font-bold">
-          <span
-            className={hasHero ? 'bg-black/70 px-3 py-1 rounded text-white' : 'text-scientific-950'}
-          >
-            EGA
-          </span>
-        </Link>
         <nav className="flex flex-wrap gap-x-8 gap-y-3 pointer-events-auto">
           {navItems.map((item) => {
             const isActive = pathname === item.href

@@ -66,7 +66,28 @@ const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => v
     {/* Episode Header */}
     <div className="space-y-3">
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-h2 font-medium text-hero-text flex-1">{title}</h3>
+        <div className="flex items-center gap-3 flex-1">
+          {status === 'published' && audioUrl && (
+            <button 
+              onClick={onPlay}
+              className={`flex items-center justify-center p-2 rounded-full transition-colors flex-shrink-0 ${isPlaying ? 'bg-accent text-white' : 'bg-scientific-100 hover:bg-scientific-200 text-hero-text'}`}
+              aria-label={isPlaying ? 'Pause episode' : 'Play episode'}
+              style={{ height: '1.5rem', width: '1.5rem' }}
+            >
+              {isPlaying ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="6" y="4" width="4" height="16"></rect>
+                  <rect x="14" y="4" width="4" height="16"></rect>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              )}
+            </button>
+          )}
+          <h3 className="text-h2 font-medium text-hero-text">{title}</h3>
+        </div>
         <div className="flex flex-col items-end gap-2">
           <span className={`text-small font-medium px-3 py-1 rounded-full ${
             status === 'published' 
@@ -95,39 +116,16 @@ const EpisodeCard: React.FC<EpisodeProps & { isPlaying: boolean; onPlay: () => v
     </div>
 
     {/* Audio Player */}
-    {audioUrl && status === 'published' && (
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          {/* <h4 className="text-body font-medium text-hero-text">Listen to Episode</h4> */}
-          <button 
-            onClick={onPlay}
-            className={`flex items-center justify-center p-3 rounded-full transition-colors ${isPlaying ? 'bg-accent text-white' : 'bg-scientific-100 hover:bg-scientific-200 text-hero-text'}`}
-            aria-label={isPlaying ? 'Pause episode' : 'Play episode'}
-          >
-            {isPlaying ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="6" y="4" width="4" height="16"></rect>
-                <rect x="14" y="4" width="4" height="16"></rect>
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-            )}
-          </button>
-        </div>
-        {isPlaying && (
-          <audio 
-            controls 
-            className="w-full"
-            preload="metadata"
-            autoPlay
-            src={audioUrl}
-          >
-            Your browser does not support the audio element.
-          </audio>
-        )}
-      </div>
+    {audioUrl && status === 'published' && isPlaying && (
+      <audio 
+        controls 
+        className="w-full"
+        preload="metadata"
+        autoPlay
+        src={audioUrl}
+      >
+        Your browser does not support the audio element.
+      </audio>
     )}
 
     {/* No accent line */}

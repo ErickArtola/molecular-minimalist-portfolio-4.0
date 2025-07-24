@@ -56,13 +56,7 @@ export default function PageWrapper({
               )}
             </div>
           </div>
-          
-          {/* Optional: Scientific accent elements */}
-          <div className="absolute top-8 right-8 opacity-20">
-            <div className="w-16 h-16 border border-white rounded-full flex items-center justify-center">
-              <div className="w-8 h-8 bg-white rounded-full opacity-60"></div>
-            </div>
-          </div>
+
         </section>
 
         {/* Main Content */}

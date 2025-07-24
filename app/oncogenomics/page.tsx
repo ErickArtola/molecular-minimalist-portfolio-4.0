@@ -208,6 +208,9 @@ export default function OncogenomicsPage() {
             <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
               View my latest research presentation on oncogenomics and AI applications.
             </p>
+            <p className="text-body max-w-3xl mx-auto">
+              <a href="/oncogenomics/library" className="text-blue-600 hover:underline">Click here for the full Oncogenomics Learning Hub library</a>.
+            </p>
           </div>
           <div className="flex flex-col items-center space-y-10">
             {/* First PowerPoint Presentation */}
