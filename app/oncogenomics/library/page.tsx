@@ -119,7 +119,7 @@ export default function OncogenomicsLearningHubPage() {
           <Link href="/oncogenomics" className="text-blue-600 hover:underline">
             Oncogenomics
           </Link>
-          <span className="text-hero-text mx-2">></span>
+          <span className="text-hero-text mx-2">&gt;</span>
           <span className="text-hero-text">Learning Hub</span>
         </nav>
 
