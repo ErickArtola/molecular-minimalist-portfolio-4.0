@@ -31,12 +31,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="font-sans antialiased bg-bg-primary text-scientific-900 min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+      <body className="font-sans antialiased text-scientific-900 min-h-screen flex flex-col relative">
+        {/* Fixed Background Image */}
+        <div 
+          className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
+          style={{
+            backgroundImage: 'url("/bg-image.jpg")',
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-white/70" />
+        </div>
+        
+        {/* Content Layer */}
+        <div className="relative z-10 min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   )

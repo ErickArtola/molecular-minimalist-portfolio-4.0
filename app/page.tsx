@@ -7,7 +7,7 @@ import { CertificationBadge } from '@/components/content/CertificationBadge';
 
 export default function HomePage() {
   return (
-    <div className="bg-[#989898] min-h-screen">
+    <div className="min-h-screen">
       {/* Hero Section with Extended Background */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         {/* DNA Background Image - Extended beyond viewport */}
@@ -46,8 +46,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Content sections with matching background */}
-      <div className="bg-[#989898]">
+      {/* Content sections */}
+      <div>
         <PageWrapper>
           {/* About Section */}
           <section className="py-16 lg:py-24">
@@ -102,59 +102,135 @@ export default function HomePage() {
 
           {/* Experience Timeline */}
           <section className="py-16 lg:py-24">
-            <h2 className="text-h1 font-semibold text-white mb-12">Professional Journey</h2>
+            <h2 className="text-h1 font-semibold text-hero-text mb-12">Professional Journey</h2>
             
             <div className="space-y-8">
               {/* Current Role */}
-              <div className="relative pl-8 pb-8 border-l-2 border-white/30 last:border-l-0">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
-                <div className="space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                    <h3 className="text-h2 font-medium text-white">Technical Account Manager</h3>
-                    <span className="text-small text-white/70">2023 - Present</span>
+              <Card 
+                as="article" 
+                variant="elevated" 
+                size="medium" 
+                animation="hover"
+                className="h-full"
+              >
+                <div className="space-y-6">
+                  <div className="space-y-3">
+                    <div className="flex items-start justify-between">
+                      <h3 className="text-h2 font-medium text-hero-text">Technical Account Manager</h3>
+                      <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
+                        2023 - Present
+                      </span>
+                    </div>
+                    <p className="text-body text-hero-text font-medium">Amazon Web Services (AWS)</p>
+                    <p className="text-body text-hero-text leading-relaxed">
+                      Leading technical strategy for enterprise healthcare and biotech clients, specializing in architecting 
+                      cloud solutions for genomics pipelines, ML model training, and high-performance computing workloads.
+                    </p>
                   </div>
-                  <p className="text-body text-white font-medium">Amazon Web Services (AWS)</p>
-                  <p className="text-body text-white/80 leading-relaxed">
-                    Leading technical strategy for enterprise healthcare and biotech clients, specializing in architecting 
-                    cloud solutions for genomics pipelines, ML model training, and high-performance computing workloads. 
-                    Key achievements include optimizing genomic analysis workflows resulting in 60% cost reduction and 
-                    3x performance improvement.
-                  </p>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-body font-medium text-hero-text">Key Achievements:</h4>
+                    <ul className="space-y-2">
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                        Optimized genomic analysis workflows resulting in 60% cost reduction
+                      </li>
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                        Achieved 3x performance improvement in ML model training pipelines
+                      </li>
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                        Architected scalable cloud solutions for biotech enterprises
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </Card>
               
               {/* Research Focus */}
-              <div className="relative pl-8 pb-8 border-l-2 border-white/30">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
-                <div className="space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                    <h3 className="text-h2 font-medium text-white">Independent Research</h3>
-                    <span className="text-small text-white/70">2022 - Present</span>
+              <Card 
+                as="article" 
+                variant="elevated" 
+                size="medium" 
+                animation="hover"
+                className="h-full"
+              >
+                <div className="space-y-6">
+                  <div className="space-y-3">
+                    <div className="flex items-start justify-between">
+                      <h3 className="text-h2 font-medium text-hero-text">Independent Research</h3>
+                      <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
+                        2022 - Present
+                      </span>
+                    </div>
+                    <p className="text-body text-hero-text font-medium">AI Applications in Oncogenomics</p>
+                    <p className="text-body text-hero-text leading-relaxed">
+                      Developing machine learning models for identifying cancer biomarkers and predicting treatment responses.
+                    </p>
                   </div>
-                  <p className="text-body text-white font-medium">AI Applications in Oncogenomics</p>
-                  <p className="text-body text-white/80 leading-relaxed">
-                    Developing machine learning models for identifying cancer biomarkers and predicting treatment responses. 
-                    Current projects include deep learning approaches for analyzing tumor heterogeneity and transformer-based 
-                    models for genomic sequence analysis.
-                  </p>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-body font-medium text-hero-text">Current Projects:</h4>
+                    <ul className="space-y-2">
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
+                        Deep learning approaches for analyzing tumor heterogeneity
+                      </li>
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
+                        Transformer-based models for genomic sequence analysis
+                      </li>
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
+                        AI-driven biomarker discovery for personalized medicine
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </Card>
               
               {/* Education/Early Career */}
-              <div className="relative pl-8">
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-white rounded-full border-4 border-[#989898] shadow-lg" />
-                <div className="space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                    <h3 className="text-h2 font-medium text-white">Technical Foundation</h3>
-                    <span className="text-small text-white/70">2020 - 2022</span>
+              <Card 
+                as="article" 
+                variant="elevated" 
+                size="medium" 
+                animation="hover"
+                className="h-full"
+              >
+                <div className="space-y-6">
+                  <div className="space-y-3">
+                    <div className="flex items-start justify-between">
+                      <h3 className="text-h2 font-medium text-hero-text">Technical Foundation</h3>
+                      <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
+                        2020 - 2022
+                      </span>
+                    </div>
+                    <p className="text-body text-hero-text leading-relaxed">
+                      Built comprehensive technical expertise through intensive self-directed learning and professional 
+                      certifications.
+                    </p>
                   </div>
-                  <p className="text-body text-white/80 leading-relaxed">
-                    Built comprehensive technical expertise through intensive self-directed learning and professional 
-                    certifications. Focused on cloud architecture, machine learning, and bioinformatics to prepare 
-                    for the intersection of AI and genomics.
-                  </p>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-body font-medium text-hero-text">Focus Areas:</h4>
+                    <ul className="space-y-2">
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                        Cloud architecture and infrastructure design
+                      </li>
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                        Machine learning and artificial intelligence
+                      </li>
+                      <li className="text-small text-hero-text flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                        Bioinformatics and computational biology
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </Card>
             </div>
           </section>
 
