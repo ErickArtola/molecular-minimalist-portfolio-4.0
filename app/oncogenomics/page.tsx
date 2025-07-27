@@ -200,6 +200,24 @@ export default function OncogenomicsPage() {
         </section>
 
         {/* Presentation Section */}
+
+        {/* Research Projects */}
+        <section className="space-y-12">
+          <div className="text-center">
+            <h2 className="text-h2 font-semibold text-hero-text mb-4">
+              Research Projects
+            </h2>
+            <p className="text-body text-hero-text">
+              Current and planned research initiatives at the intersection of AI and genomics
+            </p>
+          </div>
+          
+          <div className="space-y-8">
+            {researchProjects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </section>
         <section className="space-y-8">
           <div className="text-center">
             <h2 className="text-h2 font-semibold text-hero-text mb-4">
@@ -317,23 +335,6 @@ export default function OncogenomicsPage() {
           </div>
         </section>
 
-        {/* Research Projects */}
-        <section className="space-y-12">
-          <div className="text-center">
-            <h2 className="text-h2 font-semibold text-hero-text mb-4">
-              Research Projects
-            </h2>
-            <p className="text-body text-hero-text">
-              Current and planned research initiatives at the intersection of AI and genomics
-            </p>
-          </div>
-          
-          <div className="space-y-8">
-            {researchProjects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))}
-          </div>
-        </section>
 
         {/* Methodology Section */}
         <section className="section-spacing border-t border-scientific-100">

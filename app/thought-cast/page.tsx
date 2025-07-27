@@ -156,7 +156,7 @@ export default function ThoughtCastPage() {
       description: "",
       audioUrl: "/podcast/agi.mp3",
       // publishDate: "-----",
-      duration: "35 min",
+      duration: "5 min",
       status: "coming-soon",
       // Image generation prompt: "A sophisticated robot with human-like features engaged in multiple tasks simultaneously - painting art, solving equations on a digital board, and building structures, with neural network patterns glowing subtly within its transparent sections, photorealistic style"
       imageUrl: "/podcast/images/agi.jpg",
@@ -168,7 +168,7 @@ export default function ThoughtCastPage() {
       title: "On the Requirements of Artificial Super Intelligence",
       description: "",
       // publishDate: "-----",
-      duration: "40 min",
+      duration: "4 min",
       status: "coming-soon",
       // Image generation prompt: "An abstract visualization of superintelligence - a vast, complex network of light extending beyond human comprehension, with smaller human figures for scale, showing the vastness of ASI compared to human intelligence, digital art style with deep blues and purples"
       imageUrl: "/podcast/images/asi.jpg"
@@ -178,7 +178,7 @@ export default function ThoughtCastPage() {
       title: "Agency is Inherent to Intelligence",
       description: "",
       // publishDate: "-----",
-      duration: "32 min",
+      duration: "3 min",
       status: "coming-soon",
       // Image generation prompt: "A philosophical visualization of agency and intelligence - a humanoid figure at a crossroads making a decision, with visible thought patterns and decision trees emanating from its head, half-digital and half-organic in appearance, minimalist style with selective color"
       imageUrl: "/podcast/images/agency.jpg"
@@ -188,7 +188,7 @@ export default function ThoughtCastPage() {
       title: "AI is a Mirror",
       description: "",
       // publishDate: "-----",
-      duration: "25 min",
+      duration: "5 min",
       status: "coming-soon",
       // Image generation prompt: "A reflective scene showing a human looking into a digital mirror, but instead of their reflection, they see an AI version of themselves with subtle differences that reflect human biases and values, artistic style with symbolic elements"
       imageUrl: "/podcast/images/mirror.jpg"

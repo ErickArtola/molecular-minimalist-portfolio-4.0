@@ -38,20 +38,43 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* Optional: Scientific accent elements */}
-        <div className="absolute top-8 right-8 opacity-20">
-          <div className="w-16 h-16 border border-white rounded-full flex items-center justify-center">
-            <div className="w-8 h-8 bg-white rounded-full opacity-60"></div>
-          </div>
-        </div>
+
       </section>
+
+       {/* Desktop Portrait - Fixed overlay position */}
+      <div className="absolute top-32 right-20 hidden lg:block z-50">
+        <div className="bg-white p-2 rounded-lg shadow-lg border border-gray-200">
+          <Image
+            src="/portrait.jpeg"
+            alt="Professional headshot of Erick Geovany Artola"
+            width={563}
+height={750}
+            className="rounded object-cover"
+            priority
+            quality={90}
+          />
+        </div>
+      </div>
 
       {/* Content sections */}
       <div>
         <PageWrapper>
           {/* About Section */}
           <section className="py-16 lg:py-24">
-            <h2 className="text-h1 font-semibold text-white mb-12">About</h2>
+            <h2 className="text-h1 font-semibold text-hero-text mb-12">About</h2>
+
+            {/* Mobile Portrait - Shows when overlay is hidden */}
+<div className="lg:hidden bg-white p-2 rounded-lg shadow-lg border border-gray-200 mb-8 w-fit mx-auto">
+  <Image
+    src="/portrait.jpeg"
+    alt="Professional headshot of Erick Geovany Artola"
+width={563}
+height={750}
+    className="rounded object-cover"
+    priority
+    quality={90}
+  />
+</div>
             
             <div className="grid gap-8 lg:grid-cols-2">
               {/* UPDATED: Changed to match oncogenomics page styling */}
@@ -62,13 +85,13 @@ export default function HomePage() {
                 className="bg-[#989898] border border-white/20 shadow-lg space-y-6"
               >
                 <div className="space-y-4">
-                  <h3 className="text-h2 font-medium text-white">Background</h3>
-                  <p className="text-body text-white/90 leading-relaxed">
+                  <h3 className="text-h2 font-medium text-hero-text">Background</h3>
+                  <p className="text-body text-hero-text leading-relaxed">
                     Originally from Nicaragua and now based in Costa Rica, I bring a unique perspective to the intersection 
                     of technology and life sciences. My journey from Central America to the forefront of AI and genomics 
                     research reflects my commitment to leveraging cutting-edge technology for global impact.
                   </p>
-                  <p className="text-body text-white/90 leading-relaxed">
+                  <p className="text-body ttext-hero-text leading-relaxed">
                     As an AWS Technical Account Manager, I help organizations architect and optimize their cloud infrastructure 
                     for AI/ML workloads, particularly in the healthcare and biotech sectors. This role allows me to stay at 
                     the cutting edge of cloud computing while directly supporting genomics research initiatives.
@@ -84,13 +107,13 @@ export default function HomePage() {
                 className="bg-[#989898] border border-white/20 shadow-lg space-y-6"
               >
                 <div className="space-y-4">
-                  <h3 className="text-h2 font-medium text-white">Research Interests</h3>
-                  <p className="text-body text-white/90 leading-relaxed">
+                  <h3 className="text-h2 font-medium text-hero-text">Research Interests</h3>
+                  <p className="text-body text-hero-text leading-relaxed">
                     My primary focus lies in applying artificial intelligence to genomics, particularly in understanding 
                     oncogenic pathways and developing computational methods for cancer research. I'm passionate about 
                     creating AI models that can identify patterns in genomic data that might lead to breakthrough treatments.
                   </p>
-                  <p className="text-body text-white/90 leading-relaxed">
+                  <p className="text-body text-hero-text leading-relaxed">
                     Beyond technical pursuits, I maintain a deep interest in robotics, bioinformatics, stem cell technology, genetic engineering, believing 
                     that interdisciplinary thinking is crucial for innovation. This diverse intellectual foundation informs 
                     my approach to complex problems in computational biology.
@@ -236,23 +259,23 @@ export default function HomePage() {
 
           {/* Certifications Section */}
           <section className="py-16 lg:py-24">
-            <h2 className="text-h1 font-semibold text-white mb-12">Technical Certifications</h2>
+            <h2 className="text-h1 font-semibold text-hero-text mb-12">Technical Certifications</h2>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {/* UPDATED: Custom certification badges with matching page background and white borders */}
               <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
-                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                  <h3 className="text-h3 font-medium text-hero-text group-hover:text-white transition-colors duration-250">
                     AWS Certified Solutions Architect
                   </h3>
-                  <p className="text-body text-white/80">
+                  <p className="text-body text-hero-text">
                     Amazon Web Services
                   </p>
                   <div className="space-y-1">
-                    <p className="text-small text-white/70">
+                    <p className="text-small text-hero-text">
                       Issued: 2023
                     </p>
-                    <p className="text-small text-white/60">
+                    <p className="text-small text-hero-text">
                       ID: AWS-SAA-C03
                     </p>
                   </div>
@@ -261,55 +284,55 @@ export default function HomePage() {
 
               <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
-                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                  <h3 className="text-h3 font-medium text-hero-text group-hover:text-white transition-colors duration-250">
                     AWS Certified Machine Learning
                   </h3>
-                  <p className="text-body text-white/80">
+                  <p className="text-body text-hero-text">
                     Amazon Web Services
                   </p>
                   <div className="space-y-1">
-                    <p className="text-small text-white/70">
+                    <p className="text-small text-hero-text">
                       Issued: 2023
                     </p>
-                    <p className="text-small text-white/60">
+                    <p className="text-small text-hero-text">
                       ID: AWS-MLS-C01
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
+              <div className="group relative bg-[#989898] border text-hero-text hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
-                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                  <h3 className="text-h3 font-medium text-hero-text group-hover:text-white transition-colors duration-250">
                     Google IT Support Professional
                   </h3>
-                  <p className="text-body text-white/80">
+                  <p className="text-body text-hero-text">
                     Google
                   </p>
                   <div className="space-y-1">
-                    <p className="text-small text-white/70">
+                    <p className="text-small text-hero-text">
                       Issued: 2022
                     </p>
-                    <p className="text-small text-white/60">
+                    <p className="text-small text-hero-text">
                       ID: COURSERA-CERT
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
+              <div className="group relative bg-[#989898] border text-hero-text hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
-                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                  <h3 className="text-h3 font-medium text-hero-text group-hover:text-white transition-colors duration-250">
                     IBM AI Engineering Professional
                   </h3>
-                  <p className="text-body text-white/80">
+                  <p className="text-body text-hero-text">
                     IBM
                   </p>
                   <div className="space-y-1">
-                    <p className="text-small text-white/70">
+                    <p className="text-small text-hero-text">
                       Issued: 2022
                     </p>
-                    <p className="text-small text-white/60">
+                    <p className="text-small ttext-hero-text">
                       ID: IBM-AI-ENG
                     </p>
                   </div>
@@ -318,17 +341,17 @@ export default function HomePage() {
 
               <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
-                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                  <h3 className="text-h3 font-medium text-hero-text group-hover:text-white transition-colors duration-250">
                     AWS Certified Cloud Practitioner
                   </h3>
-                  <p className="text-body text-white/80">
+                  <p className="text-body text-hero-text">
                     Amazon Web Services
                   </p>
                   <div className="space-y-1">
-                    <p className="text-small text-white/70">
+                    <p className="text-small text-hero-text">
                       Issued: 2022
                     </p>
-                    <p className="text-small text-white/60">
+                    <p className="text-small text-hero-text">
                       ID: AWS-CLF-C01
                     </p>
                   </div>
@@ -337,17 +360,17 @@ export default function HomePage() {
 
               <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
                 <div className="space-y-3">
-                  <h3 className="text-h3 font-medium text-white group-hover:text-white transition-colors duration-250">
+                  <h3 className="text-h3 font-medium text-hero-text group-hover:text-white transition-colors duration-250">
                     Deep Learning Specialization
                   </h3>
-                  <p className="text-body text-white/80">
+                  <p className="text-body text-hero-text">
                     DeepLearning.AI
                   </p>
                   <div className="space-y-1">
-                    <p className="text-small text-white/70">
+                    <p className="text-small text-hero-text">
                       Issued: 2022
                     </p>
-                    <p className="text-small text-white/60">
+                    <p className="text-small text-hero-text">
                       ID: COURSERA-DL
                     </p>
                   </div>
@@ -368,8 +391,8 @@ export default function HomePage() {
       for life sciences applications, or want to discuss the future of AI in healthcare, I'd love to connect.
     </p>
     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <Link href="/projects" className="btn-primary">
-        View Research Projects
+      <Link href="/oncogenomics" className="btn-primary">
+        View My Oncogenomics Page
       </Link>
       <button type="button" className="btn-secondary">
         Get in Touch
