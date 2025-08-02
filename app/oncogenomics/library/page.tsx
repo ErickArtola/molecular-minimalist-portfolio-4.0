@@ -111,7 +111,7 @@ export default function OncogenomicsLearningHubPage() {
       width="default"
       heroImage="/oncogenomics-hub-hero.jpg"
       heroTitle="Oncogenomics Learning Hub"
-      heroSubtitle="Advanced Molecular Mechanisms in Cancer Development"
+      heroSubtitle="Full Courses"
     >
       <div className="space-y-16">
         {/* Breadcrumb */}
