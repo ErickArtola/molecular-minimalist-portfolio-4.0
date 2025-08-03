@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
 export default function Header() {
   const pathname = usePathname()
   const heroPages = ['/', '/projects', '/thought-cast', '/oncogenomics', '/oncogenomics/library']
-  const hasHero = heroPages.includes(pathname)
+  const hasHero = heroPages.includes(pathname) || pathname.startsWith('/oncogenomics/courses')
 
   return (
     <header

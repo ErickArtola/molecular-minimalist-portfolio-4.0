@@ -21,7 +21,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
-      "@/components/*": ["./components/*"]
+      "@/components/*": ["./components/*"],
+      "@/config/*": ["./config/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,

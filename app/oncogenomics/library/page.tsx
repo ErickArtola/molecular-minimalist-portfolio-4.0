@@ -82,36 +82,12 @@ const LectureCard: React.FC<LectureProps> = ({
 )
 
 export default function OncogenomicsLearningHubPage() {
-  const lectures: LectureProps[] = [
-    {
-      id: 5,
-      title: "Lecture 5: Coming Soon",
-      description: "Additional content in the Advanced Molecular Mechanisms in Cancer Development series.",
-      duration: "TBD",
-      status: "coming-soon"
-    },
-    {
-      id: 6,
-      title: "Lecture 6: Coming Soon", 
-      description: "Additional content in the Advanced Molecular Mechanisms in Cancer Development series.",
-      duration: "TBD",
-      status: "coming-soon"
-    },
-    {
-      id: 7,
-      title: "Lecture 7: Coming Soon",
-      description: "Additional content in the Advanced Molecular Mechanisms in Cancer Development series.", 
-      duration: "TBD",
-      status: "coming-soon"
-    }
-  ]
-
   return (
     <PageWrapper 
       width="default"
       heroImage="/oncogenomics-hub-hero.jpg"
       heroTitle="Oncogenomics Learning Hub"
-      heroSubtitle="Full Courses"
+      heroSubtitle="Redirecting to New Course Structure"
     >
       <div className="space-y-16">
         {/* Breadcrumb */}
@@ -123,25 +99,33 @@ export default function OncogenomicsLearningHubPage() {
           <span className="text-hero-text">Learning Hub</span>
         </nav>
 
-        {/* Course Information */}
-        <section className="space-y-6">
-          <div className="text-center">
-            <h2 className="text-h2 font-semibold text-hero-text mb-4">
-              Advanced Molecular Mechanisms in Cancer Development
-            </h2>
-            <p className="text-body text-hero-text">
-              Lectures 1-4 are available on the <Link href="/oncogenomics" className="text-blue-600 hover:underline">main Oncogenomics page</Link>.
-            </p>
-          </div>
-        </section>
-
-        {/* Lectures Grid */}
+        {/* Redirect Notice */}
         <section className="space-y-8">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {lectures.map((lecture) => (
-              <LectureCard key={lecture.id} {...lecture} />
-            ))}
-          </div>
+          <Card variant="elevated" size="large" className="text-center space-y-6">
+            <h2 className="text-h2 font-semibold text-hero-text">
+              Learning Hub Has Been Restructured
+            </h2>
+            <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
+              We've reorganized our learning content into comprehensive courses. 
+              All lectures and materials are now available in our new course structure 
+              with better organization and navigation.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Link 
+                href="/oncogenomics/courses"
+                className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-medium"
+              >
+                View All Courses
+              </Link>
+              <Link 
+                href="/oncogenomics/courses/advanced-molecular-mechanisms"
+                className="px-6 py-3 border border-accent text-accent rounded-lg hover:bg-accent/5 transition-colors font-medium"
+              >
+                Go to Advanced Course
+              </Link>
+            </div>
+          </Card>
         </section>
       </div>
     </PageWrapper>
