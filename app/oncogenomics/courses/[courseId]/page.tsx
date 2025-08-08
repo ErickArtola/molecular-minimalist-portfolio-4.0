@@ -71,7 +71,7 @@ export default function CoursePage({ params }: { params: { courseId: string } })
 
   const lecturesPerRow = 2
   const totalRows = Math.ceil(course.lectures.length / lecturesPerRow)
-  const visibleRows = 2
+  const visibleRows = totalRows
 
   return (
     <PageWrapper 

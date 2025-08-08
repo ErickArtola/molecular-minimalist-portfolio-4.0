@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     title: 'Erick Geovany Artola - AI & Genomics Research',
     description: 'AWS Technical Account Manager exploring AI applications in genomics research',
     type: 'website',
+    url: 'https://erickgeovany.com',
+    images: '/og-image.jpg',
   },
 }
 
