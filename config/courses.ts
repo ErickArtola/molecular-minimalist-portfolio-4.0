@@ -77,7 +77,7 @@ export const courses: Course[] = [
         title: 'Genomic Instability - The Mutational Engine',
         description: 'Additional content in the Advanced Molecular Mechanisms in Cancer Development series.',
         embedUrl: 'https://1drv.ms/p/c/e38e37d6ed9af814/IQTWCNplZCC6RYHJp6EbfH2lAVebWI70ux5qzacyCNuNtQs?em=2&wdAr=1.7777777777777777',
-        audioUrl: '/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/3.1-genomic-instability.mp3',
+        audioUrl: '/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/3.1-genomic-instability-ver-2.mp3',
         duration: '1 hr 27 min',
         status: 'published'
       },
