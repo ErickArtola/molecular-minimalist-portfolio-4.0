@@ -27,7 +27,7 @@ export const courses: Course[] = [
     description: 'Deep dive into the molecular mechanisms driving cancer development, including oncogenes, tumor suppressors, and cellular pathways.',
     status: 'published',
     difficulty: 'advanced',
-    duration: 'TBD',
+    duration: '30 Hours',
     prerequisites: ['Basic molecular biology', 'Cell biology fundamentals'],
     learningObjectives: [
       'Understand chromosomal instability in cancer',

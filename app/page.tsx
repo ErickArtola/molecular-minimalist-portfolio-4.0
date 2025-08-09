@@ -141,7 +141,7 @@ height={750}
                     <div className="flex items-start justify-between">
                       <h3 className="text-h2 font-medium text-hero-text">Technical Account Manager</h3>
                       <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
-                        2023 - Present
+                        2024 - Present
                       </span>
                     </div>
                     <p className="text-body text-hero-text font-medium">Amazon Web Services (AWS)</p>
@@ -292,7 +292,7 @@ height={750}
                   </p>
                   <div className="space-y-1">
                     <p className="text-small text-hero-text">
-                      Issued: 2023
+                      Status: In Progress
                     </p>
                     <p className="text-small text-hero-text">
                       ID: AWS-MLS-C01
@@ -368,7 +368,7 @@ height={750}
                   </p>
                   <div className="space-y-1">
                     <p className="text-small text-hero-text">
-                      Issued: 2022
+                      Status: In Progress
                     </p>
                     <p className="text-small text-hero-text">
                       ID: COURSERA-DL
