@@ -146,8 +146,7 @@ height={750}
                     </div>
                     <p className="text-body text-hero-text font-medium">Amazon Web Services (AWS)</p>
                     <p className="text-body text-hero-text leading-relaxed">
-                      Leading technical strategy for enterprise healthcare and biotech clients, specializing in architecting 
-                      cloud solutions for genomics pipelines, ML model training, and high-performance computing workloads.
+                      Leading technical strategy for enterprises in the healthcare, automotive, media and entertainment industry to achieve optimized workload environments.
                     </p>
                   </div>
                   
@@ -156,15 +155,15 @@ height={750}
                     <ul className="space-y-2">
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Optimized genomic analysis workflows resulting in 60% cost reduction
+                        •	Helped formulate a disaster recovery solution that achieved an RTO of 5 minutes by migrating from Amazon RDS MariaDB to RDS Aurora and helped design a solution to provide automatic AWS Cognito replication across regions.
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Achieved 3x performance improvement in ML model training pipelines
+                        •	Engaged with specialists to help guide customers re-architect their Wordpress server in EC2 instances into a three-tier WAF protected production environment which helped remediate source code exposure.
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Architected scalable cloud solutions for biotech enterprises
+                        •	Utilized CRM in conjunction with LLM to create a detailed implementation guide for financial services that helped reduce their IT and operational documentation for OCC audit by 15 hours, or 30%.
                       </li>
                     </ul>
                   </div>
@@ -184,7 +183,7 @@ height={750}
                     <div className="flex items-start justify-between">
                       <h3 className="text-h2 font-medium text-hero-text">Independent Research</h3>
                       <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
-                        2022 - Present
+                        2025 - Present
                       </span>
                     </div>
                     <p className="text-body text-hero-text font-medium">AI Applications in Oncogenomics</p>
@@ -226,12 +225,11 @@ height={750}
                     <div className="flex items-start justify-between">
                       <h3 className="text-h2 font-medium text-hero-text">Technical Foundation</h3>
                       <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
-                        2020 - 2022
+                        2003 - 2007
                       </span>
                     </div>
                     <p className="text-body text-hero-text leading-relaxed">
-                      Built comprehensive technical expertise through intensive self-directed learning and professional 
-                      certifications.
+                      Built comprehensive education in Biochemistry and Molecular Biology from the University of Miami, and where I learned about molecular biology principles, perform DNA extraction and sequencing for analysis 
                     </p>
                   </div>
                   

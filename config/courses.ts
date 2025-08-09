@@ -87,6 +87,41 @@ export const courses: Course[] = [
         description: 'Additional content in the Advanced Molecular Mechanisms in Cancer Development series.',
         duration: 'TBD',
         status: 'coming-soon'
+      },
+      {
+        id: 'lecture-7',
+        title: 'DNA Repair Mechanisms and Cancer',
+        description: 'Exploration of DNA repair pathways and how their dysfunction contributes to cancer development.',
+        duration: 'TBD',
+        status: 'coming-soon'
+      },
+      {
+        id: 'lecture-8',
+        title: 'Epigenetic Modifications in Cancer',
+        description: 'Understanding how epigenetic changes drive oncogenesis and tumor progression.',
+        duration: 'TBD',
+        status: 'coming-soon'
+      },
+      {
+        id: 'lecture-9',
+        title: 'Cell Cycle Dysregulation',
+        description: 'Analysis of cell cycle checkpoints and their disruption in cancer cells.',
+        duration: 'TBD',
+        status: 'coming-soon'
+      },
+      {
+        id: 'lecture-10',
+        title: 'Apoptosis and Cancer Cell Survival',
+        description: 'Mechanisms of programmed cell death and how cancer cells evade apoptosis.',
+        duration: 'TBD',
+        status: 'coming-soon'
+      },
+      {
+        id: 'lecture-11',
+        title: 'Therapeutic Targets and Future Directions',
+        description: 'Current therapeutic approaches and emerging targets in cancer treatment.',
+        duration: 'TBD',
+        status: 'coming-soon'
       }
     ]
   },
