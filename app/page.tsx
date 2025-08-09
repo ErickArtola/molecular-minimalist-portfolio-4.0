@@ -259,6 +259,21 @@ height={750}
           <section className="py-16 lg:py-24">
             <h2 className="text-h1 font-semibold text-hero-text mb-12">Technical Certifications</h2>
             
+<div className="mb-8 text-center max-w-3xl mx-auto">
+  <p className="text-body text-hero-text leading-relaxed">
+    These professional certifications demonstrate my commitment to staying current with cloud technologies, 
+    AI/ML practices, and industry best practices. View my complete certification portfolio on{' '}
+    <Link 
+      href="https://www.credly.com/users/your-profile" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-accent hover:underline font-medium"
+    >
+      Credly
+    </Link>.
+  </p>
+</div>
+
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {/* UPDATED: Custom certification badges with matching page background and white borders */}
               <div className="group relative bg-[#989898] border border-white/20 hover:border-white/40 hover:shadow-lg rounded-lg p-6 transition-all duration-250">
