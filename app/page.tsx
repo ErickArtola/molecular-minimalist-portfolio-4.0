@@ -223,7 +223,7 @@ height={750}
                 <div className="space-y-6">
                   <div className="space-y-3">
                     <div className="flex items-start justify-between">
-                      <h3 className="text-h2 font-medium text-hero-text">Technical Foundation</h3>
+                      <h3 className="text-h2 font-medium text-hero-text">Scientific Foundation</h3>
                       <span className="text-small text-accent font-medium bg-scientific-50 px-3 py-1 rounded-full">
                         2003 - 2007
                       </span>
@@ -238,15 +238,15 @@ height={750}
                     <ul className="space-y-2">
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Cloud architecture and infrastructure design
+                        Carry out experiments in biological, cellular, molecular, and organich chemistry laboratories
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Machine learning and artificial intelligence
+                         Researched in the mechanistic pathway of importin-beta, a protein involved in nuclear transpot
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Bioinformatics and computational biology
+                        Developed a foundation in statistics applicable for scientific analysis
                       </li>
                     </ul>
                   </div>
