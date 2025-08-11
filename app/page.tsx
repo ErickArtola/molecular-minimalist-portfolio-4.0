@@ -187,7 +187,7 @@ height={750}
                     </div>
                     <p className="text-body text-hero-text font-medium">AI Applications in Oncogenomics</p>
                     <p className="text-body text-hero-text leading-relaxed">
-                      Developing AI models for identifying cancer biomarkers, predicting treatment responses, elucidating oncogenomic pathways that lead
+                      Developing AI models for identifying cancer biomarkers, predicting treatment responses, elucidating oncogenomic pathways that lead to cancer development
                     </p>
                   </div>
                   
