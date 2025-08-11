@@ -88,13 +88,12 @@ height={750}
                   <h3 className="text-h2 font-medium text-hero-text">Background</h3>
                   <p className="text-body text-hero-text leading-relaxed">
                     Originally from Nicaragua and now based in Costa Rica, I bring a unique perspective to the intersection 
-                    of technology and life sciences. My journey from Central America to the forefront of AI and genomics 
-                    research reflects my commitment to leveraging cutting-edge technology for global impact.
+                    of technology and life sciences. My journey to the forefront of AI and genomics 
+                    research reflects my commitment to leveraging cutting-edge technology for global societal impact.
                   </p>
                   <p className="text-body ttext-hero-text leading-relaxed">
                     As an AWS Technical Account Manager, I help organizations architect and optimize their cloud infrastructure 
-                    for AI/ML workloads, particularly in the healthcare and biotech sectors. This role allows me to stay at 
-                    the cutting edge of cloud computing while directly supporting genomics research initiatives.
+                    This role allows me to stay at the cutting edge of cloud computing while directly supporting genomics research initiatives.
                   </p>
                 </div>
               </Card>
@@ -114,9 +113,9 @@ height={750}
                     creating AI models that can identify patterns in genomic data that might lead to breakthrough treatments.
                   </p>
                   <p className="text-body text-hero-text leading-relaxed">
-                    Beyond technical pursuits, I maintain a deep interest in robotics, bioinformatics, stem cell technology, genetic engineering, believing 
+                    I also maintain a deep interest in robotics, bioinformatics, stem cell technology, genetic engineering and drug development, believing 
                     that interdisciplinary thinking is crucial for innovation. This diverse intellectual foundation informs 
-                    my approach to complex problems in computational biology.
+                    my approach to complex problems in oncogenomics.
                   </p>
                 </div>
               </Card>
@@ -159,7 +158,7 @@ height={750}
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        •	Engaged with specialists to help guide customers re-architect their Wordpress server in EC2 instances into a three-tier WAF protected production environment which helped remediate source code exposure.
+                        •	Engaged with specialists to help guide customer re-architect their Wordpress server in EC2 instances into a three-tier WAF-protected production environment which helped remediate source code exposure.
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
@@ -188,7 +187,7 @@ height={750}
                     </div>
                     <p className="text-body text-hero-text font-medium">AI Applications in Oncogenomics</p>
                     <p className="text-body text-hero-text leading-relaxed">
-                      Developing machine learning models for identifying cancer biomarkers and predicting treatment responses.
+                      Developing AI models for identifying cancer biomarkers, predicting treatment responses, elucidating oncogenomic pathways that lead
                     </p>
                   </div>
                   
@@ -197,15 +196,15 @@ height={750}
                     <ul className="space-y-2">
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
-                        Deep learning approaches for analyzing tumor heterogeneity
+                        Deep learning approaches such as computer vision for analyzing tumor heterogeneity for genomic expression
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
-                        Transformer-based models for genomic sequence analysis
+                        Time-series based models for cancer development elucidation and prediction 
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 flex-shrink-0" />
-                        AI-driven biomarker discovery for personalized medicine
+                        Cloud-based infrastructure for personalized medicine
                       </li>
                     </ul>
                   </div>
