@@ -193,10 +193,31 @@ export default function ProjectsPage() {
     <PageWrapper 
       width="wide"
       heroImage="/circuit-board.jpg"
-      heroTitle="Projects"
+      heroTitle="Guided Projects"
       heroSubtitle="AI Development • Interactive Media • Software Engineering"
     >
       <div className="space-y-16">
+
+{/* Preamble Section */}
+<section className="text-center space-y-6">
+  <div className="max-w-3xl mx-auto">
+    <p className="text-body text-hero-text leading-relaxed">
+      These projects showcase my technical expertise across various domains, from AI development 
+      to interactive media applications. Each project demonstrates different aspects of software 
+      engineering, problem-solving, and creative implementation. Explore the complete source code 
+      and additional projects on my{' '}
+      <Link 
+        href="https://github.com/ErickArtola?tab=repositories" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-accent hover:underline font-medium"
+      >
+        GitHub profile
+      </Link>.
+    </p>
+  </div>
+</section>
+
         {/* Projects Grid */}
         <section className="space-y-12">
           <div className="grid gap-8 lg:gap-12">
