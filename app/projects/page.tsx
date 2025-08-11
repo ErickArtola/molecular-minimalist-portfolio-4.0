@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '@/components/ui/Card'
 import PageWrapper from '@/components/layout/PageWrapper'
+import Link from 'next/link'
 
 interface ProjectProps {
   title: string
