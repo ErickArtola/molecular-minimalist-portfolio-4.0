@@ -167,9 +167,8 @@ export default function OncogenomicsPage() {
               Research Focus
             </h2>
             <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
-              My research interests lie at the convergence of computational methods and cancer biology, 
-              leveraging cloud-scale computing and machine learning to understand the genomic landscape 
-              of cancer. This interdisciplinary approach combines my technical expertise in cloud 
+              My research interests lie at the convergence of artificial intelligence and oncogenomics, 
+              leveraging cloud-scale computing for AI resources and . This interdisciplinary approach combines my technical expertise in cloud 
               architecture with emerging opportunities in precision oncology.
             </p>
           </div>

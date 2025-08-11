@@ -229,7 +229,7 @@ height={750}
                       </span>
                     </div>
                     <p className="text-body text-hero-text leading-relaxed">
-                      Built comprehensive education in Biochemistry and Molecular Biology from the University of Miami, and where I learned about molecular biology principles, perform DNA extraction and sequencing for analysis 
+                      Built comprehensive education in Biochemistry and Molecular Biology from the University of Miami, where I learned about molecular biology principles, perform DNA extractions and sequencing for analysis 
                     </p>
                   </div>
                   
@@ -242,11 +242,11 @@ height={750}
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                         Researched in the mechanistic pathway of importin-beta, a protein involved in nuclear transpot
+                         Researched the mechanistic pathway of importin-beta, a protein involved in nuclear transpot
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Developed a foundation in statistics applicable for scientific analysis
+                        Developed foundations in statistics applicable for scientific analysis
                       </li>
                     </ul>
                   </div>
