@@ -89,11 +89,11 @@ height={750}
                   <p className="text-body text-hero-text leading-relaxed">
                     Originally from Nicaragua and now based in Costa Rica, I bring a unique perspective to the intersection 
                     of technology and life sciences. My journey to the forefront of AI and genomics 
-                    research reflects my commitment to leveraging cutting-edge technology for global societal impact.
+                    research is my commitment to leveraging cutting-edge technology for global societal impact.
                   </p>
                   <p className="text-body ttext-hero-text leading-relaxed">
-                    As an AWS Technical Account Manager, I help organizations architect and optimize their cloud infrastructure 
-                    This role allows me to stay at the cutting edge of cloud computing while directly supporting genomics research initiatives.
+                    As an AWS Technical Account Manager, I help organizations architect and optimize their cloud infrastructure. 
+                    This role allows me to stay at the cutting edge of cloud computing while directly having an impact on small and medium businesses.
                   </p>
                 </div>
               </Card>
