@@ -159,7 +159,7 @@ export default function CoursePage({ params }: { params: { courseId: string } })
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-h3 font-medium text-hero-text">
-                Module 1: Foundations of Cancer Biology
+                Module 1: Foundations of Cancer Biology and Hallmarks of Cancer
               </h3>
               <div className="grid gap-6 md:grid-cols-2">
                 {course.modules.slice(0, 8).map((module) => (

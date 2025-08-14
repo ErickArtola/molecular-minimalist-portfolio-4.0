@@ -83,14 +83,14 @@ export const courses: Course[] = [
       },
       {
         id: 'module-6',
-        title: 'Module 6: Coming Soon',
+        title: 'Coming Soon',
         description: 'Additional content in the Advanced Molecular Mechanisms in Cancer Development series.',
         duration: 'TBD',
         status: 'coming-soon'
       },
       {
         id: 'module-7',
-        title: 'DNA Repair Mechanisms and Cancer',
+        title: 'Coming Soon',
         description: 'Exploration of DNA repair pathways and how their dysfunction contributes to cancer development.',
         duration: 'TBD',
         status: 'coming-soon'
