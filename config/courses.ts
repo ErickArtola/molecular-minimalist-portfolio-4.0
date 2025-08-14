@@ -1,4 +1,4 @@
-export interface Lecture {
+export interface Module {
   id: string
   title: string
   description: string
@@ -15,7 +15,7 @@ export interface Course {
   status: 'published' | 'in-progress' | 'planned'
   difficulty: 'beginner' | 'intermediate' | 'advanced'
   duration: string
-  lectures: Lecture[]
+  modules: Module[]
   prerequisites?: string[]
   learningObjectives: string[]
 }
@@ -35,7 +35,7 @@ export const courses: Course[] = [
       'Explore RAS and MYC signaling pathways',
       'Examine tumor suppressor mechanisms'
     ],
-    lectures: [
+    modules: [
       {
         id: 'chromosomal-chaos',
         title: 'From Chromosomal Chaos to Molecular Precision',
@@ -82,42 +82,42 @@ export const courses: Course[] = [
         status: 'published'
       },
       {
-        id: 'lecture-6',
-        title: 'Lecture 6: Coming Soon',
+        id: 'module-6',
+        title: 'Module 6: Coming Soon',
         description: 'Additional content in the Advanced Molecular Mechanisms in Cancer Development series.',
         duration: 'TBD',
         status: 'coming-soon'
       },
       {
-        id: 'lecture-7',
+        id: 'module-7',
         title: 'DNA Repair Mechanisms and Cancer',
         description: 'Exploration of DNA repair pathways and how their dysfunction contributes to cancer development.',
         duration: 'TBD',
         status: 'coming-soon'
       },
       {
-        id: 'lecture-8',
+        id: 'module-8',
         title: 'Epigenetic Modifications in Cancer',
         description: 'Understanding how epigenetic changes drive oncogenesis and tumor progression.',
         duration: 'TBD',
         status: 'coming-soon'
       },
       {
-        id: 'lecture-9',
+        id: 'module-9',
         title: 'Cell Cycle Dysregulation',
         description: 'Analysis of cell cycle checkpoints and their disruption in cancer cells.',
         duration: 'TBD',
         status: 'coming-soon'
       },
       {
-        id: 'lecture-10',
+        id: 'module-10',
         title: 'Apoptosis and Cancer Cell Survival',
         description: 'Mechanisms of programmed cell death and how cancer cells evade apoptosis.',
         duration: 'TBD',
         status: 'coming-soon'
       },
       {
-        id: 'lecture-11',
+        id: 'module-11',
         title: 'Therapeutic Targets and Future Directions',
         description: 'Current therapeutic approaches and emerging targets in cancer treatment.',
         duration: 'TBD',
@@ -139,7 +139,7 @@ export const courses: Course[] = [
       'Explore tumor microenvironment',
       'Master molecular techniques'
     ],
-    lectures: [
+    modules: [
       {
         id: 'intro-cancer-biology',
         title: 'Introduction to Cancer Biology',
@@ -184,7 +184,7 @@ export const courses: Course[] = [
       'Identify drug targets',
       'Build clinical decision support systems'
     ],
-    lectures: [
+    modules: [
       {
         id: 'ml-genomics',
         title: 'Machine Learning in Genomics',

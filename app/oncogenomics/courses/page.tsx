@@ -55,7 +55,7 @@ const CourseCard: React.FC<{ course: any }> = ({ course }) => (
       
       <div className="flex items-center justify-between pt-4">
         <div className="flex items-center gap-4 text-small text-hero-text">
-          <span>{course.lectures.length} lectures</span>
+          <span>{course.modules.length} modules</span>
           <span>{course.duration}</span>
         </div>
         {course.status === 'published' ? (
