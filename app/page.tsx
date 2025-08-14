@@ -237,7 +237,7 @@ height={750}
                     <ul className="space-y-2">
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Carry out experiments in biological, cellular, molecular, and organich chemistry laboratories
+                        Carry out experiments in biological, cellular, molecular, and organic chemistry laboratories
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
@@ -245,7 +245,7 @@ height={750}
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Developed foundations in statistics applicable for scientific analysis
+                        Developed foundations in statistics analysis
                       </li>
                     </ul>
                   </div>
