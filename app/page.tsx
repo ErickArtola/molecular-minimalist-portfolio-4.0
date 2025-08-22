@@ -33,7 +33,7 @@ export default function HomePage() {
               Erick Geovany Artola
             </h1>
             <p className="text-h2 text-white/90 leading-relaxed">
-              AI/ML Engineer • Genomics Researcher • Technical Account Manager
+              AI/ML/DL Engineer • OncoGenomics Researcher • Technical Account Manager
             </p>
           </div>
         </div>
