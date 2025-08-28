@@ -98,8 +98,8 @@ export default function CoursesPage() {
               Available Courses
             </h2>
             <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
-              Explore our comprehensive collection of courses covering cancer genomics, 
-              molecular mechanisms, and AI applications in precision medicine.
+              These courses represent advanced learning resources developed for educational exploration of cancer biology and genomics. All materials are designed for my personal study for understanding purposes only. Course content is not intended for medical diagnosis, treatment planning, or clinical decision-making.
+              Information should not be used as a substitute for professional medical consultation.
             </p>
           </div>
           

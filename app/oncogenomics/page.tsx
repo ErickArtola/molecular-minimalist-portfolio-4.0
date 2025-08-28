@@ -168,8 +168,7 @@ export default function OncogenomicsPage() {
             </h2>
             <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
               My research interests lie at the convergence of artificial intelligence and oncogenomics, 
-              leveraging cloud-scale computing for AI resources and . This interdisciplinary approach combines my technical expertise in cloud 
-              architecture with emerging opportunities in precision oncology.
+              leveraging cloud-scale computing for AI resources with the overall aim of improving human welfare.
             </p>
           </div>
         </section>
@@ -224,7 +223,7 @@ export default function OncogenomicsPage() {
               Oncogenomics Learning Hub
             </h2>
             <p className="text-body text-hero-text max-w-3xl mx-auto leading-relaxed">
-              Explore comprehensive courses in cancer genomics, molecular mechanisms, and AI applications in precision medicine.
+              Explore personally developed courses in cancer genomics, molecular mechanisms, and AI applications in precision medicine.
             </p>
           </div>
           
@@ -242,9 +241,9 @@ export default function OncogenomicsPage() {
                 Comprehensive Cancer Genomics Education
               </h3>
               <p className="text-body text-hero-text max-w-2xl mx-auto leading-relaxed">
-                Access our full collection of courses covering advanced molecular mechanisms, 
+                Access my collection of personallu desigend courses covering advanced molecular mechanisms, 
                 AI applications in precision medicine, and fundamental cancer genomics concepts. 
-                Each course features interactive presentations, audio narrations, and laboratory exercises.
+                Each course features interactive presentations and audio narrations.
               </p>
               
               <div className="flex justify-center pt-4">
@@ -252,7 +251,7 @@ export default function OncogenomicsPage() {
                   href="/oncogenomics/courses"
                   className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-medium"
                 >
-                  Explore All Courses
+                  Explore My Courses
                 </Link>
               </div>
             </div>
@@ -444,7 +443,7 @@ export default function OncogenomicsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button type="button" className="btn-primary">
-              View Research Proposals
+              View Research Proposals (Coming Soon )
             </button>
             <a href="https://www.linkedin.com/in/erick-artola/" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 text-body font-medium bg-white text-accent border border-accent rounded-lg hover:bg-accent/5 transition-colors">
               Contact for Collaboration

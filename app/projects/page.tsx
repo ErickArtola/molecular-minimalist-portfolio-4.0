@@ -203,7 +203,7 @@ export default function ProjectsPage() {
 <section className="text-center space-y-6">
   <div className="max-w-3xl mx-auto">
     <p className="text-body text-hero-text leading-relaxed">
-      These guided projects showcase my technical expertise across various domains, from AI development 
+      These guided projects span across various domains, from AI development 
       to interactive media applications. Each project demonstrates different aspects of software 
       engineering, problem-solving, and creative implementation. Explore the complete source code 
       and additional projects on my{' '}
