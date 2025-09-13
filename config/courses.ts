@@ -83,10 +83,12 @@ export const courses: Course[] = [
       },
       {
         id: 'module-6',
-        title: 'Coming Soon',
-        description: 'Additional content in the Advanced Molecular Mechanisms in Cancer Development series.',
+        title: 'Tumor-Promoting Inflammation',
+        description: 'Exploration of how inflammation contributes to tumor development and progression.',
+        embedUrl: 'https://1drv.ms/p/c/e38e37d6ed9af814/IQTOyIkrmpxDR6p75WiqUKRqAQ5-MIQt7leVwadii8mMIeo?em=2&wdAr=1.7777777777777777',
+        audioUrl: '/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/3.2-tumor-promoting-inflammation.mp3',
         duration: 'TBD',
-        status: 'coming-soon'
+        status: 'published'
       },
       {
         id: 'module-7',

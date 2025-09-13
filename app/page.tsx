@@ -228,7 +228,7 @@ height={750}
                       </span>
                     </div>
                     <p className="text-body text-hero-text leading-relaxed">
-                      Built comprehensive education in Biochemistry and Molecular Biology from the University of Miami, where I learned about molecular biology principles, perform DNA extractions and sequencing for analysis 
+                      Built comprehensive education in Biochemistry and Molecular Biology from the University of Miami, where I learned about molecular biology principles and performed DNA extractions, sequencing and analysis  
                     </p>
                   </div>
                   
@@ -237,11 +237,11 @@ height={750}
                     <ul className="space-y-2">
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                        Carry out experiments in biological, cellular, molecular, and organic chemistry laboratories
+                        Carried out experimental protocols in molecular, cellular, biological and organic chemistry laboratories
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
-                         Researched the mechanistic pathway of importin-beta, a protein involved in nuclear transpot
+                         Researched the mechanistic pathway of importin-beta, a protein involved in nuclear transport of nueclic acid
                       </li>
                       <li className="text-small text-hero-text flex items-start gap-2">
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
@@ -406,9 +406,9 @@ height={750}
       <Link href="/oncogenomics" className="btn-primary">
         View My Oncogenomics Page
       </Link>
-      <button type="button" className="btn-secondary">
+      <a href="https://www.linkedin.com/in/erick-artola/" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-block">
         Get in Touch
-      </button>
+      </a>
     </div>
   </div>
 </section>
