@@ -4,6 +4,7 @@ export interface Module {
   description: string
   audioUrl?: string
   embedUrl?: string
+  resourcesUrl?: string
   duration: string
   status: 'published' | 'coming-soon'
 }
@@ -83,11 +84,12 @@ export const courses: Course[] = [
       },
       {
         id: 'module-6',
-        title: 'Tumor-Promoting Inflammation',
+        title: 'Tumor-Promoting Inflammation - The Microenvironmental Enabler',
         description: 'Exploration of how inflammation contributes to tumor development and progression.',
         embedUrl: 'https://1drv.ms/p/c/e38e37d6ed9af814/IQTOyIkrmpxDR6p75WiqUKRqAQ5-MIQt7leVwadii8mMIeo?em=2&wdAr=1.7777777777777777',
         audioUrl: '/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/3.2-tumor-promoting-inflammation.mp3',
-        duration: 'TBD',
+        resourcesUrl: 'https://claude.ai/public/artifacts/9270343e-26b3-405f-bad3-717bdb1bfc7c',
+        duration: '1 hour',
         status: 'published'
       },
       {

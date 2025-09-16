@@ -50,6 +50,17 @@ const ModuleCard: React.FC<{ module: any; courseId: string }> = ({ module, cours
               Your browser does not support the audio element.
             </audio>
           )}
+          
+          {module.resourcesUrl && (
+            <Link 
+              href={module.resourcesUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-small text-blue-600 hover:text-blue-800 hover:underline"
+            >
+              📚 Lecture Resources
+            </Link>
+          )}
         </div>
       )}
     </div>
