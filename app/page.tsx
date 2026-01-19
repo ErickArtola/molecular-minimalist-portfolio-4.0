@@ -263,7 +263,7 @@ height={750}
     These professional certifications demonstrate my commitment to staying current with cloud technologies, 
     AI/ML practices, and industry best practices. View my complete certification portfolio on{' '}
     <Link 
-      href="https://www.credly.com/users/your-profile" 
+      href="https://www.credly.com/users/erick-artola" 
       target="_blank" 
       rel="noopener noreferrer"
       className="text-accent hover:underline font-medium"
