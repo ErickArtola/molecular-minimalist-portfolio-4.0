@@ -121,36 +121,7 @@ export default function OncogenomicsPage() {
     }
   ]
 
-  const researchProjects: ProjectCardProps[] = [
-    {
-      title: "ARTEMIS: Advanced Real-Time Expert Medical Intelligent System",
-      description: "Developing of a cutting-edge AI-powered cancer treatment recommendation system using Amazon Web Services (AWS) and Nova multimodal AI capabilities. This comprehensive solution processes diverse patient data types including medical imaging, genomic sequences, and clinical records to deliver personalized treatment recommendations. ",
-      status: "active",
-      technologies: ["AWS Bedrock", "Amazon Nova", "Lambda", "Step Functions", "OpenSearch", "Cloudwatch", "S3", ],
-      // collaborators: ["Stanford Genomics Lab", "AWS Healthcare Team"],
-      achievements: [
-        "Implemented advanced RAG (Retrieval-Augmented Generation) system integrating current medical protocols and research",
-        "Developed automated clinical workflow agents using Amazon Bedrock",
-        "Created robust testing framework ensuring 85%+ recommendation accuracy",
-        "Engineered HIPAA-compliant architecture with end-to-end security",
-        "Integrated continuous prompt optimization for enhanced accuracy"
-      ]
-    },
-    {
-      title: "Cloud Infrastructure for Oncogenomics Research",
-      description: "Designing and implementing scalable cloud architectures specifically optimized for cancer genomics workflows, enabling efficient processing of large-scale sequencing data and facilitating collaborative research.",
-      status: "active",
-      technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
-      // collaborators: ["Cancer Research Institute", "Broad Institute"]
-    }
-    // {
-    //   title: "Oncogenomics Review",
-    //   description: "Designing and implementing scalable cloud architectures specifically optimized for cancer genomics workflows, enabling efficient processing of large-scale sequencing data and facilitating collaborative research.",
-    //   status: "active",
-    //   technologies: ["AWS", "Kubernetes", "Terraform", "GATK", "Nextflow"],
-    //   collaborators: ["Cancer Research Institute", "Broad Institute"]
-    // }
-  ]
+  const researchProjects: ProjectCardProps[] = []
 
   return (
     <PageWrapper 
@@ -270,51 +241,6 @@ export default function OncogenomicsPage() {
             </p>
           </div>
           <div className="flex flex-col items-center space-y-10">
-            <div className="w-full space-y-4">
-              <h3 className="text-h3 font-medium text-hero-text text-center">Cancer Cell Line Characterization</h3>
-              <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
-                <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
-                  <iframe 
-                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQRX5ZwnBiWcTL8tVrPRUXXlATaTn-TaGyaM21UVeOkEDl0" 
-                    className="absolute top-0 left-0 w-full h-full" 
-                    frameBorder="0" 
-                    scrolling="no"
-                    allowFullScreen
-                    loading="lazy"
-                  ></iframe>
-                </div>
-              </div>
-              
-              <div className="w-full max-w-3xl mx-auto">
-                <audio controls className="w-full" preload="auto" controlsList="nodownload">
-                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/Lab1.1-cancer-cell-line-characterization.mp3" type="audio/mpeg" />
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
-            </div>
-            
-            <div className="w-full space-y-4">
-              <h3 className="text-h3 font-medium text-hero-text text-center">Oncogene and Tumor Suppressor Analysis</h3>
-              <div className="w-full mx-auto px-4 sm:px-6 md:px-0">
-                <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
-                  <iframe 
-                    src="https://1drv.ms/p/c/e38e37d6ed9af814/IQSTOYBRrG4xT4OHc9xEQgDZAZL-gqZmDnr-37RMw8bcPBI?em=2&wdAr=1.7777777777777777" 
-                    className="absolute top-0 left-0 w-full h-full" 
-                    frameBorder="0" 
-                    scrolling="no"
-                    allowFullScreen
-                    loading="lazy"
-                  ></iframe>
-                </div>
-              </div>
-              
-              <div className="w-full max-w-3xl mx-auto">
-                <audio controls className="w-full" preload="auto" controlsList="nodownload">
-                  <source src="/oncogenomics/advanced-molecular-mechanisms-in-cancer-development/Lab2.1-oncogene-and-tumor-suppressor-analysis.pdf.mp3" type="audio/mpeg" />
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
-            </div>
           </div>
         </section>
 
